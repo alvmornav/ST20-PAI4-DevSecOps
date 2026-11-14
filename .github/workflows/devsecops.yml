@@ -41,7 +41,7 @@ jobs:
           retention-days: 1
 
   security-scans:
-    name: Security Scans & DefectDojo Ingestion
+    name: Security Scans, DefectDojo Ingestion & Quality Gate
     runs-on: ubuntu-latest
     needs: build-image
     steps:
@@ -56,6 +56,9 @@ jobs:
       - name: Load Docker image
         run: docker load -i juice-shop-image.tar
 
+      # ==========================================================
+      # ROL A (PLATAFORMA): Escaneo de contenedor (Trivy)
+      # ==========================================================
       - name: Run Trivy Container Scan (JSON)
         run: |
           docker run --rm \
@@ -83,9 +86,34 @@ jobs:
             exit 1
           fi
 
+      # ==========================================================
+      # ESPACIO PARA ROL B (SAST / SCA / SECRETOS)
+      # Añadir aquí Semgrep, Gitleaks y Trivy FS/SBOM + curl a DefectDojo
+      # ==========================================================
+
+      # ==========================================================
+      # ESPACIO PARA ROL C (DAST - OWASP ZAP)
+      # Levantar contenedor en puerto 3000, ejecutar ZAP + curl a DefectDojo
+      # ==========================================================
+
       - name: Upload Scan Reports as GitHub Artifact
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: security-reports
           path: trivy-results.json
+
+      # ==========================================================
+      # ROL A (PLATAFORMA): Quality Gate centralizado en DefectDojo
+      # ==========================================================
+      - name: Quality Gate - Evaluate Critical Findings in DefectDojo
+        run: |
+          RESPONSE=$(curl -s -H "Authorization: Token ${{ secrets.DEFECTDOJO_TOKEN }}" \
+            "${{ secrets.DEFECTDOJO_URL }}/api/v2/findings/?product_name=Juice%20Shop%20ST20&severity=Critical&active=true&duplicate=false")
+          CRITICAL_COUNT=$(echo "$RESPONSE" | jq '.count')
+          echo "Vulnerabilidades Críticas activas en DefectDojo: $CRITICAL_COUNT"
+          if [ "$CRITICAL_COUNT" -gt 0 ]; then
+            echo "❌ Quality Gate fallido: existen $CRITICAL_COUNT vulnerabilidades críticas sin mitigar en DefectDojo."
+            exit 1
+          fi
+          echo "✅ Quality Gate superado: 0 vulnerabilidades críticas activas."
