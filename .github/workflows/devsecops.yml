@@ -57,12 +57,15 @@ jobs:
         run: docker load -i juice-shop-image.tar
 
       - name: Run Trivy Container Scan (JSON)
-        uses: aquasecurity/trivy-action@0.28.0
-        with:
-          image-ref: ${{ env.IMAGE_NAME }}:${{ github.sha }}
-          format: 'json'
-          output: 'trivy-results.json'
-          severity: 'CRITICAL,HIGH,MEDIUM'
+        run: |
+          docker run --rm \
+            -v /var/run/docker.sock:/var/run/docker.sock \
+            -v "${{ github.workspace }}:/workspace" \
+            aquasec/trivy:latest image \
+            --format json \
+            --output /workspace/trivy-results.json \
+            --severity CRITICAL,HIGH,MEDIUM \
+            "${{ env.IMAGE_NAME }}:${{ github.sha }}"
 
       - name: Upload Trivy Report to DefectDojo
         run: |
