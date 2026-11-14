@@ -9,7 +9,7 @@ on:
 
 env:
   IMAGE_NAME: juice-shop-st20
-  DEFECTDOJO_PRODUCT_ID: 1
+  DEFECTDOJO_PRODUCT_NAME: "Juice Shop ST20"
 
 jobs:
   build-image:
@@ -69,14 +69,19 @@ jobs:
 
       - name: Upload Trivy Report to DefectDojo
         run: |
-          curl -s -S -f -X POST "${{ secrets.DEFECTDOJO_URL }}/api/v2/import-scan/" \
+          HTTP_CODE=$(curl -s -o response.txt -w "%{http_code}" -X POST "${{ secrets.DEFECTDOJO_URL }}/api/v2/import-scan/" \
             -H "Authorization: Token ${{ secrets.DEFECTDOJO_TOKEN }}" \
             -F "scan_type=Trivy Scan" \
-            -F "product=${{ env.DEFECTDOJO_PRODUCT_ID }}" \
+            -F "product_name=${{ env.DEFECTDOJO_PRODUCT_NAME }}" \
             -F "engagement_name=CI-CD Pipeline ST20" \
             -F "auto_create_context=true" \
             -F "deduplication_on_engagement=true" \
-            -F "file=@trivy-results.json"
+            -F "file=@trivy-results.json")
+          echo "HTTP Status: $HTTP_CODE"
+          cat response.txt
+          if [ "$HTTP_CODE" -ne 201 ] && [ "$HTTP_CODE" -ne 200 ]; then
+            exit 1
+          fi
 
       - name: Upload Scan Reports as GitHub Artifact
         if: always()
