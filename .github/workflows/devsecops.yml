@@ -182,9 +182,8 @@ jobs:
           fi
 
       # ==========================================================
-      # ESPACIO PARA ROL C (DAST - OWASP ZAP)
+      # GUARDAR REPORTES COMO ARTEFACTOS
       # ==========================================================
-
       - name: Upload Scan Reports as GitHub Artifact
         if: always()
         uses: actions/upload-artifact@v4
@@ -197,7 +196,7 @@ jobs:
             checkov-results.json
 
       # ==========================================================
-      # ROL A (PLATAFORMA): Quality Gate centralizado en DefectDojo
+      # QUALITY GATE CENTRALIZADO EN DEFECTDOJO
       # ==========================================================
       - name: Quality Gate - Evaluate Critical Findings in DefectDojo
         run: |
