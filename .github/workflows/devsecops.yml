@@ -142,6 +142,7 @@ jobs:
             --nvdApiKey ${{ secrets.NVD_API_KEY }}
             --exclude '**/node_modules/**'
             --exclude '**/test/**'
+            --exclude '**/build/**'
 
       - name: Upload Dependency-Check Report to DefectDojo
         run: |
