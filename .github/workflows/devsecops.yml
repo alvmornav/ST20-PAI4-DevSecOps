@@ -148,7 +148,7 @@ jobs:
         run: |
           HTTP_CODE=$(curl -s -o response_dc.txt -w "%{http_code}" -X POST "${{ secrets.DEFECTDOJO_URL }}/api/v2/import-scan/" \
             -H "Authorization: Token ${{ secrets.DEFECTDOJO_TOKEN }}" \
-            -F "scan_type=OWASP Dependency Check Scan" \
+            -F "scan_type=Dependency Check" \
             -F "product_name=${{ env.DEFECTDOJO_PRODUCT_NAME }}" \
             -F "engagement_name=CI-CD Pipeline ST20" \
             -F "auto_create_context=true" \
