@@ -128,8 +128,8 @@ jobs:
       - name: Ensure package-lock.json exists
         run: if [ ! -f "package-lock.json" ]; then npm install --package-lock-only --ignore-scripts; fi
 
-      - name: Install dependencies
-        run: npm install
+      - name: Install dependencies (legacy peer deps to avoid TS type conflicts)
+        run: npm ci --legacy-peer-deps
 
       - name: Run OWASP Dependency-Check SCA
         uses: dependency-check/Dependency-Check_Action@main
@@ -148,7 +148,7 @@ jobs:
         run: |
           HTTP_CODE=$(curl -s -o response_dc.txt -w "%{http_code}" -X POST "${{ secrets.DEFECTDOJO_URL }}/api/v2/import-scan/" \
             -H "Authorization: Token ${{ secrets.DEFECTDOJO_TOKEN }}" \
-            -F "scan_type=Dependency-Check Scan" \
+            -F "scan_type=Dependency Check Scan" \
             -F "product_name=${{ env.DEFECTDOJO_PRODUCT_NAME }}" \
             -F "engagement_name=CI-CD Pipeline ST20" \
             -F "auto_create_context=true" \
