@@ -87,13 +87,102 @@ jobs:
           fi
 
       # ==========================================================
-      # ESPACIO PARA ROL B (SAST / SCA / SECRETOS)
-      # Añadir aquí Semgrep, Gitleaks y Trivy FS/SBOM + curl a DefectDojo
+      # ROL B (ANÁLISIS EN BUILD: SAST, SCA, IaC)
       # ==========================================================
+
+      # --- 1. SAST & Secrets con Semgrep ---
+      - name: Run Semgrep SAST & Secrets Scan
+        run: |
+          docker run --rm \
+            -v "${{ github.workspace }}:/src" \
+            semgrep/semgrep semgrep scan \
+            --config p/owasp-top-ten \
+            --config p/nodejsscan \
+            --config p/secrets \
+            --json \
+            --output /src/semgrep.json \
+            /src
+
+      - name: Upload Semgrep Report to DefectDojo
+        run: |
+          HTTP_CODE=$(curl -s -o response_semgrep.txt -w "%{http_code}" -X POST "${{ secrets.DEFECTDOJO_URL }}/api/v2/import-scan/" \
+            -H "Authorization: Token ${{ secrets.DEFECTDOJO_TOKEN }}" \
+            -F "scan_type=Semgrep JSON Report" \
+            -F "product_name=${{ env.DEFECTDOJO_PRODUCT_NAME }}" \
+            -F "engagement_name=CI-CD Pipeline ST20" \
+            -F "auto_create_context=true" \
+            -F "deduplication_on_engagement=true" \
+            -F "file=@semgrep.json")
+          echo "Semgrep Upload HTTP Status: $HTTP_CODE"
+          cat response_semgrep.txt
+          if [ "$HTTP_CODE" -ne 201 ] && [ "$HTTP_CODE" -ne 200 ]; then
+            exit 1
+          fi
+
+      # --- 2. SCA con OWASP Dependency-Check ---
+      - name: Set up Node.js for Dependency-Check lockfile
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Ensure package-lock.json exists
+        run: if [ ! -f "package-lock.json" ]; then npm install --package-lock-only --ignore-scripts; fi
+
+      - name: Run OWASP Dependency-Check SCA
+        uses: dependency-check/Dependency-Check_Action@main
+        with:
+          project: 'juice-shop'
+          path: '.'
+          format: 'JSON'
+          out: 'reports'
+          args: >
+            --nvdApiKey ${{ secrets.NVD_API_KEY }}
+            --exclude '**/node_modules/**'
+            --exclude '**/test/**'
+
+      - name: Upload Dependency-Check Report to DefectDojo
+        run: |
+          HTTP_CODE=$(curl -s -o response_dc.txt -w "%{http_code}" -X POST "${{ secrets.DEFECTDOJO_URL }}/api/v2/import-scan/" \
+            -H "Authorization: Token ${{ secrets.DEFECTDOJO_TOKEN }}" \
+            -F "scan_type=Dependency Check Scan" \
+            -F "product_name=${{ env.DEFECTDOJO_PRODUCT_NAME }}" \
+            -F "engagement_name=CI-CD Pipeline ST20" \
+            -F "auto_create_context=true" \
+            -F "deduplication_on_engagement=true" \
+            -F "file=@reports/dependency-check-report.json")
+          echo "Dependency-Check Upload HTTP Status: $HTTP_CODE"
+          cat response_dc.txt
+          if [ "$HTTP_CODE" -ne 201 ] && [ "$HTTP_CODE" -ne 200 ]; then
+            exit 1
+          fi
+
+      # --- 3. IaC con Checkov ---
+      - name: Run Checkov IaC Scan
+        uses: bridgecrewio/checkov-action@master
+        with:
+          framework: dockerfile,kubernetes
+          output_format: json
+          output_file_path: checkov-results.json
+        continue-on-error: true
+
+      - name: Upload Checkov Report to DefectDojo
+        run: |
+          HTTP_CODE=$(curl -s -o response_checkov.txt -w "%{http_code}" -X POST "${{ secrets.DEFECTDOJO_URL }}/api/v2/import-scan/" \
+            -H "Authorization: Token ${{ secrets.DEFECTDOJO_TOKEN }}" \
+            -F "scan_type=Checkov Scan" \
+            -F "product_name=${{ env.DEFECTDOJO_PRODUCT_NAME }}" \
+            -F "engagement_name=CI-CD Pipeline ST20" \
+            -F "auto_create_context=true" \
+            -F "deduplication_on_engagement=true" \
+            -F "file=@checkov-results.json")
+          echo "Checkov Upload HTTP Status: $HTTP_CODE"
+          cat response_checkov.txt
+          if [ "$HTTP_CODE" -ne 201 ] && [ "$HTTP_CODE" -ne 200 ]; then
+            exit 1
+          fi
 
       # ==========================================================
       # ESPACIO PARA ROL C (DAST - OWASP ZAP)
-      # Levantar contenedor en puerto 3000, ejecutar ZAP + curl a DefectDojo
       # ==========================================================
 
       - name: Upload Scan Reports as GitHub Artifact
@@ -101,7 +190,11 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: security-reports
-          path: trivy-results.json
+          path: |
+            trivy-results.json
+            semgrep.json
+            reports/dependency-check-report.json
+            checkov-results.json
 
       # ==========================================================
       # ROL A (PLATAFORMA): Quality Gate centralizado en DefectDojo
