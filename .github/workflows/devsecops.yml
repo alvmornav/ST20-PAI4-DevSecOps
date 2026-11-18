@@ -38,36 +38,36 @@ jobs:
   sca:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Rol B: Dependency-Check + G1"
+      - run: 'echo "Rol B: Dependency-Check + G1"'
 
   sast:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Rol B: Semgrep + G2"
+      - run: 'echo "Rol B: Semgrep + G2"'
 
   iac:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Rol B: Checkov + G3"
+      - run: 'echo "Rol B: Checkov + G3"'
 
   container:
     needs: build
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Rol B: Trivy + G4"
+      - run: 'echo "Rol B: Trivy + G4"'
 
   dast:
     needs: build
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Rol C: OWASP ZAP + G5"
+      - run: 'echo "Rol C: OWASP ZAP + G5"'
 
   security-gate:
     needs: [sca, sast, iac, container, dast]
     if: always()
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Rol C: Gate G6 + DefectDojo"
+      - run: 'echo "Rol C: Gate G6 + DefectDojo"'
 
   deploy:
     needs: [dast, security-gate]
@@ -108,4 +108,4 @@ jobs:
     if: failure()
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Rol C: Notificación"
+      - run: 'echo "Rol C: Notificación"'
