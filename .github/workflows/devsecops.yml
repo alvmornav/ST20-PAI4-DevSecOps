@@ -100,8 +100,17 @@ jobs:
           kubectl -n juice-shop rollout status deployment/juice-shop --timeout=180s
       - name: Smoke test
         run: |
-          kubectl -n juice-shop port-forward svc/juice-shop 3000:3000 &
-          timeout 60 bash -c 'until curl -sf http://localhost:3000 > /dev/null; do sleep 3; done'
+          for i in $(seq 1 20); do
+            kubectl -n juice-shop port-forward svc/juice-shop 3000:3000 >/dev/null 2>&1 &
+            PF_PID=$!
+            sleep 3
+            if curl -sf http://localhost:3000 > /dev/null; then
+              kill $PF_PID 2>/dev/null || true
+              exit 0
+            fi
+            kill $PF_PID 2>/dev/null || true
+          done
+          exit 1
 
   notify:
     needs: [dast, security-gate, deploy]
