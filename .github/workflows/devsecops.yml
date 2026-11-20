@@ -2,7 +2,7 @@ name: DevSecOps Pipeline ST20
 
 on:
   push:
-    branches: [main]
+    branches: [main, rol-b]
   pull_request:
     branches: [main]
   workflow_dispatch:
@@ -38,23 +38,185 @@ jobs:
   sca:
     runs-on: ubuntu-latest
     steps:
-      - run: 'echo "Rol B: Dependency-Check + G1"'
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Ensure package-lock.json
+        run: test -f package-lock.json || npm install --package-lock-only --ignore-scripts
+
+      - uses: actions/cache@v4
+        with:
+          path: ~/.dependency-check-data
+          key: dc-data-${{ github.run_id }}
+          restore-keys: dc-data-
+
+      - name: Run OWASP Dependency-Check
+        uses: dependency-check/Dependency-Check_Action@v1.0.0
+        with:
+          project: juice-shop
+          path: '.'
+          format: 'XML'
+          out: 'reports'
+          args: >
+            --format HTML
+            --nvdApiKey ${{ secrets.NVD_API_KEY }}
+            --suppression security/dependency-check-suppressions.xml
+            --exclude "**/node_modules/**"
+            --exclude "**/test/**"
+
+      - name: Upload SCA to DefectDojo
+        if: always()
+        run: bash scripts/dd-upload.sh "Dependency Check Scan" reports/dependency-check-report.xml "SCA - Dependency-Check"
+        env:
+          DD_URL: ${{ secrets.DD_URL }}
+          DD_API_KEY: ${{ secrets.DD_API_KEY }}
+
+      - name: Upload SCA Artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: report-sca
+          path: reports/
+
+      - name: Quality gate G1
+        continue-on-error: true
+        run: |
+          if [ -f "scripts/quality_gate.py" ]; then
+            python3 scripts/quality_gate.py --tool dependency-check --report reports/dependency-check-report.xml --threshold 7.0 --mode warn
+          else
+            echo "::warning title=Quality Gate G1::Pendiente scripts/quality_gate.py (Rol C)"
+          fi
 
   sast:
     runs-on: ubuntu-latest
     steps:
-      - run: 'echo "Rol B: Semgrep + G2"'
+      - uses: actions/checkout@v4
+
+      - name: Run Semgrep SAST
+        run: |
+          docker run --rm -v "$PWD:/src" -w /src semgrep/semgrep:1.95.0 semgrep scan \
+            --config p/owasp-top-ten --config p/nodejsscan --config p/secrets \
+            --json --output semgrep.json || true
+
+      - name: Upload SAST to DefectDojo
+        if: always()
+        run: bash scripts/dd-upload.sh "Semgrep JSON Report" semgrep.json "SAST - Semgrep"
+        env:
+          DD_URL: ${{ secrets.DD_URL }}
+          DD_API_KEY: ${{ secrets.DD_API_KEY }}
+
+      - name: Upload SAST Artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: report-sast
+          path: semgrep.json
+
+      - name: Quality gate G2
+        continue-on-error: true
+        run: |
+          if [ -f "scripts/quality_gate.py" ]; then
+            python3 scripts/quality_gate.py --tool semgrep --report semgrep.json --threshold ERROR --mode warn
+          else
+            echo "::warning title=Quality Gate G2::Pendiente scripts/quality_gate.py (Rol C)"
+          fi
 
   iac:
     runs-on: ubuntu-latest
     steps:
-      - run: 'echo "Rol B: Checkov + G3"'
+      - uses: actions/checkout@v4
+
+      - name: Checkov Dockerfile
+        run: |
+          docker run --rm -v "$PWD:/code" bridgecrew/checkov:3.2.280 -d /code \
+            --framework dockerfile --config-file /code/security/.checkov.yaml \
+            -o json --soft-fail > checkov-docker.json || true
+
+      - name: Checkov Kubernetes
+        run: |
+          if [ -d "k8s" ]; then
+            docker run --rm -v "$PWD:/code" bridgecrew/checkov:3.2.280 -d /code/k8s \
+              --framework kubernetes --config-file /code/security/.checkov.yaml \
+              -o json --soft-fail > checkov-k8s.json || true
+          fi
+
+      - name: Upload IaC Docker to DefectDojo
+        if: always()
+        run: bash scripts/dd-upload.sh "Checkov Scan" checkov-docker.json "IaC - Checkov"
+        env:
+          DD_URL: ${{ secrets.DD_URL }}
+          DD_API_KEY: ${{ secrets.DD_API_KEY }}
+
+      - name: Upload IaC K8s to DefectDojo
+        if: always() && hashFiles('checkov-k8s.json') != ''
+        run: bash scripts/dd-upload.sh "Checkov Scan" checkov-k8s.json "IaC - Checkov K8s"
+        env:
+          DD_URL: ${{ secrets.DD_URL }}
+          DD_API_KEY: ${{ secrets.DD_API_KEY }}
+
+      - name: Upload IaC Artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: report-iac
+          path: checkov-*.json
+
+      - name: Quality gate G3
+        continue-on-error: true
+        run: |
+          if [ -f "scripts/quality_gate.py" ]; then
+            python3 scripts/quality_gate.py --tool checkov --report checkov-docker.json --threshold 1 --mode warn
+            if [ -f "checkov-k8s.json" ]; then
+              python3 scripts/quality_gate.py --tool checkov --report checkov-k8s.json --threshold 1 --mode warn
+            fi
+          else
+            echo "::warning title=Quality Gate G3::Pendiente scripts/quality_gate.py (Rol C)"
+          fi
 
   container:
     needs: build
     runs-on: ubuntu-latest
     steps:
-      - run: 'echo "Rol B: Trivy + G4"'
+      - uses: actions/checkout@v4
+
+      - uses: actions/download-artifact@v4
+        with:
+          name: image
+
+      - name: Run Trivy Container Scan
+        uses: aquasecurity/trivy-action@0.28.0
+        with:
+          input: 'image.tar'
+          format: 'json'
+          output: 'trivy.json'
+          trivyignores: 'security/.trivyignore'
+          exit-code: '0'
+
+      - name: Upload Container Scan to DefectDojo
+        if: always()
+        run: bash scripts/dd-upload.sh "Trivy Scan" trivy.json "Container - Trivy"
+        env:
+          DD_URL: ${{ secrets.DD_URL }}
+          DD_API_KEY: ${{ secrets.DD_API_KEY }}
+
+      - name: Upload Container Artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: report-container
+          path: trivy.json
+
+      - name: Quality gate G4
+        continue-on-error: true
+        run: |
+          if [ -f "scripts/quality_gate.py" ]; then
+            python3 scripts/quality_gate.py --tool trivy --report trivy.json --threshold CRITICAL --mode warn
+          else
+            echo "::warning title=Quality Gate G4::Pendiente scripts/quality_gate.py (Rol C)"
+          fi
 
   dast:
     needs: build
