@@ -1,0 +1,5 @@
+﻿framework:
+  - dockerfile
+  - kubernetes
+skip-check: []
+soft-fail: true
