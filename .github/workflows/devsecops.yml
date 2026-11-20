@@ -29,7 +29,7 @@ jobs:
           cache-from: type=gha
           cache-to: type=gha,mode=max
       - run: docker save ${{ env.IMAGE }}:${{ github.sha }} -o image.tar
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: image
           path: image.tar
@@ -76,7 +76,7 @@ jobs:
 
       - name: Upload SCA Artifact
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: report-sca
           path: reports/
@@ -110,7 +110,7 @@ jobs:
 
       - name: Upload SAST Artifact
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: report-sast
           path: semgrep.json
@@ -159,7 +159,7 @@ jobs:
 
       - name: Upload IaC Artifact
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: report-iac
           path: checkov-*.json
@@ -207,7 +207,7 @@ jobs:
 
       - name: Upload Container Artifact
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: report-container
           path: trivy.json
