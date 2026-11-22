@@ -76,6 +76,7 @@ jobs:
           path: reports/
 
       - name: Quality gate G1
+        if: always()
         continue-on-error: true
         run: python3 scripts/quality_gate.py --tool dependency-check --report reports/dependency-check-report.xml --threshold 7.0 --mode warn
 
@@ -105,6 +106,7 @@ jobs:
           path: semgrep.json
 
       - name: Quality gate G2
+        if: always()
         continue-on-error: true
         run: python3 scripts/quality_gate.py --tool semgrep --report semgrep.json --threshold ERROR --mode warn
 
@@ -147,6 +149,7 @@ jobs:
           path: checkov-*.json
 
       - name: Quality gate G3
+        if: always()
         continue-on-error: true
         run: |
           rc=0
@@ -191,6 +194,7 @@ jobs:
           path: trivy.json
 
       - name: Quality gate G4
+        if: always()
         continue-on-error: true
         run: python3 scripts/quality_gate.py --tool trivy --report trivy.json --threshold CRITICAL --mode warn
 
@@ -239,6 +243,7 @@ jobs:
             report_html.html
 
       - name: Quality gate G5
+        if: always()
         run: python3 scripts/quality_gate.py --tool zap --report report_json.json --threshold High --ignore security/zap/rules.tsv --mode block
 
   security-gate:
