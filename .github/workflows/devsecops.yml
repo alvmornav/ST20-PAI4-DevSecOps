@@ -2,7 +2,7 @@ name: DevSecOps Pipeline ST20
 
 on:
   push:
-    branches: [main, rol-b]
+    branches: [main, demo/gate]
   pull_request:
     branches: [main]
   workflow_dispatch:
@@ -33,7 +33,7 @@ jobs:
         with:
           name: image
           path: image.tar
-          retention-days: 1
+          retention-days: 3
 
   sca:
     runs-on: ubuntu-latest
@@ -46,12 +46,6 @@ jobs:
 
       - name: Ensure package-lock.json
         run: test -f package-lock.json || npm install --package-lock-only --ignore-scripts
-
-      - uses: actions/cache@v4
-        with:
-          path: ~/.dependency-check-data
-          key: dc-data-${{ github.run_id }}
-          restore-keys: dc-data-
 
       - name: Run OWASP Dependency-Check
         uses: dependency-check/Dependency-Check_Action@main
@@ -82,13 +76,9 @@ jobs:
           path: reports/
 
       - name: Quality gate G1
+        if: always()
         continue-on-error: true
-        run: |
-          if [ -f "scripts/quality_gate.py" ]; then
-            python3 scripts/quality_gate.py --tool dependency-check --report reports/dependency-check-report.xml --threshold 7.0 --mode warn
-          else
-            echo "::warning title=Quality Gate G1::Pendiente scripts/quality_gate.py (Rol C)"
-          fi
+        run: python3 scripts/quality_gate.py --tool dependency-check --report reports/dependency-check-report.xml --threshold 7.0 --mode warn
 
   sast:
     runs-on: ubuntu-latest
@@ -116,13 +106,9 @@ jobs:
           path: semgrep.json
 
       - name: Quality gate G2
+        if: always()
         continue-on-error: true
-        run: |
-          if [ -f "scripts/quality_gate.py" ]; then
-            python3 scripts/quality_gate.py --tool semgrep --report semgrep.json --threshold ERROR --mode warn
-          else
-            echo "::warning title=Quality Gate G2::Pendiente scripts/quality_gate.py (Rol C)"
-          fi
+        run: python3 scripts/quality_gate.py --tool semgrep --report semgrep.json --threshold ERROR --mode warn
 
   iac:
     runs-on: ubuntu-latest
@@ -137,11 +123,9 @@ jobs:
 
       - name: Checkov Kubernetes
         run: |
-          if [ -d "k8s" ]; then
-            docker run --rm -v "$PWD:/code" bridgecrew/checkov:3.2.280 -d /code/k8s \
-              --framework kubernetes --config-file /code/security/.checkov.yaml \
-              -o json --soft-fail > checkov-k8s.json || true
-          fi
+          docker run --rm -v "$PWD:/code" bridgecrew/checkov:3.2.280 -d /code/k8s \
+            --framework kubernetes --config-file /code/security/.checkov.yaml \
+            -o json --soft-fail > checkov-k8s.json || true
 
       - name: Upload IaC Docker to DefectDojo
         if: always()
@@ -151,7 +135,7 @@ jobs:
           DD_API_KEY: ${{ secrets.DD_API_KEY }}
 
       - name: Upload IaC K8s to DefectDojo
-        if: always() && hashFiles('checkov-k8s.json') != ''
+        if: always()
         run: bash scripts/dd-upload.sh "Checkov Scan" checkov-k8s.json "IaC - Checkov K8s"
         env:
           DD_URL: ${{ secrets.DD_URL }}
@@ -165,16 +149,13 @@ jobs:
           path: checkov-*.json
 
       - name: Quality gate G3
+        if: always()
         continue-on-error: true
         run: |
-          if [ -f "scripts/quality_gate.py" ]; then
-            python3 scripts/quality_gate.py --tool checkov --report checkov-docker.json --threshold 1 --mode warn
-            if [ -f "checkov-k8s.json" ]; then
-              python3 scripts/quality_gate.py --tool checkov --report checkov-k8s.json --threshold 1 --mode warn
-            fi
-          else
-            echo "::warning title=Quality Gate G3::Pendiente scripts/quality_gate.py (Rol C)"
-          fi
+          rc=0
+          python3 scripts/quality_gate.py --tool checkov --report checkov-docker.json --threshold 1 --mode warn || rc=1
+          python3 scripts/quality_gate.py --tool checkov --report checkov-k8s.json --threshold 1 --mode warn || rc=1
+          exit $rc
 
   container:
     needs: build
@@ -191,7 +172,7 @@ jobs:
           docker run --rm \
             -v "$PWD:/work" \
             -w /work \
-            aquasec/trivy:latest image \
+            aquasec/trivy:0.58.1 image \
             --input image.tar \
             --format json \
             --output trivy.json \
@@ -213,29 +194,98 @@ jobs:
           path: trivy.json
 
       - name: Quality gate G4
+        if: always()
         continue-on-error: true
-        run: |
-          if [ -f "scripts/quality_gate.py" ]; then
-            python3 scripts/quality_gate.py --tool trivy --report trivy.json --threshold CRITICAL --mode warn
-          else
-            echo "::warning title=Quality Gate G4::Pendiente scripts/quality_gate.py (Rol C)"
-          fi
+        run: python3 scripts/quality_gate.py --tool trivy --report trivy.json --threshold CRITICAL --mode warn
 
   dast:
     needs: build
     runs-on: ubuntu-latest
+    timeout-minutes: 60
     steps:
-      - run: 'echo "Rol C: OWASP ZAP + G5"'
+      - uses: actions/checkout@v4
+
+      - uses: actions/download-artifact@v4
+        with:
+          name: image
+
+      - name: Start Juice Shop
+        run: |
+          docker load -i image.tar
+          docker run -d --name app -p 3000:3000 ${{ env.IMAGE }}:${{ github.sha }}
+          timeout 180 bash -c 'until curl -sf http://localhost:3000 > /dev/null; do sleep 5; done'
+
+      - name: OWASP ZAP Full Scan
+        uses: zaproxy/action-full-scan@v0.12.0
+        with:
+          target: http://localhost:3000
+          rules_file_name: security/zap/rules.tsv
+          cmd_options: -a -j -m 5 -x report_xml.xml
+          allow_issue_writing: false
+          fail_action: false
+          artifact_name: zap-raw
+
+      - name: Upload DAST to DefectDojo
+        if: always()
+        run: bash scripts/dd-upload.sh "ZAP Scan" report_xml.xml "DAST - ZAP"
+        env:
+          DD_URL: ${{ secrets.DD_URL }}
+          DD_API_KEY: ${{ secrets.DD_API_KEY }}
+
+      - name: Upload DAST Artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: report-dast
+          path: |
+            report_json.json
+            report_xml.xml
+            report_html.html
+
+      - name: Quality gate G5
+        if: always()
+        run: python3 scripts/quality_gate.py --tool zap --report report_json.json --threshold High --ignore security/zap/rules.tsv --mode block
 
   security-gate:
     needs: [sca, sast, iac, container, dast]
     if: always()
     runs-on: ubuntu-latest
     steps:
-      - run: 'echo "Rol C: Gate G6 + DefectDojo"'
+      - uses: actions/checkout@v4
+
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: report-*
+          path: reports
+
+      - name: Quality gate G6 - SCA (CVSS >= 9.0)
+        id: g6_sca
+        continue-on-error: true
+        run: python3 scripts/quality_gate.py --tool dependency-check --report reports/report-sca/dependency-check-report.xml --threshold 9.0 --mode block
+
+      - name: Quality gate G6 - Container (CRITICAL)
+        id: g6_container
+        continue-on-error: true
+        run: python3 scripts/quality_gate.py --tool trivy --report reports/report-container/trivy.json --threshold CRITICAL --mode block
+
+      - name: Estado en DefectDojo
+        continue-on-error: true
+        run: bash scripts/dd-gate-summary.sh
+        env:
+          DD_URL: ${{ secrets.DD_URL }}
+          DD_API_KEY: ${{ secrets.DD_API_KEY }}
+
+      - name: Decision G6
+        run: |
+          if [ "${{ steps.g6_sca.outcome }}" != "success" ] || [ "${{ steps.g6_container.outcome }}" != "success" ]; then
+            echo "::error title=Quality gate G6::Release bloqueada: SCA=${{ steps.g6_sca.outcome }}, Container=${{ steps.g6_container.outcome }}"
+            exit 1
+          fi
+          echo "Quality gate G6 superado"
 
   deploy:
     needs: [dast, security-gate]
+    if: github.event_name != 'pull_request'
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -276,10 +326,25 @@ jobs:
             kill $PF_PID 2>/dev/null || true
           done
           exit 1
+      - name: Estado del despliegue
+        if: always()
+        run: |
+          kubectl -n juice-shop get deploy,pods,svc -o wide
+          echo "### Despliegue en kind" >> "$GITHUB_STEP_SUMMARY"
+          echo "Imagen desplegada: \`$IMG\`" >> "$GITHUB_STEP_SUMMARY"
 
   notify:
     needs: [dast, security-gate, deploy]
     if: failure()
     runs-on: ubuntu-latest
+    env:
+      RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+      DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
     steps:
-      - run: 'echo "Rol C: Notificación"'
+      - name: Aviso por Discord
+        if: env.DISCORD_WEBHOOK != ''
+        run: |
+          curl -sS -H "Content-Type: application/json" \
+            -d "{\"content\":\"Pipeline ST20 bloqueado por un quality gate en ${GITHUB_REF_NAME} (${GITHUB_SHA::7}): $RUN_URL\"}" \
+            "$DISCORD_WEBHOOK"
+      - run: echo "::error title=Pipeline bloqueado::$RUN_URL"

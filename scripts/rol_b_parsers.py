@@ -1,4 +1,4 @@
-﻿import json
+import json
 import xml.etree.ElementTree as ET
 
 SEMGREP_LEVELS = ["INFO", "WARNING", "ERROR"]

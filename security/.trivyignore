@@ -1,1 +1,2 @@
-﻿# CVE-XXXX-YYYY motivo responsable revisar antes de AAAA-MM-DD
+# Formato: CVE-AAAA-NNNN  motivo · responsable · revisar antes de AAAA-MM-DD
+# Solo se añaden entradas mediante pull request revisado por otro rol.
