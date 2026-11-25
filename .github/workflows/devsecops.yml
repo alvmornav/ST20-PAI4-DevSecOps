@@ -2,7 +2,7 @@ name: DevSecOps Pipeline ST20
 
 on:
   push:
-    branches: [main, demo/gate]
+    branches: [main]
   pull_request:
     branches: [main]
   workflow_dispatch:

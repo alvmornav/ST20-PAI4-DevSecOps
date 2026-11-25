@@ -1,0 +1,3593 @@
+{
+	"@programName": "ZAP",
+	"@version": "2.17.0",
+	"@generated": "Tue, 24 Nov 2026 08:59:08",
+	"created": "2026-11-24T08:59:08.504114271Z",
+	"insights":[
+		{
+			"level": "Low",
+			"reason": "Warning",
+			"site": "",
+			"key": "insight.log.warn",
+			"description": "ZAP warnings logged - see the zap.log file for details",
+			"statistic": "24"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "http://cdnjs.cloudflare.com",
+			"key": "insight.code.2xx",
+			"description": "Percentage of responses with status code 2xx",
+			"statistic": "72"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "http://cdnjs.cloudflare.com",
+			"key": "insight.code.3xx",
+			"description": "Percentage of responses with status code 3xx",
+			"statistic": "27"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "http://cdnjs.cloudflare.com",
+			"key": "insight.endpoint.ctype.text/html",
+			"description": "Percentage of endpoints with content type text/html",
+			"statistic": "100"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "http://cdnjs.cloudflare.com",
+			"key": "insight.endpoint.method.GET",
+			"description": "Percentage of endpoints with method GET",
+			"statistic": "100"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "http://cdnjs.cloudflare.com",
+			"key": "insight.endpoint.total",
+			"description": "Count of total endpoints",
+			"statistic": "5"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "http://cdnjs.cloudflare.com",
+			"key": "insight.response.slow",
+			"description": "Percentage of slow responses",
+			"statistic": "3"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "http://localhost:3000",
+			"key": "insight.code.1xx",
+			"description": "Percentage of responses with status code 1xx",
+			"statistic": "1"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "http://localhost:3000",
+			"key": "insight.code.2xx",
+			"description": "Percentage of responses with status code 2xx",
+			"statistic": "70"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "http://localhost:3000",
+			"key": "insight.code.3xx",
+			"description": "Percentage of responses with status code 3xx",
+			"statistic": "2"
+		},
+		{
+			"level": "Info",
+			"reason": "Exceeded Low",
+			"site": "http://localhost:3000",
+			"key": "insight.code.4xx",
+			"description": "Percentage of responses with status code 4xx",
+			"statistic": "21"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "http://localhost:3000",
+			"key": "insight.code.5xx",
+			"description": "Percentage of responses with status code 5xx",
+			"statistic": "4"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "http://localhost:3000",
+			"key": "insight.endpoint.ctype.application/javascript",
+			"description": "Percentage of endpoints with content type application/javascript",
+			"statistic": "2"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "http://localhost:3000",
+			"key": "insight.endpoint.ctype.application/json",
+			"description": "Percentage of endpoints with content type application/json",
+			"statistic": "7"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "http://localhost:3000",
+			"key": "insight.endpoint.ctype.application/octet-stream",
+			"description": "Percentage of endpoints with content type application/octet-stream",
+			"statistic": "2"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "http://localhost:3000",
+			"key": "insight.endpoint.ctype.font/woff2",
+			"description": "Percentage of endpoints with content type font/woff2",
+			"statistic": "1"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "http://localhost:3000",
+			"key": "insight.endpoint.ctype.image/jpeg",
+			"description": "Percentage of endpoints with content type image/jpeg",
+			"statistic": "11"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "http://localhost:3000",
+			"key": "insight.endpoint.ctype.image/png",
+			"description": "Percentage of endpoints with content type image/png",
+			"statistic": "3"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "http://localhost:3000",
+			"key": "insight.endpoint.ctype.image/svg+xml",
+			"description": "Percentage of endpoints with content type image/svg+xml",
+			"statistic": "20"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "http://localhost:3000",
+			"key": "insight.endpoint.ctype.image/x-icon",
+			"description": "Percentage of endpoints with content type image/x-icon",
+			"statistic": "1"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "http://localhost:3000",
+			"key": "insight.endpoint.ctype.text/css",
+			"description": "Percentage of endpoints with content type text/css",
+			"statistic": "1"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "http://localhost:3000",
+			"key": "insight.endpoint.ctype.text/html",
+			"description": "Percentage of endpoints with content type text/html",
+			"statistic": "46"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "http://localhost:3000",
+			"key": "insight.endpoint.ctype.text/markdown",
+			"description": "Percentage of endpoints with content type text/markdown",
+			"statistic": "1"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "http://localhost:3000",
+			"key": "insight.endpoint.ctype.text/plain",
+			"description": "Percentage of endpoints with content type text/plain",
+			"statistic": "1"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "http://localhost:3000",
+			"key": "insight.endpoint.method.GET",
+			"description": "Percentage of endpoints with method GET",
+			"statistic": "99"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "http://localhost:3000",
+			"key": "insight.endpoint.method.POST",
+			"description": "Percentage of endpoints with method POST",
+			"statistic": "1"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "http://localhost:3000",
+			"key": "insight.endpoint.total",
+			"description": "Count of total endpoints",
+			"statistic": "205"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "http://localhost:3000",
+			"key": "insight.response.slow",
+			"description": "Percentage of slow responses",
+			"statistic": "1"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://analytics.githubassets.com",
+			"key": "insight.code.2xx",
+			"description": "Percentage of responses with status code 2xx",
+			"statistic": "100"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://analytics.githubassets.com",
+			"key": "insight.response.slow",
+			"description": "Percentage of slow responses",
+			"statistic": "50"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://api.github.com",
+			"key": "insight.code.2xx",
+			"description": "Percentage of responses with status code 2xx",
+			"statistic": "100"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://api.github.com",
+			"key": "insight.endpoint.ctype.text/plain",
+			"description": "Percentage of endpoints with content type text/plain",
+			"statistic": "100"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://api.github.com",
+			"key": "insight.endpoint.method.POST",
+			"description": "Percentage of endpoints with method POST",
+			"statistic": "100"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://api.github.com",
+			"key": "insight.endpoint.total",
+			"description": "Count of total endpoints",
+			"statistic": "1"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://api.github.com",
+			"key": "insight.response.slow",
+			"description": "Percentage of slow responses",
+			"statistic": "100"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://avatars.githubusercontent.com",
+			"key": "insight.code.2xx",
+			"description": "Percentage of responses with status code 2xx",
+			"statistic": "100"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://avatars.githubusercontent.com",
+			"key": "insight.endpoint.ctype.image/jpeg",
+			"description": "Percentage of endpoints with content type image/jpeg",
+			"statistic": "64"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://avatars.githubusercontent.com",
+			"key": "insight.endpoint.ctype.image/png",
+			"description": "Percentage of endpoints with content type image/png",
+			"statistic": "35"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://avatars.githubusercontent.com",
+			"key": "insight.endpoint.method.GET",
+			"description": "Percentage of endpoints with method GET",
+			"statistic": "100"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://avatars.githubusercontent.com",
+			"key": "insight.endpoint.total",
+			"description": "Count of total endpoints",
+			"statistic": "17"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://browser.events.data.microsoft.com",
+			"key": "insight.code.2xx",
+			"description": "Percentage of responses with status code 2xx",
+			"statistic": "100"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://browser.events.data.microsoft.com",
+			"key": "insight.response.slow",
+			"description": "Percentage of slow responses",
+			"statistic": "33"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://camo.githubusercontent.com",
+			"key": "insight.code.2xx",
+			"description": "Percentage of responses with status code 2xx",
+			"statistic": "80"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://camo.githubusercontent.com",
+			"key": "insight.code.4xx",
+			"description": "Percentage of responses with status code 4xx",
+			"statistic": "9"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://camo.githubusercontent.com",
+			"key": "insight.code.5xx",
+			"description": "Percentage of responses with status code 5xx",
+			"statistic": "9"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://camo.githubusercontent.com",
+			"key": "insight.endpoint.ctype.image/svg+xml",
+			"description": "Percentage of endpoints with content type image/svg+xml",
+			"statistic": "75"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://camo.githubusercontent.com",
+			"key": "insight.endpoint.ctype.text/plain",
+			"description": "Percentage of endpoints with content type text/plain",
+			"statistic": "24"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://camo.githubusercontent.com",
+			"key": "insight.endpoint.method.GET",
+			"description": "Percentage of endpoints with method GET",
+			"statistic": "100"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://camo.githubusercontent.com",
+			"key": "insight.endpoint.total",
+			"description": "Count of total endpoints",
+			"statistic": "29"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://camo.githubusercontent.com",
+			"key": "insight.response.slow",
+			"description": "Percentage of slow responses",
+			"statistic": "65"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://cdnjs.cloudflare.com",
+			"key": "insight.code.2xx",
+			"description": "Percentage of responses with status code 2xx",
+			"statistic": "100"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://cdnjs.cloudflare.com",
+			"key": "insight.endpoint.ctype.application/javascript",
+			"description": "Percentage of endpoints with content type application/javascript",
+			"statistic": "66"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://cdnjs.cloudflare.com",
+			"key": "insight.endpoint.ctype.text/css",
+			"description": "Percentage of endpoints with content type text/css",
+			"statistic": "33"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://cdnjs.cloudflare.com",
+			"key": "insight.endpoint.method.GET",
+			"description": "Percentage of endpoints with method GET",
+			"statistic": "100"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://cdnjs.cloudflare.com",
+			"key": "insight.endpoint.total",
+			"description": "Count of total endpoints",
+			"statistic": "3"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://collector.github.com",
+			"key": "insight.code.2xx",
+			"description": "Percentage of responses with status code 2xx",
+			"statistic": "100"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://collector.github.com",
+			"key": "insight.endpoint.method.POST",
+			"description": "Percentage of endpoints with method POST",
+			"statistic": "100"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://collector.github.com",
+			"key": "insight.endpoint.total",
+			"description": "Count of total endpoints",
+			"statistic": "2"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://collector.github.com",
+			"key": "insight.response.slow",
+			"description": "Percentage of slow responses",
+			"statistic": "54"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://collector.githubapp.com",
+			"key": "insight.code.2xx",
+			"description": "Percentage of responses with status code 2xx",
+			"statistic": "100"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://collector.githubapp.com",
+			"key": "insight.response.slow",
+			"description": "Percentage of slow responses",
+			"statistic": "66"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://ghcc.githubassets.com",
+			"key": "insight.code.2xx",
+			"description": "Percentage of responses with status code 2xx",
+			"statistic": "100"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://ghcc.githubassets.com",
+			"key": "insight.response.slow",
+			"description": "Percentage of slow responses",
+			"statistic": "50"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://github.blog",
+			"key": "insight.code.2xx",
+			"description": "Percentage of responses with status code 2xx",
+			"statistic": "100"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://github.blog",
+			"key": "insight.response.slow",
+			"description": "Percentage of slow responses",
+			"statistic": "3"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://github.com",
+			"key": "insight.code.2xx",
+			"description": "Percentage of responses with status code 2xx",
+			"statistic": "92"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://github.com",
+			"key": "insight.code.3xx",
+			"description": "Percentage of responses with status code 3xx",
+			"statistic": "7"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://github.com",
+			"key": "insight.endpoint.ctype.application/json",
+			"description": "Percentage of endpoints with content type application/json",
+			"statistic": "61"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://github.com",
+			"key": "insight.endpoint.ctype.image/png",
+			"description": "Percentage of endpoints with content type image/png",
+			"statistic": "7"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://github.com",
+			"key": "insight.endpoint.ctype.image/svg+xml",
+			"description": "Percentage of endpoints with content type image/svg+xml",
+			"statistic": "15"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://github.com",
+			"key": "insight.endpoint.ctype.text/html",
+			"description": "Percentage of endpoints with content type text/html",
+			"statistic": "15"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://github.com",
+			"key": "insight.endpoint.method.GET",
+			"description": "Percentage of endpoints with method GET",
+			"statistic": "100"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://github.com",
+			"key": "insight.endpoint.total",
+			"description": "Count of total endpoints",
+			"statistic": "13"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://github.com",
+			"key": "insight.response.slow",
+			"description": "Percentage of slow responses",
+			"statistic": "92"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://github.githubassets.com",
+			"key": "insight.code.2xx",
+			"description": "Percentage of responses with status code 2xx",
+			"statistic": "100"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://github.githubassets.com",
+			"key": "insight.endpoint.ctype.application/javascript",
+			"description": "Percentage of endpoints with content type application/javascript",
+			"statistic": "72"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://github.githubassets.com",
+			"key": "insight.endpoint.ctype.image/webp",
+			"description": "Percentage of endpoints with content type image/webp",
+			"statistic": "6"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://github.githubassets.com",
+			"key": "insight.endpoint.ctype.text/css",
+			"description": "Percentage of endpoints with content type text/css",
+			"statistic": "19"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://github.githubassets.com",
+			"key": "insight.endpoint.method.GET",
+			"description": "Percentage of endpoints with method GET",
+			"statistic": "100"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://github.githubassets.com",
+			"key": "insight.endpoint.total",
+			"description": "Count of total endpoints",
+			"statistic": "102"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://js.monitor.azure.com",
+			"key": "insight.code.2xx",
+			"description": "Percentage of responses with status code 2xx",
+			"statistic": "100"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://pixel.wp.com",
+			"key": "insight.code.2xx",
+			"description": "Percentage of responses with status code 2xx",
+			"statistic": "100"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://raw.githubusercontent.com",
+			"key": "insight.code.2xx",
+			"description": "Percentage of responses with status code 2xx",
+			"statistic": "100"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://raw.githubusercontent.com",
+			"key": "insight.endpoint.ctype.image/gif",
+			"description": "Percentage of endpoints with content type image/gif",
+			"statistic": "20"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://raw.githubusercontent.com",
+			"key": "insight.endpoint.ctype.image/jpeg",
+			"description": "Percentage of endpoints with content type image/jpeg",
+			"statistic": "40"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://raw.githubusercontent.com",
+			"key": "insight.endpoint.ctype.image/png",
+			"description": "Percentage of endpoints with content type image/png",
+			"statistic": "40"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://raw.githubusercontent.com",
+			"key": "insight.endpoint.method.GET",
+			"description": "Percentage of endpoints with method GET",
+			"statistic": "100"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://raw.githubusercontent.com",
+			"key": "insight.endpoint.total",
+			"description": "Count of total endpoints",
+			"statistic": "5"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://raw.githubusercontent.com",
+			"key": "insight.response.slow",
+			"description": "Percentage of slow responses",
+			"statistic": "88"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://stats.wp.com",
+			"key": "insight.code.2xx",
+			"description": "Percentage of responses with status code 2xx",
+			"statistic": "100"
+		}
+	],
+	"site":[ 
+		{
+			"@name": "https://api.github.com",
+			"@host": "api.github.com",
+			"@port": "443",
+			"@ssl": "true",
+			"alerts": [ 
+			]
+		},
+		{
+			"@name": "https://collector.github.com",
+			"@host": "collector.github.com",
+			"@port": "443",
+			"@ssl": "true",
+			"alerts": [ 
+			]
+		},
+		{
+			"@name": "https://camo.githubusercontent.com",
+			"@host": "camo.githubusercontent.com",
+			"@port": "443",
+			"@ssl": "true",
+			"alerts": [ 
+			]
+		},
+		{
+			"@name": "https://avatars.githubusercontent.com",
+			"@host": "avatars.githubusercontent.com",
+			"@port": "443",
+			"@ssl": "true",
+			"alerts": [ 
+			]
+		},
+		{
+			"@name": "https://raw.githubusercontent.com",
+			"@host": "raw.githubusercontent.com",
+			"@port": "443",
+			"@ssl": "true",
+			"alerts": [ 
+			]
+		},
+		{
+			"@name": "https://github.githubassets.com",
+			"@host": "github.githubassets.com",
+			"@port": "443",
+			"@ssl": "true",
+			"alerts": [ 
+				{
+					"pluginid": "10036",
+					"alertRef": "10036-2",
+					"alert": "Server Leaks Version Information via \"Server\" HTTP Response Header Field",
+					"name": "Server Leaks Version Information via \"Server\" HTTP Response Header Field",
+					"riskcode": "1",
+					"confidence": "3",
+					"riskdesc": "Low (High)",
+					"desc": "<p>The web/application server is leaking version information via the \"Server\" HTTP response header. Access to such information may facilitate attackers identifying other vulnerabilities your web/application server is subject to.</p>",
+					"instances":[ 
+						{
+							"id": "181",
+							"uri": "https://github.githubassets.com/assets/dark-534def0b30583f22.css",
+							"nodeName": "https:\/\/github.githubassets.com\/assets\/dark-534def0b30583f22.css",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Windows-Azure-Web/1.0 Microsoft-HTTPAPI/2.0",
+							"otherinfo": ""
+						},
+						{
+							"id": "174",
+							"uri": "https://github.githubassets.com/assets/dark_high_contrast-0f67518b61ff9e26.css",
+							"nodeName": "https:\/\/github.githubassets.com\/assets\/dark_high_contrast-0f67518b61ff9e26.css",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Windows-Azure-Web/1.0 Microsoft-HTTPAPI/2.0",
+							"otherinfo": ""
+						},
+						{
+							"id": "177",
+							"uri": "https://github.githubassets.com/assets/light-3ee16b3ea60adc77.css",
+							"nodeName": "https:\/\/github.githubassets.com\/assets\/light-3ee16b3ea60adc77.css",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Windows-Azure-Web/1.0 Microsoft-HTTPAPI/2.0",
+							"otherinfo": ""
+						},
+						{
+							"id": "179",
+							"uri": "https://github.githubassets.com/assets/light_high_contrast-bb77a780db30c175.css",
+							"nodeName": "https:\/\/github.githubassets.com\/assets\/light_high_contrast-bb77a780db30c175.css",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Windows-Azure-Web/1.0 Microsoft-HTTPAPI/2.0",
+							"otherinfo": ""
+						},
+						{
+							"id": "171",
+							"uri": "https://github.githubassets.com/assets/primer-primitives-7b6f781f48ff31c6.css",
+							"nodeName": "https:\/\/github.githubassets.com\/assets\/primer-primitives-7b6f781f48ff31c6.css",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Windows-Azure-Web/1.0 Microsoft-HTTPAPI/2.0",
+							"otherinfo": ""
+						}
+					],
+					"count": "5",
+					"systemic": true,
+					"solution": "<p>Ensure that your web server, application server, load balancer, etc. is configured to suppress the \"Server\" header or provide generic details.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://httpd.apache.org/docs/current/mod/core.html#servertokens</p><p>https://learn.microsoft.com/en-us/previous-versions/msp-n-p/ff648552(v=pandp.10)</p><p>https://www.troyhunt.com/shhh-dont-let-your-response-headers/</p>",
+					"cweid": "497",
+					"wascid": "13",
+					"sourceid": "348"
+				},
+				{
+					"pluginid": "10021",
+					"alertRef": "10021",
+					"alert": "X-Content-Type-Options Header Missing",
+					"name": "X-Content-Type-Options Header Missing",
+					"riskcode": "1",
+					"confidence": "2",
+					"riskdesc": "Low (Medium)",
+					"desc": "<p>The Anti-MIME-Sniffing header X-Content-Type-Options was not set to 'nosniff'. This allows older versions of Internet Explorer and Chrome to perform MIME-sniffing on the response body, potentially causing the response body to be interpreted and displayed as a content type other than the declared content type. Current (early 2014) and legacy versions of Firefox will use the declared content type (if one is set), rather than performing MIME-sniffing.</p>",
+					"instances":[ 
+						{
+							"id": "175",
+							"uri": "https://github.githubassets.com/assets/dark_high_contrast-0f67518b61ff9e26.css",
+							"nodeName": "https:\/\/github.githubassets.com\/assets\/dark_high_contrast-0f67518b61ff9e26.css",
+							"method": "GET",
+							"param": "x-content-type-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
+						},
+						{
+							"id": "182",
+							"uri": "https://github.githubassets.com/assets/light-3ee16b3ea60adc77.css",
+							"nodeName": "https:\/\/github.githubassets.com\/assets\/light-3ee16b3ea60adc77.css",
+							"method": "GET",
+							"param": "x-content-type-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
+						},
+						{
+							"id": "172",
+							"uri": "https://github.githubassets.com/assets/primer-primitives-7b6f781f48ff31c6.css",
+							"nodeName": "https:\/\/github.githubassets.com\/assets\/primer-primitives-7b6f781f48ff31c6.css",
+							"method": "GET",
+							"param": "x-content-type-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
+						}
+					],
+					"count": "3",
+					"systemic": false,
+					"solution": "<p>Ensure that the application/web server sets the Content-Type header appropriately, and that it sets the X-Content-Type-Options header to 'nosniff' for all web pages.</p><p>If possible, ensure that the end user uses a standards-compliant and modern web browser that does not perform MIME-sniffing at all, or that can be directed by the web application/web server to not perform MIME-sniffing.</p>",
+					"otherinfo": "<p>This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.</p><p>At \"High\" threshold this scan rule will not alert on client or server error responses.</p>",
+					"reference": "<p>https://learn.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/compatibility/gg622941(v=vs.85)</p><p>https://owasp.org/www-community/Security_Headers</p>",
+					"cweid": "693",
+					"wascid": "15",
+					"sourceid": "346"
+				},
+				{
+					"pluginid": "10027",
+					"alertRef": "10027",
+					"alert": "Information Disclosure - Suspicious Comments",
+					"name": "Information Disclosure - Suspicious Comments",
+					"riskcode": "0",
+					"confidence": "2",
+					"riskdesc": "Informational (Medium)",
+					"desc": "<p>The response appears to contain suspicious comments which may help an attacker.</p>",
+					"instances":[ 
+						{
+							"id": "292",
+							"uri": "https://github.githubassets.com/assets/chunk-lazy-element-select-panel-8863c8433aa44837.js",
+							"nodeName": "https:\/\/github.githubassets.com\/assets\/chunk-lazy-element-select-panel-8863c8433aa44837.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "=chunk-lazy-element-select-panel-8863c8433aa44",
+							"otherinfo": "The following pattern was used: \\bSELECT\\b and was detected in likely comment: \"//# sourceMappingURL=chunk-lazy-element-select-panel-8863c8433aa44837-2b47a58131c4e59c.js.map\", see evidence field for the suspicious comment/snippet."
+						}
+					],
+					"count": "1",
+					"systemic": false,
+					"solution": "<p>Remove all comments that return information that may help an attacker and fix any underlying problems they refer to.</p>",
+					"otherinfo": "<p>The following pattern was used: \\bSELECT\\b and was detected in likely comment: \"//# sourceMappingURL=chunk-lazy-element-select-panel-8863c8433aa44837-2b47a58131c4e59c.js.map\", see evidence field for the suspicious comment/snippet.</p>",
+					"reference": "",
+					"cweid": "615",
+					"wascid": "13",
+					"sourceid": "463"
+				},
+				{
+					"pluginid": "10050",
+					"alertRef": "10050-1",
+					"alert": "Retrieved from Cache",
+					"name": "Retrieved from Cache",
+					"riskcode": "0",
+					"confidence": "2",
+					"riskdesc": "Informational (Medium)",
+					"desc": "<p>The content was retrieved from a shared cache. If the response data is sensitive, personal or user-specific, this may result in sensitive information being leaked. In some cases, this may even result in a user gaining complete control of the session of another user, depending on the configuration of the caching components in use in their environment. This is primarily an issue where caching servers such as \"proxy\" caches are configured on the local network. This configuration is typically found in corporate or educational environments, for instance.</p>",
+					"instances":[ 
+						{
+							"id": "180",
+							"uri": "https://github.githubassets.com/assets/dark-534def0b30583f22.css",
+							"nodeName": "https:\/\/github.githubassets.com\/assets\/dark-534def0b30583f22.css",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "HIT",
+							"otherinfo": ""
+						},
+						{
+							"id": "173",
+							"uri": "https://github.githubassets.com/assets/dark_high_contrast-0f67518b61ff9e26.css",
+							"nodeName": "https:\/\/github.githubassets.com\/assets\/dark_high_contrast-0f67518b61ff9e26.css",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "HIT",
+							"otherinfo": ""
+						},
+						{
+							"id": "176",
+							"uri": "https://github.githubassets.com/assets/light-3ee16b3ea60adc77.css",
+							"nodeName": "https:\/\/github.githubassets.com\/assets\/light-3ee16b3ea60adc77.css",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "HIT",
+							"otherinfo": ""
+						},
+						{
+							"id": "178",
+							"uri": "https://github.githubassets.com/assets/light_high_contrast-bb77a780db30c175.css",
+							"nodeName": "https:\/\/github.githubassets.com\/assets\/light_high_contrast-bb77a780db30c175.css",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "HIT",
+							"otherinfo": ""
+						},
+						{
+							"id": "170",
+							"uri": "https://github.githubassets.com/assets/primer-primitives-7b6f781f48ff31c6.css",
+							"nodeName": "https:\/\/github.githubassets.com\/assets\/primer-primitives-7b6f781f48ff31c6.css",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "HIT",
+							"otherinfo": ""
+						}
+					],
+					"count": "5",
+					"systemic": true,
+					"solution": "<p>Validate that the response does not contain sensitive, personal or user-specific information. If it does, consider the use of the following HTTP response headers, to limit, or prevent the content being stored and retrieved from the cache by another user:</p><p>Cache-Control: no-cache, no-store, must-revalidate, private</p><p>Pragma: no-cache</p><p>Expires: 0</p><p>This configuration directs both HTTP 1.0 and HTTP 1.1 compliant caching servers to not store the response, and to not retrieve the response (without validation) from the cache, in response to a similar request.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://datatracker.ietf.org/doc/html/rfc7234</p><p>https://datatracker.ietf.org/doc/html/rfc7231</p><p>https://www.rfc-editor.org/rfc/rfc9110.html</p>",
+					"cweid": "525",
+					"wascid": "-1",
+					"sourceid": "348"
+				}
+			]
+		},
+		{
+			"@name": "https://github.com",
+			"@host": "github.com",
+			"@port": "443",
+			"@ssl": "true",
+			"alerts": [ 
+				{
+					"pluginid": "10055",
+					"alertRef": "10055-6",
+					"alert": "CSP: style-src unsafe-inline",
+					"name": "CSP: style-src unsafe-inline",
+					"riskcode": "2",
+					"confidence": "3",
+					"riskdesc": "Medium (High)",
+					"desc": "<p>Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks. Including (but not limited to) Cross Site Scripting (XSS), and data injection attacks. These attacks are used for everything from data theft to site defacement or distribution of malware. CSP provides a set of standard HTTP headers that allow website owners to declare approved sources of content that browsers should be allowed to load on that page \u2014 covered types are JavaScript, CSS, HTML frames, fonts, images and embeddable objects such as Java applets, ActiveX, audio and video files.</p>",
+					"instances":[ 
+						{
+							"id": "188",
+							"uri": "https://github.com/juice-shop/juice-shop",
+							"nodeName": "https:\/\/github.com\/juice-shop\/juice-shop",
+							"method": "GET",
+							"param": "Content-Security-Policy",
+							"attack": "",
+							"evidence": "default-src 'none'; base-uri 'self'; child-src github.githubassets.com github.com/assets-cdn/worker/ github.com/assets/ gist.github.com/assets-cdn/worker/; connect-src 'self' uploads.github.com www.githubstatus.com collector.github.com raw.githubusercontent.com api.github.com github-cloud.s3.amazonaws.com github-production-repository-file-5c1aeb.s3.amazonaws.com github-production-upload-manifest-file-7fdce7.s3.amazonaws.com github-production-user-asset-6210df.s3.amazonaws.com *.rel.tunnels.api.visualstudio.com wss://*.rel.tunnels.api.visualstudio.com github.githubassets.com objects-origin.githubusercontent.com copilot-proxy.githubusercontent.com proxy.individual.githubcopilot.com proxy.business.githubcopilot.com proxy.enterprise.githubcopilot.com *.actions.githubusercontent.com wss://*.actions.githubusercontent.com productionresultssa0.blob.core.windows.net productionresultssa1.blob.core.windows.net productionresultssa2.blob.core.windows.net productionresultssa3.blob.core.windows.net productionresultssa4.blob.core.windows.net productionresultssa5.blob.core.windows.net productionresultssa6.blob.core.windows.net productionresultssa7.blob.core.windows.net productionresultssa8.blob.core.windows.net productionresultssa9.blob.core.windows.net productionresultssa10.blob.core.windows.net productionresultssa11.blob.core.windows.net productionresultssa12.blob.core.windows.net productionresultssa13.blob.core.windows.net productionresultssa14.blob.core.windows.net productionresultssa15.blob.core.windows.net productionresultssa16.blob.core.windows.net productionresultssa17.blob.core.windows.net productionresultssa18.blob.core.windows.net productionresultssa19.blob.core.windows.net productionresultssa30.blob.core.windows.net productionresultssa31.blob.core.windows.net productionresultssa32.blob.core.windows.net github-production-repository-image-32fea6.s3.amazonaws.com github-production-release-asset-2e65be.s3.amazonaws.com insights.github.com wss://alive.github.com wss://alive-staging.github.com api.githubcopilot.com api.individual.githubcopilot.com api.business.githubcopilot.com api.enterprise.githubcopilot.com wss://*.wps.githubcopilot.com wss://production-copilot-host.webpubsub.azure.com wss://production-copilot-host-centralus.webpubsub.azure.com wss://production-copilot-host-centralus-02.webpubsub.azure.com wss://production-copilot-host-westus.webpubsub.azure.com wss://production-copilot-host-westus3.webpubsub.azure.com wss://production-copilot-host-eastasia.webpubsub.azure.com wss://production-copilot-host-austriaeast.webpubsub.azure.com api.github.com/cmc_internal/api/; font-src github.githubassets.com; form-action 'self' github.com gist.github.com copilot-workspace.githubnext.com objects-origin.githubusercontent.com; frame-ancestors 'none'; frame-src viewscreen.githubusercontent.com notebooks.githubusercontent.com; img-src 'self' data: blob: github.githubassets.com media.githubusercontent.com camo.githubusercontent.com identicons.github.com avatars.githubusercontent.com private-avatars.githubusercontent.com github-cloud.s3.amazonaws.com objects.githubusercontent.com release-assets.githubusercontent.com secured-user-images.githubusercontent.com user-images.githubusercontent.com private-user-images.githubusercontent.com opengraph.githubassets.com repository-images.githubusercontent.com marketplace-screenshots.githubusercontent.com copilotprodattachments.blob.core.windows.net/github-production-copilot-attachments/ github-production-user-asset-6210df.s3.amazonaws.com customer-stories-feed.github.com spotlights-feed.github.com explore-feed.github.com *.googleusercontent.com objects-origin.githubusercontent.com *.githubusercontent.com; manifest-src 'self'; media-src github.com user-images.githubusercontent.com secured-user-images.githubusercontent.com private-user-images.githubusercontent.com github-production-user-asset-6210df.s3.amazonaws.com gist.github.com github.githubassets.com; script-src github.githubassets.com 'sha256-6nkh0w49y4npXaU0CPIq0z+XDtPnpaDFECgj6Y9vmx4='; style-src 'unsafe-inline' github.githubassets.com; upgrade-insecure-requests; worker-src github.githubassets.com github.com/assets-cdn/worker/ github.com/assets/ gist.github.com/assets-cdn/worker/",
+							"otherinfo": "style-src includes unsafe-inline."
+						},
+						{
+							"id": "290",
+							"uri": "https://github.com/juice-shop/juice-shop/raw/master/screenshots/slideshow.gif",
+							"nodeName": "https:\/\/github.com\/juice-shop\/juice-shop\/raw\/master\/screenshots\/slideshow.gif",
+							"method": "GET",
+							"param": "Content-Security-Policy",
+							"attack": "",
+							"evidence": "default-src 'none'; base-uri 'self'; child-src github.githubassets.com github.com/assets-cdn/worker/ github.com/assets/ gist.github.com/assets-cdn/worker/; connect-src 'self' uploads.github.com www.githubstatus.com collector.github.com raw.githubusercontent.com api.github.com github-cloud.s3.amazonaws.com github-production-repository-file-5c1aeb.s3.amazonaws.com github-production-upload-manifest-file-7fdce7.s3.amazonaws.com github-production-user-asset-6210df.s3.amazonaws.com *.rel.tunnels.api.visualstudio.com wss://*.rel.tunnels.api.visualstudio.com github.githubassets.com objects-origin.githubusercontent.com copilot-proxy.githubusercontent.com proxy.individual.githubcopilot.com proxy.business.githubcopilot.com proxy.enterprise.githubcopilot.com *.actions.githubusercontent.com wss://*.actions.githubusercontent.com productionresultssa0.blob.core.windows.net productionresultssa1.blob.core.windows.net productionresultssa2.blob.core.windows.net productionresultssa3.blob.core.windows.net productionresultssa4.blob.core.windows.net productionresultssa5.blob.core.windows.net productionresultssa6.blob.core.windows.net productionresultssa7.blob.core.windows.net productionresultssa8.blob.core.windows.net productionresultssa9.blob.core.windows.net productionresultssa10.blob.core.windows.net productionresultssa11.blob.core.windows.net productionresultssa12.blob.core.windows.net productionresultssa13.blob.core.windows.net productionresultssa14.blob.core.windows.net productionresultssa15.blob.core.windows.net productionresultssa16.blob.core.windows.net productionresultssa17.blob.core.windows.net productionresultssa18.blob.core.windows.net productionresultssa19.blob.core.windows.net productionresultssa30.blob.core.windows.net productionresultssa31.blob.core.windows.net productionresultssa32.blob.core.windows.net github-production-repository-image-32fea6.s3.amazonaws.com github-production-release-asset-2e65be.s3.amazonaws.com insights.github.com wss://alive.github.com wss://alive-staging.github.com api.githubcopilot.com api.individual.githubcopilot.com api.business.githubcopilot.com api.enterprise.githubcopilot.com wss://*.wps.githubcopilot.com wss://production-copilot-host.webpubsub.azure.com wss://production-copilot-host-centralus.webpubsub.azure.com wss://production-copilot-host-centralus-02.webpubsub.azure.com wss://production-copilot-host-westus.webpubsub.azure.com wss://production-copilot-host-westus3.webpubsub.azure.com wss://production-copilot-host-eastasia.webpubsub.azure.com wss://production-copilot-host-austriaeast.webpubsub.azure.com api.github.com/cmc_internal/api/; font-src github.githubassets.com; form-action 'self' github.com gist.github.com copilot-workspace.githubnext.com objects-origin.githubusercontent.com; frame-ancestors 'none'; frame-src viewscreen.githubusercontent.com notebooks.githubusercontent.com; img-src 'self' data: blob: github.githubassets.com media.githubusercontent.com camo.githubusercontent.com identicons.github.com avatars.githubusercontent.com private-avatars.githubusercontent.com github-cloud.s3.amazonaws.com objects.githubusercontent.com release-assets.githubusercontent.com secured-user-images.githubusercontent.com user-images.githubusercontent.com private-user-images.githubusercontent.com opengraph.githubassets.com repository-images.githubusercontent.com marketplace-screenshots.githubusercontent.com copilotprodattachments.blob.core.windows.net/github-production-copilot-attachments/ github-production-user-asset-6210df.s3.amazonaws.com customer-stories-feed.github.com spotlights-feed.github.com explore-feed.github.com *.googleusercontent.com objects-origin.githubusercontent.com *.githubusercontent.com; manifest-src 'self'; media-src github.com user-images.githubusercontent.com secured-user-images.githubusercontent.com private-user-images.githubusercontent.com github-production-user-asset-6210df.s3.amazonaws.com gist.github.com github.githubassets.com; script-src github.githubassets.com; style-src 'unsafe-inline' github.githubassets.com; upgrade-insecure-requests; worker-src github.githubassets.com github.com/assets-cdn/worker/ github.com/assets/ gist.github.com/assets-cdn/worker/",
+							"otherinfo": "style-src includes unsafe-inline."
+						}
+					],
+					"count": "2",
+					"systemic": false,
+					"solution": "<p>Ensure that your web server, application server, load balancer, etc. is properly configured to set the Content-Security-Policy header.</p>",
+					"otherinfo": "<p>style-src includes unsafe-inline.</p>",
+					"reference": "<p>https://www.w3.org/TR/CSP/</p><p>https://caniuse.com/#search=content+security+policy</p><p>https://content-security-policy.com/</p><p>https://github.com/HtmlUnit/htmlunit-csp</p><p>https://web.dev/articles/csp#resource-options</p>",
+					"cweid": "693",
+					"wascid": "15",
+					"sourceid": "340"
+				},
+				{
+					"pluginid": "90003",
+					"alertRef": "90003",
+					"alert": "Sub Resource Integrity Attribute Missing",
+					"name": "Sub Resource Integrity Attribute Missing",
+					"riskcode": "2",
+					"confidence": "3",
+					"riskdesc": "Medium (High)",
+					"desc": "<p>The integrity attribute is missing on a script or link tag served by an external server. The integrity tag prevents an attacker who have gained access to this server from injecting a malicious content.</p>",
+					"instances":[ 
+						{
+							"id": "197",
+							"uri": "https://github.com/juice-shop/juice-shop",
+							"nodeName": "https:\/\/github.com\/juice-shop\/juice-shop",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<link crossorigin=\"anonymous\" rel=\"modulepreload\" href=\"https://github.githubassets.com/assets/react-compiler-runtime-4610bd6d3de9c049.js\" />",
+							"otherinfo": ""
+						},
+						{
+							"id": "199",
+							"uri": "https://github.com/juice-shop/juice-shop",
+							"nodeName": "https:\/\/github.com\/juice-shop\/juice-shop",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<link crossorigin=\"anonymous\" rel=\"modulepreload\" href=\"https://github.githubassets.com/assets/react-dom-c7f52540bb6b77ed.js\" />",
+							"otherinfo": ""
+						},
+						{
+							"id": "200",
+							"uri": "https://github.com/juice-shop/juice-shop",
+							"nodeName": "https:\/\/github.com\/juice-shop\/juice-shop",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<link crossorigin=\"anonymous\" rel=\"modulepreload\" href=\"https://github.githubassets.com/assets/react-dom-client-35b308126995de85.js\" />",
+							"otherinfo": ""
+						},
+						{
+							"id": "196",
+							"uri": "https://github.com/juice-shop/juice-shop",
+							"nodeName": "https:\/\/github.com\/juice-shop\/juice-shop",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<link crossorigin=\"anonymous\" rel=\"modulepreload\" href=\"https://github.githubassets.com/assets/react-fa5e2e82e6e0ecc0.js\" />",
+							"otherinfo": ""
+						},
+						{
+							"id": "198",
+							"uri": "https://github.com/juice-shop/juice-shop",
+							"nodeName": "https:\/\/github.com\/juice-shop\/juice-shop",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<link crossorigin=\"anonymous\" rel=\"modulepreload\" href=\"https://github.githubassets.com/assets/scheduler-58b860b049ca307c.js\" />",
+							"otherinfo": ""
+						}
+					],
+					"count": "5",
+					"systemic": true,
+					"solution": "<p>Provide a valid integrity attribute to the tag.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/Security/Defenses/Subresource_Integrity</p>",
+					"cweid": "345",
+					"wascid": "15",
+					"sourceid": "340"
+				},
+				{
+					"pluginid": "10010",
+					"alertRef": "10010",
+					"alert": "Cookie No HttpOnly Flag",
+					"name": "Cookie No HttpOnly Flag",
+					"riskcode": "1",
+					"confidence": "2",
+					"riskdesc": "Low (Medium)",
+					"desc": "<p>A cookie has been set without the HttpOnly flag, which means that the cookie can be accessed by JavaScript. If a malicious script can be run on this page then the cookie will be accessible and can be transmitted to another site. If this is a session cookie then session hijacking may be possible.</p>",
+					"instances":[ 
+						{
+							"id": "189",
+							"uri": "https://github.com/juice-shop/juice-shop",
+							"nodeName": "https:\/\/github.com\/juice-shop\/juice-shop",
+							"method": "GET",
+							"param": "_octo",
+							"attack": "",
+							"evidence": "Set-Cookie: _octo",
+							"otherinfo": ""
+						}
+					],
+					"count": "1",
+					"systemic": false,
+					"solution": "<p>Ensure that the HttpOnly flag is set for all cookies.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://owasp.org/www-community/HttpOnly</p>",
+					"cweid": "1004",
+					"wascid": "13",
+					"sourceid": "340"
+				},
+				{
+					"pluginid": "2",
+					"alertRef": "2",
+					"alert": "Private IP Disclosure",
+					"name": "Private IP Disclosure",
+					"riskcode": "1",
+					"confidence": "2",
+					"riskdesc": "Low (Medium)",
+					"desc": "<p>A private IP (such as 10.x.x.x, 172.x.x.x, 192.168.x.x) or an Amazon EC2 private hostname (for example, ip-10-0-56-78) has been found in the HTTP response body. This information might be helpful for further attacks targeting internal systems.</p>",
+					"instances":[ 
+						{
+							"id": "193",
+							"uri": "https://github.com/juice-shop/juice-shop",
+							"nodeName": "https:\/\/github.com\/juice-shop\/juice-shop",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "192.168.99.100:3000",
+							"otherinfo": "192.168.99.100:3000\n192.168.99.100:3000\n192.168.56.110\n192.168.99.100:3000\n192.168.99.100:3000\n192.168.56.110\n192.168.56.110\n"
+						},
+						{
+							"id": "300",
+							"uri": "https://github.com/juice-shop/juice-shop/overview-files/master",
+							"nodeName": "https:\/\/github.com\/juice-shop\/juice-shop\/overview-files\/master",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "192.168.99.100:3000",
+							"otherinfo": "192.168.99.100:3000\n192.168.99.100:3000\n192.168.56.110\n192.168.56.110\n"
+						}
+					],
+					"count": "2",
+					"systemic": false,
+					"solution": "<p>Remove the private IP address from the HTTP response body. For comments, use JSP/ASP/PHP comment instead of HTML/JavaScript comment which can be seen by client browsers.</p>",
+					"otherinfo": "<p>192.168.99.100:3000</p><p>192.168.99.100:3000</p><p>192.168.56.110</p><p>192.168.99.100:3000</p><p>192.168.99.100:3000</p><p>192.168.56.110</p><p>192.168.56.110</p><p></p>",
+					"reference": "<p>https://datatracker.ietf.org/doc/html/rfc1918</p>",
+					"cweid": "497",
+					"wascid": "13",
+					"sourceid": "340"
+				},
+				{
+					"pluginid": "120000",
+					"alertRef": "120000-1",
+					"alert": "Information Disclosure - Information in Browser localStorage",
+					"name": "Information Disclosure - Information in Browser localStorage",
+					"riskcode": "0",
+					"confidence": "3",
+					"riskdesc": "Informational (High)",
+					"desc": "<p>Information was stored in browser localStorage.</p><p>This is not unusual or necessarily unsafe - this informational alert has been raised to help you get a better understanding of what this app is doing. For more details see the Client tabs - this information was set directly in the browser and will therefore not necessarily appear in this form in any HTTP(S) messages.</p>",
+					"instances":[ 
+						{
+							"id": "286",
+							"uri": "https://github.com/juice-shop/juice-shop",
+							"nodeName": "https:\/\/github.com\/juice-shop\/juice-shop",
+							"method": "GET",
+							"param": "offline_cache_last_cleanup::offline_cache_v2::undefined::queries",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "The following data (key=value) was set: offline_cache_last_cleanup::offline_cache_v2::undefined::queries=1795508171206\nNote that this alert will only be raised once for each URL + key."
+						},
+						{
+							"id": "288",
+							"uri": "https://github.com/juice-shop/juice-shop",
+							"nodeName": "https:\/\/github.com\/juice-shop\/juice-shop",
+							"method": "GET",
+							"param": "offline_cache_schema_first_seen::offline_cache_v2::",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "The following data (key=value) was set: offline_cache_schema_first_seen::offline_cache_v2::=1795508171156\nNote that this alert will only be raised once for each URL + key."
+						},
+						{
+							"id": "287",
+							"uri": "https://github.com/juice-shop/juice-shop",
+							"nodeName": "https:\/\/github.com\/juice-shop\/juice-shop",
+							"method": "GET",
+							"param": "ref-selector:juice-shop/juice-shop:branch",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "The following data (key=value) was set: ref-selector:juice-shop/juice-shop:branch={\"refs\":[\"master\",\"chore/dependency-cleanup\",\"copilot/fix-api-test-macos-latest\",\"copilot/review-pr-3701\",\"create-pull-request/patch\",\"develop\",\"feat/package-json-merge\",\"feature/passkey-webauthn\",\"gh-pages\",\"l10n_develop\",\"m2-theme/neon-cyberpunk\",\"mixed-stuff\"],\"cacheKey\":\"v0:1795359121.0\"}\nNote that this alert will only be raised once for each URL + key."
+						}
+					],
+					"count": "3",
+					"systemic": false,
+					"solution": "<p>This is an informational alert and no action is necessary. </p>",
+					"otherinfo": "<p>The following data (key=value) was set: offline_cache_last_cleanup::offline_cache_v2::undefined::queries=1795508171206</p><p>Note that this alert will only be raised once for each URL + key.</p>",
+					"reference": "",
+					"cweid": "359",
+					"wascid": "13",
+					"sourceid": "579"
+				},
+				{
+					"pluginid": "120000",
+					"alertRef": "120000-2",
+					"alert": "Information Disclosure - Information in Browser sessionStorage",
+					"name": "Information Disclosure - Information in Browser sessionStorage",
+					"riskcode": "0",
+					"confidence": "3",
+					"riskdesc": "Informational (High)",
+					"desc": "<p>Information was stored in browser sessionStorage.</p><p>This is not unusual or necessarily unsafe - this informational alert has been raised to help you get a better understanding of what this app is doing. For more details see the Client tabs - this information was set directly in the browser and will therefore not necessarily appear in this form in any HTTP(S) messages.</p>",
+					"instances":[ 
+						{
+							"id": "289",
+							"uri": "https://github.com/juice-shop/juice-shop",
+							"nodeName": "https:\/\/github.com\/juice-shop\/juice-shop",
+							"method": "GET",
+							"param": "soft-nav:marker",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "The following data (key=value) was set: soft-nav:marker=0\nNote that this alert will only be raised once for each URL + key."
+						}
+					],
+					"count": "1",
+					"systemic": false,
+					"solution": "<p>This is an informational alert and no action is necessary. </p>",
+					"otherinfo": "<p>The following data (key=value) was set: soft-nav:marker=0</p><p>Note that this alert will only be raised once for each URL + key.</p>",
+					"reference": "",
+					"cweid": "359",
+					"wascid": "13",
+					"sourceid": "586"
+				},
+				{
+					"pluginid": "10015",
+					"alertRef": "10015",
+					"alert": "Re-examine Cache-control Directives",
+					"name": "Re-examine Cache-control Directives",
+					"riskcode": "0",
+					"confidence": "1",
+					"riskdesc": "Informational (Low)",
+					"desc": "<p>The cache-control header has not been set properly or is missing, allowing the browser and proxies to cache content. For static assets like css, js, or image files this might be intended, however, the resources should be reviewed to ensure that no sensitive content will be cached.</p>",
+					"instances":[ 
+						{
+							"id": "183",
+							"uri": "https://github.com/juice-shop/juice-shop",
+							"nodeName": "https:\/\/github.com\/juice-shop\/juice-shop",
+							"method": "GET",
+							"param": "cache-control",
+							"attack": "",
+							"evidence": "max-age=0, private, must-revalidate",
+							"otherinfo": ""
+						},
+						{
+							"id": "293",
+							"uri": "https://github.com/juice-shop/juice-shop/branch-and-tag-count",
+							"nodeName": "https:\/\/github.com\/juice-shop\/juice-shop\/branch-and-tag-count",
+							"method": "GET",
+							"param": "cache-control",
+							"attack": "",
+							"evidence": "max-age=0, private, must-revalidate",
+							"otherinfo": ""
+						},
+						{
+							"id": "294",
+							"uri": "https://github.com/juice-shop/juice-shop/latest-commit",
+							"nodeName": "https:\/\/github.com\/juice-shop\/juice-shop\/latest-commit",
+							"method": "GET",
+							"param": "cache-control",
+							"attack": "",
+							"evidence": "max-age=0, private, must-revalidate",
+							"otherinfo": ""
+						},
+						{
+							"id": "291",
+							"uri": "https://github.com/juice-shop/juice-shop/recently-touched-branches",
+							"nodeName": "https:\/\/github.com\/juice-shop\/juice-shop\/recently-touched-branches",
+							"method": "GET",
+							"param": "cache-control",
+							"attack": "",
+							"evidence": "max-age=0, private, must-revalidate",
+							"otherinfo": ""
+						},
+						{
+							"id": "295",
+							"uri": "https://github.com/juice-shop/juice-shop/refs?type=branch",
+							"nodeName": "https:\/\/github.com\/juice-shop\/juice-shop\/refs (type)",
+							"method": "GET",
+							"param": "cache-control",
+							"attack": "",
+							"evidence": "max-age=0, private, must-revalidate",
+							"otherinfo": ""
+						}
+					],
+					"count": "5",
+					"systemic": true,
+					"solution": "<p>For secure content, ensure the cache-control HTTP header is set with \"no-cache, no-store, must-revalidate\". If an asset should be cached consider setting the directives \"public, max-age, immutable\".</p>",
+					"otherinfo": "",
+					"reference": "<p>https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html#web-content-caching</p><p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Cache-Control</p><p>https://grayduck.mn/2021/09/13/cache-control-recommendations/</p>",
+					"cweid": "525",
+					"wascid": "13",
+					"sourceid": "340"
+				}
+			]
+		},
+		{
+			"@name": "https://cdnjs.cloudflare.com",
+			"@host": "cdnjs.cloudflare.com",
+			"@port": "443",
+			"@ssl": "true",
+			"alerts": [ 
+				{
+					"pluginid": "10003",
+					"alertRef": "10003",
+					"alert": "Vulnerable JS Library",
+					"name": "Vulnerable JS Library",
+					"riskcode": "2",
+					"confidence": "2",
+					"riskdesc": "Medium (Medium)",
+					"desc": "<p>The identified library appears to be vulnerable.</p>",
+					"instances":[ 
+						{
+							"id": "131",
+							"uri": "https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js",
+							"nodeName": "https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/jquery\/2.2.4\/jquery.min.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "/2.2.4/jquery.min.js",
+							"otherinfo": "The identified library jquery, version 2.2.4 is vulnerable.\nCVE-2020-11023\nCVE-2020-11022\nCVE-2015-9251\nCVE-2019-11358\nhttps://github.com/jquery/jquery/issues/2432\nhttp://blog.jquery.com/2016/01/08/jquery-2-2-and-1-12-released/\nhttp://research.insecurelabs.org/jquery/test/\nhttps://blog.jquery.com/2019/04/10/jquery-3-4-0-released/\nhttps://nvd.nist.gov/vuln/detail/CVE-2019-11358\nhttps://github.com/advisories/GHSA-rmxg-73gg-4p98\nhttps://nvd.nist.gov/vuln/detail/CVE-2015-9251\nhttps://github.com/jquery/jquery/commit/753d591aea698e57d6db58c9f722cd0808619b1b\nhttps://github.com/jquery/jquery.com/issues/162\nhttps://bugs.jquery.com/ticket/11974\nhttps://blog.jquery.com/2020/04/10/jquery-3-5-0-released/\n"
+						}
+					],
+					"count": "1",
+					"systemic": false,
+					"solution": "<p>Upgrade to the latest version of the affected library.</p>",
+					"otherinfo": "<p>The identified library jquery, version 2.2.4 is vulnerable.</p><p>CVE-2020-11023</p><p>CVE-2020-11022</p><p>CVE-2015-9251</p><p>CVE-2019-11358</p><p>https://github.com/jquery/jquery/issues/2432</p><p>http://blog.jquery.com/2016/01/08/jquery-2-2-and-1-12-released/</p><p>http://research.insecurelabs.org/jquery/test/</p><p>https://blog.jquery.com/2019/04/10/jquery-3-4-0-released/</p><p>https://nvd.nist.gov/vuln/detail/CVE-2019-11358</p><p>https://github.com/advisories/GHSA-rmxg-73gg-4p98</p><p>https://nvd.nist.gov/vuln/detail/CVE-2015-9251</p><p>https://github.com/jquery/jquery/commit/753d591aea698e57d6db58c9f722cd0808619b1b</p><p>https://github.com/jquery/jquery.com/issues/162</p><p>https://bugs.jquery.com/ticket/11974</p><p>https://blog.jquery.com/2020/04/10/jquery-3-5-0-released/</p><p></p>",
+					"reference": "<p>https://owasp.org/Top10/2021/A06_2021-Vulnerable_and_Outdated_Components/</p>",
+					"cweid": "1395",
+					"wascid": "-1",
+					"sourceid": "197"
+				},
+				{
+					"pluginid": "10094",
+					"alertRef": "10094-3",
+					"alert": "Base64 Disclosure",
+					"name": "Base64 Disclosure",
+					"riskcode": "0",
+					"confidence": "2",
+					"riskdesc": "Informational (Medium)",
+					"desc": "<p>Base64 encoded data was disclosed by the application/web server. Note: in the interests of performance not all base64 strings in the response were analyzed individually, the entire response should be looked at by the analyst/security team/developer(s).</p>",
+					"instances":[ 
+						{
+							"id": "114",
+							"uri": "https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css",
+							"nodeName": "https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/cookieconsent2\/3.1.0\/cookieconsent.min.css",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "2B9z9EbbLeXA8K5PTImlVlf4X5f3jI7wzxPqvFW5tB8ItNIejmlmfTS2UnIamsIxpbldie8sboO4iHa",
+							"otherinfo": "\uFFFD\\x001fs\uFFFDF\uFFFD-\uFFFD\uFFFD\uFFFDOL\uFFFD\uFFFDVW\uFFFD_\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\\x0013\uFFFDU\uFFFD\uFFFD\\x001f\\x0008\uFFFD\uFFFD\\x001e\uFFFDif}4\uFFFDRr\\x001a\uFFFD\uFFFD1\uFFFD\uFFFD]\uFFFD\uFFFD,n\uFFFD\uFFFD\uFFFDv"
+						},
+						{
+							"id": "116",
+							"uri": "https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js",
+							"nodeName": "https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/cookieconsent2\/3.1.0\/cookieconsent.min.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "2BuOi5p4TjbGZgjo2fsurDKMOrpDtBIJdCKx2t87kGwY",
+							"otherinfo": "\uFFFD\\x001b\uFFFD\uFFFD\uFFFDxN6\uFFFDf\\x0008\uFFFD\uFFFD\uFFFD.\uFFFD2\uFFFD:\uFFFDC\uFFFD\\x0012\tt\"\uFFFD\uFFFD\uFFFD;\uFFFDl\\x0018"
+						},
+						{
+							"id": "133",
+							"uri": "https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js",
+							"nodeName": "https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/jquery\/2.2.4\/jquery.min.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "FmdcN5QLYuoTBTeqXXyFI9HvmhDikpCHvb1M",
+							"otherinfo": "\\x0016g\\7\uFFFD\\x000bb\uFFFD\\x0013\\x00057\uFFFD]|\uFFFD#\uFFFD\uFFFD\\x0010\u2490\uFFFD\uFFFD\uFFFDL"
+						}
+					],
+					"count": "3",
+					"systemic": false,
+					"solution": "<p>Manually confirm that the Base64 data does not leak sensitive information, and that the data cannot be aggregated/used to exploit other vulnerabilities.</p>",
+					"otherinfo": "<p>\uFFFD\\x001fs\uFFFDF\uFFFD-\uFFFD\uFFFD\uFFFDOL\uFFFD\uFFFDVW\uFFFD_\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\\x0013\uFFFDU\uFFFD\uFFFD\\x001f\\x0008\uFFFD\uFFFD\\x001e\uFFFDif}4\uFFFDRr\\x001a\uFFFD\uFFFD1\uFFFD\uFFFD]\uFFFD\uFFFD,n\uFFFD\uFFFD\uFFFDv</p>",
+					"reference": "<p>https://projects.webappsec.org/w/page/13246936/Information%20Leakage</p>",
+					"cweid": "319",
+					"wascid": "13",
+					"sourceid": "190"
+				},
+				{
+					"pluginid": "10050",
+					"alertRef": "10050-2",
+					"alert": "Retrieved from Cache",
+					"name": "Retrieved from Cache",
+					"riskcode": "0",
+					"confidence": "2",
+					"riskdesc": "Informational (Medium)",
+					"desc": "<p>The content was retrieved from a shared cache. If the response data is sensitive, personal or user-specific, this may result in sensitive information being leaked. In some cases, this may even result in a user gaining complete control of the session of another user, depending on the configuration of the caching components in use in their environment. This is primarily an issue where caching servers such as \"proxy\" caches are configured on the local network. This configuration is typically found in corporate or educational environments, for instance.</p>",
+					"instances":[ 
+						{
+							"id": "113",
+							"uri": "https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css",
+							"nodeName": "https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/cookieconsent2\/3.1.0\/cookieconsent.min.css",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Age: 5449835",
+							"otherinfo": "The presence of the 'Age' header indicates that a HTTP/1.1 compliant caching server is in use."
+						},
+						{
+							"id": "150",
+							"uri": "https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css",
+							"nodeName": "https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/cookieconsent2\/3.1.0\/cookieconsent.min.css",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Age: 5449841",
+							"otherinfo": "The presence of the 'Age' header indicates that a HTTP/1.1 compliant caching server is in use."
+						},
+						{
+							"id": "115",
+							"uri": "https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js",
+							"nodeName": "https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/cookieconsent2\/3.1.0\/cookieconsent.min.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Age: 4647318",
+							"otherinfo": "The presence of the 'Age' header indicates that a HTTP/1.1 compliant caching server is in use."
+						},
+						{
+							"id": "149",
+							"uri": "https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js",
+							"nodeName": "https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/cookieconsent2\/3.1.0\/cookieconsent.min.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Age: 4647324",
+							"otherinfo": "The presence of the 'Age' header indicates that a HTTP/1.1 compliant caching server is in use."
+						},
+						{
+							"id": "130",
+							"uri": "https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js",
+							"nodeName": "https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/jquery\/2.2.4\/jquery.min.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Age: 5375969",
+							"otherinfo": "The presence of the 'Age' header indicates that a HTTP/1.1 compliant caching server is in use."
+						}
+					],
+					"count": "5",
+					"systemic": true,
+					"solution": "<p>Validate that the response does not contain sensitive, personal or user-specific information. If it does, consider the use of the following HTTP response headers, to limit, or prevent the content being stored and retrieved from the cache by another user:</p><p>Cache-Control: no-cache, no-store, must-revalidate, private</p><p>Pragma: no-cache</p><p>Expires: 0</p><p>This configuration directs both HTTP 1.0 and HTTP 1.1 compliant caching servers to not store the response, and to not retrieve the response (without validation) from the cache, in response to a similar request.</p>",
+					"otherinfo": "<p>The presence of the 'Age' header indicates that a HTTP/1.1 compliant caching server is in use.</p>",
+					"reference": "<p>https://datatracker.ietf.org/doc/html/rfc7234</p><p>https://datatracker.ietf.org/doc/html/rfc7231</p><p>https://www.rfc-editor.org/rfc/rfc9110.html</p>",
+					"cweid": "525",
+					"wascid": "-1",
+					"sourceid": "190"
+				}
+			]
+		},
+		{
+			"@name": "http://cdnjs.cloudflare.com",
+			"@host": "cdnjs.cloudflare.com",
+			"@port": "80",
+			"@ssl": "false",
+			"alerts": [ 
+				{
+					"pluginid": "10094",
+					"alertRef": "10094-3",
+					"alert": "Base64 Disclosure",
+					"name": "Base64 Disclosure",
+					"riskcode": "0",
+					"confidence": "2",
+					"riskdesc": "Informational (Medium)",
+					"desc": "<p>Base64 encoded data was disclosed by the application/web server. Note: in the interests of performance not all base64 strings in the response were analyzed individually, the entire response should be looked at by the analyst/security team/developer(s).</p>",
+					"instances":[ 
+						{
+							"id": "111",
+							"uri": "http://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css",
+							"nodeName": "http:\/\/cdnjs.cloudflare.com\/ajax\/libs\/cookieconsent2\/3.1.0\/cookieconsent.min.css",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "2BZCRsnT7ikKTR0ZG5xO5n252BoBRZJqUkGCKXmUhV",
+							"otherinfo": "\uFFFD\\x0016BF\uFFFD\uFFFD\uFFFD)\nM\\x001d\\x0019\\x001b\uFFFDN\uFFFD}\uFFFD\uFFFD\\x001a\\x0001E\uFFFDjRA\uFFFD)y\uFFFD\uFFFD"
+						},
+						{
+							"id": "112",
+							"uri": "http://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js",
+							"nodeName": "http:\/\/cdnjs.cloudflare.com\/ajax\/libs\/jquery\/2.2.4\/jquery.min.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "2FilBIRlV3uvanTQzAb7DjuVAkjd69x6w0zN5N8caVFbFDLWRHt76td2WTjuU30CFuj9IaAhUA6vsBdPMR53e6TQ8IweVDf6WCMch3vs",
+							"otherinfo": "\uFFFDX\uFFFD\\x0004\uFFFDeW{\uFFFDjt\uFFFD\uFFFD\\x0006\uFFFD\\x000e;\uFFFD\\x0002H\uFFFD\uFFFD\uFFFDz\uFFFDL\uFFFD\uFFFD\uFFFD\\x001ciQ[\\x00142\uFFFDD{{\uFFFD\uFFFDvY8\uFFFDS}\\x0002\\x0016\uFFFD\uFFFD!\uFFFD!P\\x000e\uFFFD\uFFFD\\x0017O1\\x001ew{\uFFFD\uFFFD\uFFFD\uFFFD\\x001eT7\uFFFDX#\\x001c\uFFFD{\uFFFD"
+						}
+					],
+					"count": "2",
+					"systemic": false,
+					"solution": "<p>Manually confirm that the Base64 data does not leak sensitive information, and that the data cannot be aggregated/used to exploit other vulnerabilities.</p>",
+					"otherinfo": "<p>\uFFFD\\x0016BF\uFFFD\uFFFD\uFFFD)</p><p>M\\x001d\\x0019\\x001b\uFFFDN\uFFFD}\uFFFD\uFFFD\\x001a\\x0001E\uFFFDjRA\uFFFD)y\uFFFD\uFFFD</p>",
+					"reference": "<p>https://projects.webappsec.org/w/page/13246936/Information%20Leakage</p>",
+					"cweid": "319",
+					"wascid": "13",
+					"sourceid": "176"
+				}
+			]
+		},
+		{
+			"@name": "http://localhost:3000",
+			"@host": "localhost",
+			"@port": "3000",
+			"@ssl": "false",
+			"alerts": [ 
+				{
+					"pluginid": "20019",
+					"alertRef": "20019-1",
+					"alert": "External Redirect",
+					"name": "External Redirect",
+					"riskcode": "3",
+					"confidence": "2",
+					"riskdesc": "High (Medium)",
+					"desc": "<p>URL redirectors represent common functionality employed by web sites to forward an incoming request to an alternate resource. This can be done for a variety of reasons and is often done to allow resources to be moved within the directory structure and to avoid breaking functionality for users that request the resource at its previous location. URL redirectors may also be used to implement load balancing, leveraging abbreviated URLs or recording outgoing links. It is this last implementation which is often used in phishing attacks as described in the example below. URL redirectors do not necessarily represent a direct security vulnerability but can be abused by attackers trying to social engineer victims into believing that they are navigating to a site other than the true destination.</p>",
+					"instances":[ 
+						{
+							"id": "307",
+							"uri": "http://localhost:3000/redirect?to=https%3A%2F%2F7301356130655880148.owasp.org%2F%3Fhttps%3A%2F%2Fgithub.com%2Fjuice-shop%2Fjuice-shop",
+							"nodeName": "http:\/\/localhost:3000\/redirect (to)",
+							"method": "GET",
+							"param": "to",
+							"attack": "https://7301356130655880148.owasp.org/?https://github.com/juice-shop/juice-shop",
+							"evidence": "https://7301356130655880148.owasp.org/?@@@original@@@",
+							"otherinfo": "The response contains a redirect in its Location header which allows an external Url to be set."
+						}
+					],
+					"count": "1",
+					"systemic": false,
+					"solution": "<p>Assume all input is malicious. Use an \"accept known good\" input validation strategy, i.e., use an allow list of acceptable inputs that strictly conform to specifications. Reject any input that does not strictly conform to specifications, or transform it into something that does. Do not rely exclusively on looking for malicious or malformed inputs (i.e., do not rely on a deny list). However, deny lists can be useful for detecting potential attacks or determining which inputs are so malformed that they should be rejected outright.</p><p></p><p>When performing input validation, consider all potentially relevant properties, including length, type of input, the full range of acceptable values, missing or extra inputs, syntax, consistency across related fields, and conformance to business rules. As an example of business rule logic, \"boat\" may be syntactically valid because it only contains alphanumeric characters, but it is not valid if you are expecting colors such as \"red\" or \"blue.\"</p><p></p><p>Use an allow list of approved URLs or domains to be used for redirection.</p><p></p><p>Use an intermediate disclaimer page that provides the user with a clear warning that they are leaving your site. Implement a long timeout before the redirect occurs, or force the user to click on the link. Be careful to avoid XSS problems when generating the disclaimer page.</p><p></p><p>When the set of acceptable objects, such as filenames or URLs, is limited or known, create a mapping from a set of fixed input values (such as numeric IDs) to the actual filenames or URLs, and reject all other inputs.</p><p></p><p>For example, ID 1 could map to \"/login.asp\" and ID 2 could map to \"https://www.example.com/\". Features such as the ESAPI AccessReferenceMap provide this capability.</p><p></p><p>Understand all the potential areas where untrusted inputs can enter your software: parameters or arguments, cookies, anything read from the network, environment variables, reverse DNS lookups, query results, request headers, URL components, e-mail, files, databases, and any external systems that provide data to the application. Remember that such inputs may be obtained indirectly through API calls.</p><p></p><p>Many open redirect problems occur because the programmer assumed that certain inputs could not be modified, such as cookies and hidden form fields.</p>",
+					"otherinfo": "<p>The response contains a redirect in its Location header which allows an external Url to be set.</p>",
+					"reference": "<p>https://cheatsheetseries.owasp.org/cheatsheets/Unvalidated_Redirects_and_Forwards_Cheat_Sheet.html</p><p>https://cwe.mitre.org/data/definitions/601.html</p>",
+					"cweid": "601",
+					"wascid": "38",
+					"sourceid": "2485"
+				},
+				{
+					"pluginid": "10028",
+					"alertRef": "10028",
+					"alert": "Off-site Redirect",
+					"name": "Off-site Redirect",
+					"riskcode": "3",
+					"confidence": "2",
+					"riskdesc": "High (Medium)",
+					"desc": "<p>Open redirects are one of the OWASP 2010 Top Ten vulnerabilities. This check looks at user-supplied input in query string parameters and POST data to identify where open redirects might be possible. Open redirects occur when an application allows user-supplied input (e.g. https://nottrusted.com) to control an off-site destination. This is generally a pretty accurate way to find where 301 or 302 redirects could be exploited by spammers or phishing attacks.</p><p></p><p>For example an attacker could supply a user with the following link: https://example.com/example.php?url=https://malicious.example.com.</p><p></p><p>NOTE: For the purposes of the passive check the authority portion of the origin and destination were compared. Manual testing may be required to validate the impact of this finding.</p>",
+					"instances":[ 
+						{
+							"id": "169",
+							"uri": "http://localhost:3000/redirect?to=https://github.com/juice-shop/juice-shop",
+							"nodeName": "http:\/\/localhost:3000\/redirect (to)",
+							"method": "GET",
+							"param": "to",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "The 301 or 302 response to a request for the following URL appeared to contain user input in the location header:\n\nhttp://localhost:3000/redirect?to=https://github.com/juice-shop/juice-shop\n\nThe user input found was:\n\nto=https://github.com/juice-shop/juice-shop\n\nThe context was:\n\nhttps://github.com/juice-shop/juice-shop"
+						}
+					],
+					"count": "1",
+					"systemic": false,
+					"solution": "<p>To avoid the open redirect vulnerability, parameters of the application script/program must be validated before sending 302 HTTP code (redirect) to the client browser. Implement safe redirect functionality that only redirects to relative URI's, or a list of trusted domains.</p>",
+					"otherinfo": "<p>The 301 or 302 response to a request for the following URL appeared to contain user input in the location header:</p><p></p><p>http://localhost:3000/redirect?to=https://github.com/juice-shop/juice-shop</p><p></p><p>The user input found was:</p><p></p><p>to=https://github.com/juice-shop/juice-shop</p><p></p><p>The context was:</p><p></p><p>https://github.com/juice-shop/juice-shop</p>",
+					"reference": "<p>https://cheatsheetseries.owasp.org/cheatsheets/Unvalidated_Redirects_and_Forwards_Cheat_Sheet.html</p><p>https://cwe.mitre.org/data/definitions/601.html</p>",
+					"cweid": "601",
+					"wascid": "38",
+					"sourceid": "337"
+				},
+				{
+					"pluginid": "40018",
+					"alertRef": "40018",
+					"alert": "SQL Injection",
+					"name": "SQL Injection",
+					"riskcode": "3",
+					"confidence": "1",
+					"riskdesc": "High (Low)",
+					"desc": "<p>SQL injection may be possible.</p>",
+					"instances":[ 
+						{
+							"id": "308",
+							"uri": "http://localhost:3000/rest/products/search?q=%27%28",
+							"nodeName": "http:\/\/localhost:3000\/rest\/products\/search (q)",
+							"method": "GET",
+							"param": "q",
+							"attack": "'(",
+							"evidence": "HTTP/1.1 500 Internal Server Error",
+							"otherinfo": ""
+						}
+					],
+					"count": "1",
+					"systemic": false,
+					"solution": "<p>Do not trust client side input, even if there is client side validation in place.</p><p>In general, type check all data on the server side.</p><p>If the application uses JDBC, use PreparedStatement or CallableStatement, with parameters passed by '?'</p><p>If the application uses ASP, use ADO Command Objects with strong type checking and parameterized queries.</p><p>If database Stored Procedures can be used, use them.</p><p>Do *not* concatenate strings into queries in the stored procedure, or use 'exec', 'exec immediate', or equivalent functionality!</p><p>Do not create dynamic SQL queries using simple string concatenation.</p><p>Escape all data received from the client.</p><p>Apply an 'allow list' of allowed characters, or a 'deny list' of disallowed characters in user input.</p><p>Apply the principle of least privilege by using the least privileged database user possible.</p><p>In particular, avoid using the 'sa' or 'db-owner' database users. This does not eliminate SQL injection, but minimizes its impact.</p><p>Grant the minimum database access that is necessary for the application.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html</p>",
+					"cweid": "89",
+					"wascid": "19",
+					"sourceid": "3729"
+				},
+				{
+					"pluginid": "10095",
+					"alertRef": "10095",
+					"alert": "Backup File Disclosure",
+					"name": "Backup File Disclosure",
+					"riskcode": "2",
+					"confidence": "2",
+					"riskdesc": "Medium (Medium)",
+					"desc": "<p>A backup of the file was disclosed by the web server.</p>",
+					"instances":[ 
+						{
+							"id": "513",
+							"uri": "http://localhost:3000/ftp/quarantine%20-%20Copy",
+							"nodeName": "http:\/\/localhost:3000\/ftp\/quarantine - Copy",
+							"method": "GET",
+							"param": "",
+							"attack": "http://localhost:3000/ftp/quarantine%20-%20Copy",
+							"evidence": "",
+							"otherinfo": "A backup of [http://localhost:3000/ftp/quarantine] is available at [http://localhost:3000/ftp/quarantine%20-%20Copy]"
+						},
+						{
+							"id": "514",
+							"uri": "http://localhost:3000/ftp/quarantine%20-%20Copy%20(2)",
+							"nodeName": "http:\/\/localhost:3000\/ftp\/quarantine - Copy (2)",
+							"method": "GET",
+							"param": "",
+							"attack": "http://localhost:3000/ftp/quarantine%20-%20Copy%20(2)",
+							"evidence": "",
+							"otherinfo": "A backup of [http://localhost:3000/ftp/quarantine] is available at [http://localhost:3000/ftp/quarantine%20-%20Copy%20(2)]"
+						},
+						{
+							"id": "526",
+							"uri": "http://localhost:3000/ftp/quarantine%20-%20Copy%20(2)/juicy_malware_linux_amd_64.url",
+							"nodeName": "http:\/\/localhost:3000\/ftp\/quarantine - Copy (2)\/juicy_malware_linux_amd_64.url",
+							"method": "GET",
+							"param": "",
+							"attack": "http://localhost:3000/ftp/quarantine%20-%20Copy%20(2)/juicy_malware_linux_amd_64.url",
+							"evidence": "",
+							"otherinfo": "A backup of [http://localhost:3000/ftp/quarantine/juicy_malware_linux_amd_64.url] is available at [http://localhost:3000/ftp/quarantine%20-%20Copy%20(2)/juicy_malware_linux_amd_64.url]"
+						},
+						{
+							"id": "521",
+							"uri": "http://localhost:3000/ftp/quarantine%20-%20Copy%20(2)/juicy_malware_linux_arm_64.url",
+							"nodeName": "http:\/\/localhost:3000\/ftp\/quarantine - Copy (2)\/juicy_malware_linux_arm_64.url",
+							"method": "GET",
+							"param": "",
+							"attack": "http://localhost:3000/ftp/quarantine%20-%20Copy%20(2)/juicy_malware_linux_arm_64.url",
+							"evidence": "",
+							"otherinfo": "A backup of [http://localhost:3000/ftp/quarantine/juicy_malware_linux_arm_64.url] is available at [http://localhost:3000/ftp/quarantine%20-%20Copy%20(2)/juicy_malware_linux_arm_64.url]"
+						},
+						{
+							"id": "523",
+							"uri": "http://localhost:3000/ftp/quarantine%20-%20Copy%20(2)/juicy_malware_macos_64.url",
+							"nodeName": "http:\/\/localhost:3000\/ftp\/quarantine - Copy (2)\/juicy_malware_macos_64.url",
+							"method": "GET",
+							"param": "",
+							"attack": "http://localhost:3000/ftp/quarantine%20-%20Copy%20(2)/juicy_malware_macos_64.url",
+							"evidence": "",
+							"otherinfo": "A backup of [http://localhost:3000/ftp/quarantine/juicy_malware_macos_64.url] is available at [http://localhost:3000/ftp/quarantine%20-%20Copy%20(2)/juicy_malware_macos_64.url]"
+						},
+						{
+							"id": "520",
+							"uri": "http://localhost:3000/ftp/quarantine%20-%20Copy%20(2)/juicy_malware_windows_64.exe.url",
+							"nodeName": "http:\/\/localhost:3000\/ftp\/quarantine - Copy (2)\/juicy_malware_windows_64.exe.url",
+							"method": "GET",
+							"param": "",
+							"attack": "http://localhost:3000/ftp/quarantine%20-%20Copy%20(2)/juicy_malware_windows_64.exe.url",
+							"evidence": "",
+							"otherinfo": "A backup of [http://localhost:3000/ftp/quarantine/juicy_malware_windows_64.exe.url] is available at [http://localhost:3000/ftp/quarantine%20-%20Copy%20(2)/juicy_malware_windows_64.exe.url]"
+						},
+						{
+							"id": "515",
+							"uri": "http://localhost:3000/ftp/quarantine%20-%20Copy%20(3)",
+							"nodeName": "http:\/\/localhost:3000\/ftp\/quarantine - Copy (3)",
+							"method": "GET",
+							"param": "",
+							"attack": "http://localhost:3000/ftp/quarantine%20-%20Copy%20(3)",
+							"evidence": "",
+							"otherinfo": "A backup of [http://localhost:3000/ftp/quarantine] is available at [http://localhost:3000/ftp/quarantine%20-%20Copy%20(3)]"
+						},
+						{
+							"id": "530",
+							"uri": "http://localhost:3000/ftp/quarantine%20-%20Copy%20(3)/juicy_malware_linux_amd_64.url",
+							"nodeName": "http:\/\/localhost:3000\/ftp\/quarantine - Copy (3)\/juicy_malware_linux_amd_64.url",
+							"method": "GET",
+							"param": "",
+							"attack": "http://localhost:3000/ftp/quarantine%20-%20Copy%20(3)/juicy_malware_linux_amd_64.url",
+							"evidence": "",
+							"otherinfo": "A backup of [http://localhost:3000/ftp/quarantine/juicy_malware_linux_amd_64.url] is available at [http://localhost:3000/ftp/quarantine%20-%20Copy%20(3)/juicy_malware_linux_amd_64.url]"
+						},
+						{
+							"id": "525",
+							"uri": "http://localhost:3000/ftp/quarantine%20-%20Copy%20(3)/juicy_malware_linux_arm_64.url",
+							"nodeName": "http:\/\/localhost:3000\/ftp\/quarantine - Copy (3)\/juicy_malware_linux_arm_64.url",
+							"method": "GET",
+							"param": "",
+							"attack": "http://localhost:3000/ftp/quarantine%20-%20Copy%20(3)/juicy_malware_linux_arm_64.url",
+							"evidence": "",
+							"otherinfo": "A backup of [http://localhost:3000/ftp/quarantine/juicy_malware_linux_arm_64.url] is available at [http://localhost:3000/ftp/quarantine%20-%20Copy%20(3)/juicy_malware_linux_arm_64.url]"
+						},
+						{
+							"id": "527",
+							"uri": "http://localhost:3000/ftp/quarantine%20-%20Copy%20(3)/juicy_malware_macos_64.url",
+							"nodeName": "http:\/\/localhost:3000\/ftp\/quarantine - Copy (3)\/juicy_malware_macos_64.url",
+							"method": "GET",
+							"param": "",
+							"attack": "http://localhost:3000/ftp/quarantine%20-%20Copy%20(3)/juicy_malware_macos_64.url",
+							"evidence": "",
+							"otherinfo": "A backup of [http://localhost:3000/ftp/quarantine/juicy_malware_macos_64.url] is available at [http://localhost:3000/ftp/quarantine%20-%20Copy%20(3)/juicy_malware_macos_64.url]"
+						},
+						{
+							"id": "524",
+							"uri": "http://localhost:3000/ftp/quarantine%20-%20Copy%20(3)/juicy_malware_windows_64.exe.url",
+							"nodeName": "http:\/\/localhost:3000\/ftp\/quarantine - Copy (3)\/juicy_malware_windows_64.exe.url",
+							"method": "GET",
+							"param": "",
+							"attack": "http://localhost:3000/ftp/quarantine%20-%20Copy%20(3)/juicy_malware_windows_64.exe.url",
+							"evidence": "",
+							"otherinfo": "A backup of [http://localhost:3000/ftp/quarantine/juicy_malware_windows_64.exe.url] is available at [http://localhost:3000/ftp/quarantine%20-%20Copy%20(3)/juicy_malware_windows_64.exe.url]"
+						},
+						{
+							"id": "522",
+							"uri": "http://localhost:3000/ftp/quarantine%20-%20Copy/juicy_malware_linux_amd_64.url",
+							"nodeName": "http:\/\/localhost:3000\/ftp\/quarantine - Copy\/juicy_malware_linux_amd_64.url",
+							"method": "GET",
+							"param": "",
+							"attack": "http://localhost:3000/ftp/quarantine%20-%20Copy/juicy_malware_linux_amd_64.url",
+							"evidence": "",
+							"otherinfo": "A backup of [http://localhost:3000/ftp/quarantine/juicy_malware_linux_amd_64.url] is available at [http://localhost:3000/ftp/quarantine%20-%20Copy/juicy_malware_linux_amd_64.url]"
+						},
+						{
+							"id": "518",
+							"uri": "http://localhost:3000/ftp/quarantine%20-%20Copy/juicy_malware_linux_arm_64.url",
+							"nodeName": "http:\/\/localhost:3000\/ftp\/quarantine - Copy\/juicy_malware_linux_arm_64.url",
+							"method": "GET",
+							"param": "",
+							"attack": "http://localhost:3000/ftp/quarantine%20-%20Copy/juicy_malware_linux_arm_64.url",
+							"evidence": "",
+							"otherinfo": "A backup of [http://localhost:3000/ftp/quarantine/juicy_malware_linux_arm_64.url] is available at [http://localhost:3000/ftp/quarantine%20-%20Copy/juicy_malware_linux_arm_64.url]"
+						},
+						{
+							"id": "519",
+							"uri": "http://localhost:3000/ftp/quarantine%20-%20Copy/juicy_malware_macos_64.url",
+							"nodeName": "http:\/\/localhost:3000\/ftp\/quarantine - Copy\/juicy_malware_macos_64.url",
+							"method": "GET",
+							"param": "",
+							"attack": "http://localhost:3000/ftp/quarantine%20-%20Copy/juicy_malware_macos_64.url",
+							"evidence": "",
+							"otherinfo": "A backup of [http://localhost:3000/ftp/quarantine/juicy_malware_macos_64.url] is available at [http://localhost:3000/ftp/quarantine%20-%20Copy/juicy_malware_macos_64.url]"
+						},
+						{
+							"id": "517",
+							"uri": "http://localhost:3000/ftp/quarantine%20-%20Copy/juicy_malware_windows_64.exe.url",
+							"nodeName": "http:\/\/localhost:3000\/ftp\/quarantine - Copy\/juicy_malware_windows_64.exe.url",
+							"method": "GET",
+							"param": "",
+							"attack": "http://localhost:3000/ftp/quarantine%20-%20Copy/juicy_malware_windows_64.exe.url",
+							"evidence": "",
+							"otherinfo": "A backup of [http://localhost:3000/ftp/quarantine/juicy_malware_windows_64.exe.url] is available at [http://localhost:3000/ftp/quarantine%20-%20Copy/juicy_malware_windows_64.exe.url]"
+						},
+						{
+							"id": "504",
+							"uri": "http://localhost:3000/ftp/quarantine.bac",
+							"nodeName": "http:\/\/localhost:3000\/ftp\/quarantine.bac",
+							"method": "GET",
+							"param": "",
+							"attack": "http://localhost:3000/ftp/quarantine.bac",
+							"evidence": "",
+							"otherinfo": "A backup of [http://localhost:3000/ftp/quarantine] is available at [http://localhost:3000/ftp/quarantine.bac]"
+						},
+						{
+							"id": "503",
+							"uri": "http://localhost:3000/ftp/quarantine.backup",
+							"nodeName": "http:\/\/localhost:3000\/ftp\/quarantine.backup",
+							"method": "GET",
+							"param": "",
+							"attack": "http://localhost:3000/ftp/quarantine.backup",
+							"evidence": "",
+							"otherinfo": "A backup of [http://localhost:3000/ftp/quarantine] is available at [http://localhost:3000/ftp/quarantine.backup]"
+						},
+						{
+							"id": "502",
+							"uri": "http://localhost:3000/ftp/quarantine.bak",
+							"nodeName": "http:\/\/localhost:3000\/ftp\/quarantine.bak",
+							"method": "GET",
+							"param": "",
+							"attack": "http://localhost:3000/ftp/quarantine.bak",
+							"evidence": "",
+							"otherinfo": "A backup of [http://localhost:3000/ftp/quarantine] is available at [http://localhost:3000/ftp/quarantine.bak]"
+						},
+						{
+							"id": "507",
+							"uri": "http://localhost:3000/ftp/quarantine.jar",
+							"nodeName": "http:\/\/localhost:3000\/ftp\/quarantine.jar",
+							"method": "GET",
+							"param": "",
+							"attack": "http://localhost:3000/ftp/quarantine.jar",
+							"evidence": "",
+							"otherinfo": "A backup of [http://localhost:3000/ftp/quarantine] is available at [http://localhost:3000/ftp/quarantine.jar]"
+						},
+						{
+							"id": "508",
+							"uri": "http://localhost:3000/ftp/quarantine.log",
+							"nodeName": "http:\/\/localhost:3000\/ftp\/quarantine.log",
+							"method": "GET",
+							"param": "",
+							"attack": "http://localhost:3000/ftp/quarantine.log",
+							"evidence": "",
+							"otherinfo": "A backup of [http://localhost:3000/ftp/quarantine] is available at [http://localhost:3000/ftp/quarantine.log]"
+						},
+						{
+							"id": "511",
+							"uri": "http://localhost:3000/ftp/quarantine.old",
+							"nodeName": "http:\/\/localhost:3000\/ftp\/quarantine.old",
+							"method": "GET",
+							"param": "",
+							"attack": "http://localhost:3000/ftp/quarantine.old",
+							"evidence": "",
+							"otherinfo": "A backup of [http://localhost:3000/ftp/quarantine] is available at [http://localhost:3000/ftp/quarantine.old]"
+						},
+						{
+							"id": "509",
+							"uri": "http://localhost:3000/ftp/quarantine.swp",
+							"nodeName": "http:\/\/localhost:3000\/ftp\/quarantine.swp",
+							"method": "GET",
+							"param": "",
+							"attack": "http://localhost:3000/ftp/quarantine.swp",
+							"evidence": "",
+							"otherinfo": "A backup of [http://localhost:3000/ftp/quarantine] is available at [http://localhost:3000/ftp/quarantine.swp]"
+						},
+						{
+							"id": "506",
+							"uri": "http://localhost:3000/ftp/quarantine.tar",
+							"nodeName": "http:\/\/localhost:3000\/ftp\/quarantine.tar",
+							"method": "GET",
+							"param": "",
+							"attack": "http://localhost:3000/ftp/quarantine.tar",
+							"evidence": "",
+							"otherinfo": "A backup of [http://localhost:3000/ftp/quarantine] is available at [http://localhost:3000/ftp/quarantine.tar]"
+						},
+						{
+							"id": "505",
+							"uri": "http://localhost:3000/ftp/quarantine.zip",
+							"nodeName": "http:\/\/localhost:3000\/ftp\/quarantine.zip",
+							"method": "GET",
+							"param": "",
+							"attack": "http://localhost:3000/ftp/quarantine.zip",
+							"evidence": "",
+							"otherinfo": "A backup of [http://localhost:3000/ftp/quarantine] is available at [http://localhost:3000/ftp/quarantine.zip]"
+						},
+						{
+							"id": "512",
+							"uri": "http://localhost:3000/ftp/quarantine.~bk",
+							"nodeName": "http:\/\/localhost:3000\/ftp\/quarantine.~bk",
+							"method": "GET",
+							"param": "",
+							"attack": "http://localhost:3000/ftp/quarantine.~bk",
+							"evidence": "",
+							"otherinfo": "A backup of [http://localhost:3000/ftp/quarantine] is available at [http://localhost:3000/ftp/quarantine.~bk]"
+						},
+						{
+							"id": "516",
+							"uri": "http://localhost:3000/ftp/quarantinebackup",
+							"nodeName": "http:\/\/localhost:3000\/ftp\/quarantinebackup",
+							"method": "GET",
+							"param": "",
+							"attack": "http://localhost:3000/ftp/quarantinebackup",
+							"evidence": "",
+							"otherinfo": "A backup of [http://localhost:3000/ftp/quarantine] is available at [http://localhost:3000/ftp/quarantinebackup]"
+						},
+						{
+							"id": "532",
+							"uri": "http://localhost:3000/ftp/quarantinebackup/juicy_malware_linux_amd_64.url",
+							"nodeName": "http:\/\/localhost:3000\/ftp\/quarantinebackup\/juicy_malware_linux_amd_64.url",
+							"method": "GET",
+							"param": "",
+							"attack": "http://localhost:3000/ftp/quarantinebackup/juicy_malware_linux_amd_64.url",
+							"evidence": "",
+							"otherinfo": "A backup of [http://localhost:3000/ftp/quarantine/juicy_malware_linux_amd_64.url] is available at [http://localhost:3000/ftp/quarantinebackup/juicy_malware_linux_amd_64.url]"
+						},
+						{
+							"id": "529",
+							"uri": "http://localhost:3000/ftp/quarantinebackup/juicy_malware_linux_arm_64.url",
+							"nodeName": "http:\/\/localhost:3000\/ftp\/quarantinebackup\/juicy_malware_linux_arm_64.url",
+							"method": "GET",
+							"param": "",
+							"attack": "http://localhost:3000/ftp/quarantinebackup/juicy_malware_linux_arm_64.url",
+							"evidence": "",
+							"otherinfo": "A backup of [http://localhost:3000/ftp/quarantine/juicy_malware_linux_arm_64.url] is available at [http://localhost:3000/ftp/quarantinebackup/juicy_malware_linux_arm_64.url]"
+						},
+						{
+							"id": "531",
+							"uri": "http://localhost:3000/ftp/quarantinebackup/juicy_malware_macos_64.url",
+							"nodeName": "http:\/\/localhost:3000\/ftp\/quarantinebackup\/juicy_malware_macos_64.url",
+							"method": "GET",
+							"param": "",
+							"attack": "http://localhost:3000/ftp/quarantinebackup/juicy_malware_macos_64.url",
+							"evidence": "",
+							"otherinfo": "A backup of [http://localhost:3000/ftp/quarantine/juicy_malware_macos_64.url] is available at [http://localhost:3000/ftp/quarantinebackup/juicy_malware_macos_64.url]"
+						},
+						{
+							"id": "528",
+							"uri": "http://localhost:3000/ftp/quarantinebackup/juicy_malware_windows_64.exe.url",
+							"nodeName": "http:\/\/localhost:3000\/ftp\/quarantinebackup\/juicy_malware_windows_64.exe.url",
+							"method": "GET",
+							"param": "",
+							"attack": "http://localhost:3000/ftp/quarantinebackup/juicy_malware_windows_64.exe.url",
+							"evidence": "",
+							"otherinfo": "A backup of [http://localhost:3000/ftp/quarantine/juicy_malware_windows_64.exe.url] is available at [http://localhost:3000/ftp/quarantinebackup/juicy_malware_windows_64.exe.url]"
+						},
+						{
+							"id": "510",
+							"uri": "http://localhost:3000/ftp/quarantine~",
+							"nodeName": "http:\/\/localhost:3000\/ftp\/quarantine~",
+							"method": "GET",
+							"param": "",
+							"attack": "http://localhost:3000/ftp/quarantine~",
+							"evidence": "",
+							"otherinfo": "A backup of [http://localhost:3000/ftp/quarantine] is available at [http://localhost:3000/ftp/quarantine~]"
+						}
+					],
+					"count": "31",
+					"systemic": false,
+					"solution": "<p>Do not edit files in-situ on the web server, and ensure that un-necessary files (including hidden files) are removed from the web server.</p>",
+					"otherinfo": "<p>A backup of [http://localhost:3000/ftp/quarantine] is available at [http://localhost:3000/ftp/quarantine%20-%20Copy]</p>",
+					"reference": "<p>https://cwe.mitre.org/data/definitions/530.html</p><p>https://owasp.org/www-project-web-security-testing-guide/v41/4-Web_Application_Security_Testing/02-Configuration_and_Deployment_Management_Testing/04-Review_Old_Backup_and_Unreferenced_Files_for_Sensitive_Information.html</p>",
+					"cweid": "530",
+					"wascid": "34",
+					"sourceid": "19399"
+				},
+				{
+					"pluginid": "40038",
+					"alertRef": "40038",
+					"alert": "Bypassing 403",
+					"name": "Bypassing 403",
+					"riskcode": "2",
+					"confidence": "2",
+					"riskdesc": "Medium (Medium)",
+					"desc": "<p>Bypassing 403 endpoints may be possible, the scan rule sent a payload that caused the response to be accessible (status code 200).</p>",
+					"instances":[ 
+						{
+							"id": "534",
+							"uri": "http://localhost:3000/%2e/ftp/coupons_2013.md.bak",
+							"nodeName": "http:\/\/localhost:3000\/.\/ftp\/coupons_2013.md.bak",
+							"method": "GET",
+							"param": "",
+							"attack": "/%2e/ftp/coupons_2013.md.bak",
+							"evidence": "",
+							"otherinfo": "http://localhost:3000/ftp/coupons_2013.md.bak"
+						},
+						{
+							"id": "533",
+							"uri": "http://localhost:3000/%2e/ftp/eastere.gg",
+							"nodeName": "http:\/\/localhost:3000\/.\/ftp\/eastere.gg",
+							"method": "GET",
+							"param": "",
+							"attack": "/%2e/ftp/eastere.gg",
+							"evidence": "",
+							"otherinfo": "http://localhost:3000/ftp/eastere.gg"
+						},
+						{
+							"id": "535",
+							"uri": "http://localhost:3000/%2e/ftp/encrypt.pyc",
+							"nodeName": "http:\/\/localhost:3000\/.\/ftp\/encrypt.pyc",
+							"method": "GET",
+							"param": "",
+							"attack": "/%2e/ftp/encrypt.pyc",
+							"evidence": "",
+							"otherinfo": "http://localhost:3000/ftp/encrypt.pyc"
+						},
+						{
+							"id": "536",
+							"uri": "http://localhost:3000/%2e/ftp/package.json.bak",
+							"nodeName": "http:\/\/localhost:3000\/.\/ftp\/package.json.bak",
+							"method": "GET",
+							"param": "",
+							"attack": "/%2e/ftp/package.json.bak",
+							"evidence": "",
+							"otherinfo": "http://localhost:3000/ftp/package.json.bak"
+						},
+						{
+							"id": "537",
+							"uri": "http://localhost:3000/%2e/ftp/suspicious_errors.yml",
+							"nodeName": "http:\/\/localhost:3000\/.\/ftp\/suspicious_errors.yml",
+							"method": "GET",
+							"param": "",
+							"attack": "/%2e/ftp/suspicious_errors.yml",
+							"evidence": "",
+							"otherinfo": "http://localhost:3000/ftp/suspicious_errors.yml"
+						}
+					],
+					"count": "5",
+					"systemic": false,
+					"solution": "",
+					"otherinfo": "<p>http://localhost:3000/ftp/coupons_2013.md.bak</p>",
+					"reference": "<p>https://www.acunetix.com/blog/articles/a-fresh-look-on-reverse-proxy-related-attacks/</p><p>https://i.blackhat.com/us-18/Wed-August-8/us-18-Orange-Tsai-Breaking-Parser-Logic-Take-Your-Path-Normalization-Off-And-Pop-0days-Out-2.pdf</p><p>https://seclists.org/fulldisclosure/2011/Oct/273</p>",
+					"cweid": "348",
+					"wascid": "0",
+					"sourceid": "25174"
+				},
+				{
+					"pluginid": "40040",
+					"alertRef": "40040-2",
+					"alert": "CORS Misconfiguration",
+					"name": "CORS Misconfiguration",
+					"riskcode": "2",
+					"confidence": "3",
+					"riskdesc": "Medium (High)",
+					"desc": "<p>This CORS misconfiguration could allow an attacker to perform AJAX queries to the vulnerable website from a malicious page loaded by the victim's user agent.</p><p>In order to perform authenticated AJAX queries, the server must specify the header \"Access-Control-Allow-Credentials: true\" and the \"Access-Control-Allow-Origin\" header must be set to null or the malicious page's domain. Even if this misconfiguration doesn't allow authenticated AJAX requests, unauthenticated sensitive content can still be accessed (e.g intranet websites).</p><p>A malicious page can belong to a malicious website but also a trusted website with flaws (e.g XSS, support of HTTP without TLS allowing code injection through MITM, etc).</p>",
+					"instances":[ 
+						{
+							"id": "546",
+							"uri": "http://localhost:3000/",
+							"nodeName": "http:\/\/localhost:3000\/",
+							"method": "GET",
+							"param": "",
+							"attack": "origin: http://Ex7CPkre.com",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"id": "543",
+							"uri": "http://localhost:3000/api/Quantitys/",
+							"nodeName": "http:\/\/localhost:3000\/api\/Quantitys\/",
+							"method": "GET",
+							"param": "",
+							"attack": "origin: http://Ex7CPkre.com",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"id": "542",
+							"uri": "http://localhost:3000/api/SecurityQuestions/",
+							"nodeName": "http:\/\/localhost:3000\/api\/SecurityQuestions\/",
+							"method": "GET",
+							"param": "",
+							"attack": "origin: http://Ex7CPkre.com",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"id": "540",
+							"uri": "http://localhost:3000/rest/captcha/",
+							"nodeName": "http:\/\/localhost:3000\/rest\/captcha\/",
+							"method": "GET",
+							"param": "",
+							"attack": "origin: http://Ex7CPkre.com",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"id": "541",
+							"uri": "http://localhost:3000/rest/memories/",
+							"nodeName": "http:\/\/localhost:3000\/rest\/memories\/",
+							"method": "GET",
+							"param": "",
+							"attack": "origin: http://Ex7CPkre.com",
+							"evidence": "",
+							"otherinfo": ""
+						}
+					],
+					"count": "5",
+					"systemic": true,
+					"solution": "<p>If a web resource contains sensitive information, the origin should be properly specified in the Access-Control-Allow-Origin header. Only trusted websites needing this resource should be specified in this header, with the most secured protocol supported.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS</p><p>https://portswigger.net/web-security/cors</p>",
+					"cweid": "942",
+					"wascid": "14",
+					"sourceid": "25365"
+				},
+				{
+					"pluginid": "10038",
+					"alertRef": "10038-1",
+					"alert": "Content Security Policy (CSP) Header Not Set",
+					"name": "Content Security Policy (CSP) Header Not Set",
+					"riskcode": "2",
+					"confidence": "3",
+					"riskdesc": "Medium (High)",
+					"desc": "<p>Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks, including Cross Site Scripting (XSS) and data injection attacks. These attacks are used for everything from data theft to site defacement or distribution of malware. CSP provides a set of standard HTTP headers that allow website owners to declare approved sources of content that browsers should be allowed to load on that page \u2014 covered types are JavaScript, CSS, HTML frames, fonts, images and embeddable objects such as Java applets, ActiveX, audio and video files.</p>",
+					"instances":[ 
+						{
+							"id": "17",
+							"uri": "http://localhost:3000",
+							"nodeName": "http:\/\/localhost:3000",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"id": "0",
+							"uri": "http://localhost:3000/",
+							"nodeName": "http:\/\/localhost:3000\/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"id": "74",
+							"uri": "http://localhost:3000/ftp",
+							"nodeName": "http:\/\/localhost:3000\/ftp",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"id": "68",
+							"uri": "http://localhost:3000/ftp/coupons_2013.md.bak",
+							"nodeName": "http:\/\/localhost:3000\/ftp\/coupons_2013.md.bak",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"id": "14",
+							"uri": "http://localhost:3000/sitemap.xml",
+							"nodeName": "http:\/\/localhost:3000\/sitemap.xml",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						}
+					],
+					"count": "5",
+					"systemic": true,
+					"solution": "<p>Ensure that your web server, application server, load balancer, etc. is configured to set the Content-Security-Policy header.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CSP</p><p>https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html</p><p>https://www.w3.org/TR/CSP/</p><p>https://w3c.github.io/webappsec-csp/</p><p>https://web.dev/articles/csp</p><p>https://caniuse.com/#feat=contentsecuritypolicy</p><p>https://content-security-policy.com/</p>",
+					"cweid": "693",
+					"wascid": "15",
+					"sourceid": "9"
+				},
+				{
+					"pluginid": "10098",
+					"alertRef": "10098",
+					"alert": "Cross-Domain Misconfiguration",
+					"name": "Cross-Domain Misconfiguration",
+					"riskcode": "2",
+					"confidence": "2",
+					"riskdesc": "Medium (Medium)",
+					"desc": "<p>Web browser data loading may be possible, due to a Cross Origin Resource Sharing (CORS) misconfiguration on the web server.</p>",
+					"instances":[ 
+						{
+							"id": "27",
+							"uri": "http://localhost:3000",
+							"nodeName": "http:\/\/localhost:3000",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Access-Control-Allow-Origin: *",
+							"otherinfo": "The CORS misconfiguration on the web server permits cross-domain read requests from arbitrary third party domains, using unauthenticated APIs on this domain. Web browser implementations do not permit arbitrary third parties to read the response from authenticated APIs, however. This reduces the risk somewhat. This misconfiguration could be used by an attacker to access data that is available in an unauthenticated manner, but which uses some other form of security, such as IP address white-listing."
+						},
+						{
+							"id": "1",
+							"uri": "http://localhost:3000/",
+							"nodeName": "http:\/\/localhost:3000\/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Access-Control-Allow-Origin: *",
+							"otherinfo": "The CORS misconfiguration on the web server permits cross-domain read requests from arbitrary third party domains, using unauthenticated APIs on this domain. Web browser implementations do not permit arbitrary third parties to read the response from authenticated APIs, however. This reduces the risk somewhat. This misconfiguration could be used by an attacker to access data that is available in an unauthenticated manner, but which uses some other form of security, such as IP address white-listing."
+						},
+						{
+							"id": "13",
+							"uri": "http://localhost:3000/robots.txt",
+							"nodeName": "http:\/\/localhost:3000\/robots.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Access-Control-Allow-Origin: *",
+							"otherinfo": "The CORS misconfiguration on the web server permits cross-domain read requests from arbitrary third party domains, using unauthenticated APIs on this domain. Web browser implementations do not permit arbitrary third parties to read the response from authenticated APIs, however. This reduces the risk somewhat. This misconfiguration could be used by an attacker to access data that is available in an unauthenticated manner, but which uses some other form of security, such as IP address white-listing."
+						},
+						{
+							"id": "31",
+							"uri": "http://localhost:3000/runtime.js",
+							"nodeName": "http:\/\/localhost:3000\/runtime.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Access-Control-Allow-Origin: *",
+							"otherinfo": "The CORS misconfiguration on the web server permits cross-domain read requests from arbitrary third party domains, using unauthenticated APIs on this domain. Web browser implementations do not permit arbitrary third parties to read the response from authenticated APIs, however. This reduces the risk somewhat. This misconfiguration could be used by an attacker to access data that is available in an unauthenticated manner, but which uses some other form of security, such as IP address white-listing."
+						},
+						{
+							"id": "15",
+							"uri": "http://localhost:3000/sitemap.xml",
+							"nodeName": "http:\/\/localhost:3000\/sitemap.xml",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Access-Control-Allow-Origin: *",
+							"otherinfo": "The CORS misconfiguration on the web server permits cross-domain read requests from arbitrary third party domains, using unauthenticated APIs on this domain. Web browser implementations do not permit arbitrary third parties to read the response from authenticated APIs, however. This reduces the risk somewhat. This misconfiguration could be used by an attacker to access data that is available in an unauthenticated manner, but which uses some other form of security, such as IP address white-listing."
+						}
+					],
+					"count": "5",
+					"systemic": true,
+					"solution": "<p>Ensure that sensitive data is not available in an unauthenticated manner (using IP address white-listing, for instance).</p><p>Configure the \"Access-Control-Allow-Origin\" HTTP header to a more restrictive set of domains, or remove all CORS headers entirely, to allow the web browser to enforce the Same Origin Policy (SOP) in a more restrictive manner.</p>",
+					"otherinfo": "<p>The CORS misconfiguration on the web server permits cross-domain read requests from arbitrary third party domains, using unauthenticated APIs on this domain. Web browser implementations do not permit arbitrary third parties to read the response from authenticated APIs, however. This reduces the risk somewhat. This misconfiguration could be used by an attacker to access data that is available in an unauthenticated manner, but which uses some other form of security, such as IP address white-listing.</p>",
+					"reference": "<p>https://vulncat.fortify.com/en/detail?category=HTML5&subcategory=Overly%20Permissive%20CORS%20Policy</p>",
+					"cweid": "264",
+					"wascid": "14",
+					"sourceid": "9"
+				},
+				{
+					"pluginid": "10020",
+					"alertRef": "10020-1",
+					"alert": "Missing Anti-clickjacking Header",
+					"name": "Missing Anti-clickjacking Header",
+					"riskcode": "2",
+					"confidence": "2",
+					"riskdesc": "Medium (Medium)",
+					"desc": "<p>The response does not protect against 'ClickJacking' attacks. It should include either Content-Security-Policy with 'frame-ancestors' directive or X-Frame-Options.</p>",
+					"instances":[ 
+						{
+							"id": "132",
+							"uri": "http://localhost:3000/socket.io/?EIO=4&transport=polling&t=Q8Cd_8-&sid=5x4Xr2u_VqdTBUqCAAAA",
+							"nodeName": "http:\/\/localhost:3000\/socket.io\/ (EIO,sid,t,transport)(40)",
+							"method": "POST",
+							"param": "x-frame-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"id": "139",
+							"uri": "http://localhost:3000/socket.io/?EIO=4&transport=polling&t=Q8Cd_B2&sid=5x4Xr2u_VqdTBUqCAAAA",
+							"nodeName": "http:\/\/localhost:3000\/socket.io\/ (EIO,sid,t,transport)(42[\"notification received\",\"8d2072c6b0a4...)",
+							"method": "POST",
+							"param": "x-frame-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						}
+					],
+					"count": "2",
+					"systemic": false,
+					"solution": "<p>Modern Web browsers support the Content-Security-Policy and X-Frame-Options HTTP headers. Ensure one of them is set on all web pages returned by your site/app.</p><p>If you expect the page to be framed only by pages on your server (e.g. it's part of a FRAMESET) then you'll want to use SAMEORIGIN, otherwise if you never expect the page to be framed, you should use DENY. Alternatively consider implementing Content Security Policy's \"frame-ancestors\" directive.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/X-Frame-Options</p>",
+					"cweid": "1021",
+					"wascid": "15",
+					"sourceid": "217"
+				},
+				{
+					"pluginid": "3",
+					"alertRef": "3-1",
+					"alert": "Session ID in URL Rewrite",
+					"name": "Session ID in URL Rewrite",
+					"riskcode": "2",
+					"confidence": "3",
+					"riskdesc": "Medium (High)",
+					"desc": "<p>URL rewrite is used to track user session ID. The session ID may be disclosed via cross-site referer header. In addition, the session ID might be stored in browser history or server logs.</p>",
+					"instances":[ 
+						{
+							"id": "137",
+							"uri": "http://localhost:3000/socket.io/?EIO=4&transport=polling&t=Q8Cd_90&sid=5x4Xr2u_VqdTBUqCAAAA",
+							"nodeName": "http:\/\/localhost:3000\/socket.io\/ (EIO,sid,t,transport)",
+							"method": "GET",
+							"param": "sid",
+							"attack": "",
+							"evidence": "5x4Xr2u_VqdTBUqCAAAA",
+							"otherinfo": ""
+						},
+						{
+							"id": "136",
+							"uri": "http://localhost:3000/socket.io/?EIO=4&transport=websocket&sid=5x4Xr2u_VqdTBUqCAAAA",
+							"nodeName": "http:\/\/localhost:3000\/socket.io\/ (EIO,sid,transport)",
+							"method": "GET",
+							"param": "sid",
+							"attack": "",
+							"evidence": "5x4Xr2u_VqdTBUqCAAAA",
+							"otherinfo": ""
+						},
+						{
+							"id": "134",
+							"uri": "http://localhost:3000/socket.io/?EIO=4&transport=polling&t=Q8Cd_8-&sid=5x4Xr2u_VqdTBUqCAAAA",
+							"nodeName": "http:\/\/localhost:3000\/socket.io\/ (EIO,sid,t,transport)(40)",
+							"method": "POST",
+							"param": "sid",
+							"attack": "",
+							"evidence": "5x4Xr2u_VqdTBUqCAAAA",
+							"otherinfo": ""
+						},
+						{
+							"id": "159",
+							"uri": "http://localhost:3000/socket.io/?EIO=4&transport=polling&t=Q8Ce0le&sid=HP0UH6jZxSNlLFEzAAAC",
+							"nodeName": "http:\/\/localhost:3000\/socket.io\/ (EIO,sid,t,transport)(40)",
+							"method": "POST",
+							"param": "sid",
+							"attack": "",
+							"evidence": "HP0UH6jZxSNlLFEzAAAC",
+							"otherinfo": ""
+						},
+						{
+							"id": "140",
+							"uri": "http://localhost:3000/socket.io/?EIO=4&transport=polling&t=Q8Cd_B2&sid=5x4Xr2u_VqdTBUqCAAAA",
+							"nodeName": "http:\/\/localhost:3000\/socket.io\/ (EIO,sid,t,transport)(42[\"notification received\",\"8d2072c6b0a4...)",
+							"method": "POST",
+							"param": "sid",
+							"attack": "",
+							"evidence": "5x4Xr2u_VqdTBUqCAAAA",
+							"otherinfo": ""
+						}
+					],
+					"count": "5",
+					"systemic": true,
+					"solution": "<p>For secure content, put session ID in a cookie. To be even more secure consider using a combination of cookie and URL rewrite.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://seclists.org/webappsec/2002/q4/111</p>",
+					"cweid": "598",
+					"wascid": "13",
+					"sourceid": "218"
+				},
+				{
+					"pluginid": "10017",
+					"alertRef": "10017",
+					"alert": "Cross-Domain JavaScript Source File Inclusion",
+					"name": "Cross-Domain JavaScript Source File Inclusion",
+					"riskcode": "1",
+					"confidence": "2",
+					"riskdesc": "Low (Medium)",
+					"desc": "<p>The page includes one or more script files from a third-party domain.</p>",
+					"instances":[ 
+						{
+							"id": "28",
+							"uri": "http://localhost:3000",
+							"nodeName": "http:\/\/localhost:3000",
+							"method": "GET",
+							"param": "//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js",
+							"attack": "",
+							"evidence": "<script src=\"//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js\"></script>",
+							"otherinfo": ""
+						},
+						{
+							"id": "2",
+							"uri": "http://localhost:3000/",
+							"nodeName": "http:\/\/localhost:3000\/",
+							"method": "GET",
+							"param": "//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js",
+							"attack": "",
+							"evidence": "<script src=\"//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js\"></script>",
+							"otherinfo": ""
+						},
+						{
+							"id": "3",
+							"uri": "http://localhost:3000/",
+							"nodeName": "http:\/\/localhost:3000\/",
+							"method": "GET",
+							"param": "//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js",
+							"attack": "",
+							"evidence": "<script src=\"//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js\"></script>",
+							"otherinfo": ""
+						},
+						{
+							"id": "18",
+							"uri": "http://localhost:3000/sitemap.xml",
+							"nodeName": "http:\/\/localhost:3000\/sitemap.xml",
+							"method": "GET",
+							"param": "//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js",
+							"attack": "",
+							"evidence": "<script src=\"//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js\"></script>",
+							"otherinfo": ""
+						},
+						{
+							"id": "26",
+							"uri": "http://localhost:3000/sitemap.xml",
+							"nodeName": "http:\/\/localhost:3000\/sitemap.xml",
+							"method": "GET",
+							"param": "//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js",
+							"attack": "",
+							"evidence": "<script src=\"//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js\"></script>",
+							"otherinfo": ""
+						}
+					],
+					"count": "5",
+					"systemic": true,
+					"solution": "<p>Ensure JavaScript source files are loaded from only trusted sources, and the sources can't be controlled by end users of the application.</p>",
+					"otherinfo": "",
+					"reference": "",
+					"cweid": "829",
+					"wascid": "15",
+					"sourceid": "9"
+				},
+				{
+					"pluginid": "90004",
+					"alertRef": "90004-2",
+					"alert": "Cross-Origin-Embedder-Policy Header Missing or Invalid",
+					"name": "Cross-Origin-Embedder-Policy Header Missing or Invalid",
+					"riskcode": "1",
+					"confidence": "2",
+					"riskdesc": "Low (Medium)",
+					"desc": "<p>Cross-Origin-Embedder-Policy header is a response header that prevents a document from loading any cross-origin resources that don't explicitly grant the document permission (using CORP or CORS).</p>",
+					"instances":[ 
+						{
+							"id": "49",
+							"uri": "http://localhost:3000",
+							"nodeName": "http:\/\/localhost:3000",
+							"method": "GET",
+							"param": "Cross-Origin-Embedder-Policy",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"id": "7",
+							"uri": "http://localhost:3000/",
+							"nodeName": "http:\/\/localhost:3000\/",
+							"method": "GET",
+							"param": "Cross-Origin-Embedder-Policy",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"id": "76",
+							"uri": "http://localhost:3000/ftp",
+							"nodeName": "http:\/\/localhost:3000\/ftp",
+							"method": "GET",
+							"param": "Cross-Origin-Embedder-Policy",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"id": "98",
+							"uri": "http://localhost:3000/juice-shop/build/routes/fileServer.js:55:18",
+							"nodeName": "http:\/\/localhost:3000\/juice-shop\/build\/routes\/fileServer.js:55:18",
+							"method": "GET",
+							"param": "Cross-Origin-Embedder-Policy",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"id": "42",
+							"uri": "http://localhost:3000/sitemap.xml",
+							"nodeName": "http:\/\/localhost:3000\/sitemap.xml",
+							"method": "GET",
+							"param": "Cross-Origin-Embedder-Policy",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						}
+					],
+					"count": "5",
+					"systemic": false,
+					"solution": "<p>Ensure that the application/web server sets the Cross-Origin-Embedder-Policy header appropriately, and that it sets the Cross-Origin-Embedder-Policy header to 'require-corp' for documents.</p><p>If possible, ensure that the end user uses a standards-compliant and modern web browser that supports the Cross-Origin-Embedder-Policy header (https://caniuse.com/mdn-http_headers_cross-origin-embedder-policy).</p>",
+					"otherinfo": "",
+					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Cross-Origin-Embedder-Policy</p>",
+					"cweid": "693",
+					"wascid": "14",
+					"sourceid": "9"
+				},
+				{
+					"pluginid": "90004",
+					"alertRef": "90004-3",
+					"alert": "Cross-Origin-Opener-Policy Header Missing or Invalid",
+					"name": "Cross-Origin-Opener-Policy Header Missing or Invalid",
+					"riskcode": "1",
+					"confidence": "2",
+					"riskdesc": "Low (Medium)",
+					"desc": "<p>Cross-Origin-Opener-Policy header is a response header that allows a site to control if others included documents share the same browsing context. Sharing the same browsing context with untrusted documents might lead to data leak.</p>",
+					"instances":[ 
+						{
+							"id": "50",
+							"uri": "http://localhost:3000",
+							"nodeName": "http:\/\/localhost:3000",
+							"method": "GET",
+							"param": "Cross-Origin-Opener-Policy",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"id": "8",
+							"uri": "http://localhost:3000/",
+							"nodeName": "http:\/\/localhost:3000\/",
+							"method": "GET",
+							"param": "Cross-Origin-Opener-Policy",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"id": "78",
+							"uri": "http://localhost:3000/ftp",
+							"nodeName": "http:\/\/localhost:3000\/ftp",
+							"method": "GET",
+							"param": "Cross-Origin-Opener-Policy",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"id": "99",
+							"uri": "http://localhost:3000/juice-shop/build/routes/fileServer.js:55:18",
+							"nodeName": "http:\/\/localhost:3000\/juice-shop\/build\/routes\/fileServer.js:55:18",
+							"method": "GET",
+							"param": "Cross-Origin-Opener-Policy",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"id": "45",
+							"uri": "http://localhost:3000/sitemap.xml",
+							"nodeName": "http:\/\/localhost:3000\/sitemap.xml",
+							"method": "GET",
+							"param": "Cross-Origin-Opener-Policy",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						}
+					],
+					"count": "5",
+					"systemic": false,
+					"solution": "<p>Ensure that the application/web server sets the Cross-Origin-Opener-Policy header appropriately, and that it sets the Cross-Origin-Opener-Policy header to 'same-origin' for documents.</p><p>'same-origin-allow-popups' is considered as less secured and should be avoided.</p><p>If possible, ensure that the end user uses a standards-compliant and modern web browser that supports the Cross-Origin-Opener-Policy header (https://caniuse.com/mdn-http_headers_cross-origin-opener-policy).</p>",
+					"otherinfo": "",
+					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Cross-Origin-Opener-Policy</p>",
+					"cweid": "693",
+					"wascid": "14",
+					"sourceid": "9"
+				},
+				{
+					"pluginid": "10110",
+					"alertRef": "10110",
+					"alert": "Dangerous JS Functions",
+					"name": "Dangerous JS Functions",
+					"riskcode": "1",
+					"confidence": "1",
+					"riskdesc": "Low (Low)",
+					"desc": "<p>A dangerous JS function seems to be in use that would leave the site vulnerable.</p>",
+					"instances":[ 
+						{
+							"id": "65",
+							"uri": "http://localhost:3000/main.js",
+							"nodeName": "http:\/\/localhost:3000\/main.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "bypassSecurityTrustHtml(",
+							"otherinfo": ""
+						},
+						{
+							"id": "103",
+							"uri": "http://localhost:3000/vendor.js",
+							"nodeName": "http:\/\/localhost:3000\/vendor.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "bypassSecurityTrustHtml(",
+							"otherinfo": ""
+						}
+					],
+					"count": "2",
+					"systemic": false,
+					"solution": "<p>See the references for security advice on the use of these functions.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://v17.angular.io/guide/security</p>",
+					"cweid": "749",
+					"wascid": "-1",
+					"sourceid": "22"
+				},
+				{
+					"pluginid": "10063",
+					"alertRef": "10063-2",
+					"alert": "Deprecated Feature Policy Header Set",
+					"name": "Deprecated Feature Policy Header Set",
+					"riskcode": "1",
+					"confidence": "2",
+					"riskdesc": "Low (Medium)",
+					"desc": "<p>The header has now been renamed to Permissions-Policy.</p>",
+					"instances":[ 
+						{
+							"id": "48",
+							"uri": "http://localhost:3000",
+							"nodeName": "http:\/\/localhost:3000",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Feature-Policy",
+							"otherinfo": ""
+						},
+						{
+							"id": "6",
+							"uri": "http://localhost:3000/",
+							"nodeName": "http:\/\/localhost:3000\/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Feature-Policy",
+							"otherinfo": ""
+						},
+						{
+							"id": "61",
+							"uri": "http://localhost:3000/polyfills.js",
+							"nodeName": "http:\/\/localhost:3000\/polyfills.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Feature-Policy",
+							"otherinfo": ""
+						},
+						{
+							"id": "36",
+							"uri": "http://localhost:3000/runtime.js",
+							"nodeName": "http:\/\/localhost:3000\/runtime.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Feature-Policy",
+							"otherinfo": ""
+						},
+						{
+							"id": "41",
+							"uri": "http://localhost:3000/sitemap.xml",
+							"nodeName": "http:\/\/localhost:3000\/sitemap.xml",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Feature-Policy",
+							"otherinfo": ""
+						}
+					],
+					"count": "5",
+					"systemic": true,
+					"solution": "<p>Ensure that your web server, application server, load balancer, etc. is configured to set the Permissions-Policy header instead of the Feature-Policy header.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy</p><p>https://scotthelme.co.uk/goodbye-feature-policy-and-hello-permissions-policy/</p>",
+					"cweid": "16",
+					"wascid": "15",
+					"sourceid": "9"
+				},
+				{
+					"pluginid": "110009",
+					"alertRef": "110009",
+					"alert": "Full Path Disclosure",
+					"name": "Full Path Disclosure",
+					"riskcode": "1",
+					"confidence": "1",
+					"riskdesc": "Low (Low)",
+					"desc": "<p>The full path of files which might be sensitive has been exposed to the client.</p>",
+					"instances":[ 
+						{
+							"id": "73",
+							"uri": "http://localhost:3000/ftp/coupons_2013.md.bak",
+							"nodeName": "http:\/\/localhost:3000\/ftp\/coupons_2013.md.bak",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "/lib/",
+							"otherinfo": ""
+						},
+						{
+							"id": "82",
+							"uri": "http://localhost:3000/ftp/eastere.gg",
+							"nodeName": "http:\/\/localhost:3000\/ftp\/eastere.gg",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "/lib/",
+							"otherinfo": ""
+						},
+						{
+							"id": "83",
+							"uri": "http://localhost:3000/ftp/encrypt.pyc",
+							"nodeName": "http:\/\/localhost:3000\/ftp\/encrypt.pyc",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "/lib/",
+							"otherinfo": ""
+						},
+						{
+							"id": "87",
+							"uri": "http://localhost:3000/ftp/package.json.bak",
+							"nodeName": "http:\/\/localhost:3000\/ftp\/package.json.bak",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "/lib/",
+							"otherinfo": ""
+						},
+						{
+							"id": "89",
+							"uri": "http://localhost:3000/ftp/suspicious_errors.yml",
+							"nodeName": "http:\/\/localhost:3000\/ftp\/suspicious_errors.yml",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "/lib/",
+							"otherinfo": ""
+						}
+					],
+					"count": "5",
+					"systemic": false,
+					"solution": "<p>Disable directory browsing in your web server. Refer to the web server documentation.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://owasp.org/www-community/attacks/Full_Path_Disclosure</p>",
+					"cweid": "209",
+					"wascid": "13",
+					"sourceid": "39"
+				},
+				{
+					"pluginid": "2",
+					"alertRef": "2",
+					"alert": "Private IP Disclosure",
+					"name": "Private IP Disclosure",
+					"riskcode": "1",
+					"confidence": "2",
+					"riskdesc": "Low (Medium)",
+					"desc": "<p>A private IP (such as 10.x.x.x, 172.x.x.x, 192.168.x.x) or an Amazon EC2 private hostname (for example, ip-10-0-56-78) has been found in the HTTP response body. This information might be helpful for further attacks targeting internal systems.</p>",
+					"instances":[ 
+						{
+							"id": "117",
+							"uri": "http://localhost:3000/rest/admin/application-configuration",
+							"nodeName": "http:\/\/localhost:3000\/rest\/admin\/application-configuration",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "192.168.99.100:3000",
+							"otherinfo": "192.168.99.100:3000\n192.168.99.100:4200\n"
+						}
+					],
+					"count": "1",
+					"systemic": false,
+					"solution": "<p>Remove the private IP address from the HTTP response body. For comments, use JSP/ASP/PHP comment instead of HTML/JavaScript comment which can be seen by client browsers.</p>",
+					"otherinfo": "<p>192.168.99.100:3000</p><p>192.168.99.100:4200</p><p></p>",
+					"reference": "<p>https://datatracker.ietf.org/doc/html/rfc1918</p>",
+					"cweid": "497",
+					"wascid": "13",
+					"sourceid": "201"
+				},
+				{
+					"pluginid": "10096",
+					"alertRef": "10096",
+					"alert": "Timestamp Disclosure - Unix",
+					"name": "Timestamp Disclosure - Unix",
+					"riskcode": "1",
+					"confidence": "1",
+					"riskdesc": "Low (Low)",
+					"desc": "<p>A timestamp was disclosed by the application/web server. - Unix</p>",
+					"instances":[ 
+						{
+							"id": "62",
+							"uri": "http://localhost:3000/main.js",
+							"nodeName": "http:\/\/localhost:3000\/main.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "1734944650",
+							"otherinfo": "1734944650, which evaluates to: 2024-12-23 09:04:10."
+						},
+						{
+							"id": "118",
+							"uri": "http://localhost:3000/rest/admin/application-configuration",
+							"nodeName": "http:\/\/localhost:3000\/rest\/admin\/application-configuration",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "1969196030",
+							"otherinfo": "1969196030, which evaluates to: 2032-05-26 14:53:50."
+						},
+						{
+							"id": "119",
+							"uri": "http://localhost:3000/rest/admin/application-configuration",
+							"nodeName": "http:\/\/localhost:3000\/rest\/admin\/application-configuration",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "1970691216",
+							"otherinfo": "1970691216, which evaluates to: 2032-06-12 22:13:36."
+						},
+						{
+							"id": "147",
+							"uri": "http://localhost:3000/rest/products/search?q=",
+							"nodeName": "http:\/\/localhost:3000\/rest\/products\/search (q)",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "1969196030",
+							"otherinfo": "1969196030, which evaluates to: 2032-05-26 14:53:50."
+						},
+						{
+							"id": "146",
+							"uri": "http://localhost:3000/rest/products/search?q=",
+							"nodeName": "http:\/\/localhost:3000\/rest\/products\/search (q)",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "1970691216",
+							"otherinfo": "1970691216, which evaluates to: 2032-06-12 22:13:36."
+						}
+					],
+					"count": "5",
+					"systemic": false,
+					"solution": "<p>Manually confirm that the timestamp data is not sensitive, and that the data cannot be aggregated to disclose exploitable patterns.</p>",
+					"otherinfo": "<p>1734944650, which evaluates to: 2024-12-23 09:04:10.</p>",
+					"reference": "<p>https://cwe.mitre.org/data/definitions/200.html</p>",
+					"cweid": "497",
+					"wascid": "13",
+					"sourceid": "22"
+				},
+				{
+					"pluginid": "10021",
+					"alertRef": "10021",
+					"alert": "X-Content-Type-Options Header Missing",
+					"name": "X-Content-Type-Options Header Missing",
+					"riskcode": "1",
+					"confidence": "2",
+					"riskdesc": "Low (Medium)",
+					"desc": "<p>The Anti-MIME-Sniffing header X-Content-Type-Options was not set to 'nosniff'. This allows older versions of Internet Explorer and Chrome to perform MIME-sniffing on the response body, potentially causing the response body to be interpreted and displayed as a content type other than the declared content type. Current (early 2014) and legacy versions of Firefox will use the declared content type (if one is set), rather than performing MIME-sniffing.</p>",
+					"instances":[ 
+						{
+							"id": "138",
+							"uri": "http://localhost:3000/socket.io/?EIO=4&transport=polling&t=Q8Cd_90&sid=5x4Xr2u_VqdTBUqCAAAA",
+							"nodeName": "http:\/\/localhost:3000\/socket.io\/ (EIO,sid,t,transport)",
+							"method": "GET",
+							"param": "x-content-type-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
+						},
+						{
+							"id": "120",
+							"uri": "http://localhost:3000/socket.io/?EIO=4&transport=polling&t=Q8Cd_5u",
+							"nodeName": "http:\/\/localhost:3000\/socket.io\/ (EIO,t,transport)",
+							"method": "GET",
+							"param": "x-content-type-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
+						},
+						{
+							"id": "135",
+							"uri": "http://localhost:3000/socket.io/?EIO=4&transport=polling&t=Q8Cd_8-&sid=5x4Xr2u_VqdTBUqCAAAA",
+							"nodeName": "http:\/\/localhost:3000\/socket.io\/ (EIO,sid,t,transport)(40)",
+							"method": "POST",
+							"param": "x-content-type-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
+						},
+						{
+							"id": "142",
+							"uri": "http://localhost:3000/socket.io/?EIO=4&transport=polling&t=Q8Cd_B2&sid=5x4Xr2u_VqdTBUqCAAAA",
+							"nodeName": "http:\/\/localhost:3000\/socket.io\/ (EIO,sid,t,transport)(42[\"notification received\",\"8d2072c6b0a4...)",
+							"method": "POST",
+							"param": "x-content-type-options",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.\nAt \"High\" threshold this scan rule will not alert on client or server error responses."
+						}
+					],
+					"count": "4",
+					"systemic": false,
+					"solution": "<p>Ensure that the application/web server sets the Content-Type header appropriately, and that it sets the X-Content-Type-Options header to 'nosniff' for all web pages.</p><p>If possible, ensure that the end user uses a standards-compliant and modern web browser that does not perform MIME-sniffing at all, or that can be directed by the web application/web server to not perform MIME-sniffing.</p>",
+					"otherinfo": "<p>This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.</p><p>At \"High\" threshold this scan rule will not alert on client or server error responses.</p>",
+					"reference": "<p>https://learn.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/compatibility/gg622941(v=vs.85)</p><p>https://owasp.org/www-community/Security_Headers</p>",
+					"cweid": "693",
+					"wascid": "15",
+					"sourceid": "218"
+				},
+				{
+					"pluginid": "10094",
+					"alertRef": "10094-3",
+					"alert": "Base64 Disclosure",
+					"name": "Base64 Disclosure",
+					"riskcode": "0",
+					"confidence": "2",
+					"riskdesc": "Informational (Medium)",
+					"desc": "<p>Base64 encoded data was disclosed by the application/web server. Note: in the interests of performance not all base64 strings in the response were analyzed individually, the entire response should be looked at by the analyst/security team/developer(s).</p>",
+					"instances":[ 
+						{
+							"id": "84",
+							"uri": "http://localhost:3000/ftp",
+							"nodeName": "http:\/\/localhost:3000\/ftp",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAABGdBTUEAALGPC/xhBQAAAWtQTFRFAAAA/PPQ9Nhc2q402qQ12qs2/PTX2pg12p81+/LM89NE9dto2q82+/fp2rM22qY39d6U+/bo2qo2/frx/vz32q812qs12qE279SU8c4w9NZP+/LK//367s9y7s925cp0/vzw9t92//342po2/vz25s1579B6+OSO2bQ0/v799NyT8tE79dld8Msm+OrC/vzx79KA2IYs7s6I9d6R4cJe9+OF/PLI/fry79OF/v30//328tWB89RJ8c9p8c0u9eCf//7+9txs6sts5Mdr+++5+u2z/vrv+/fq6cFz8dBs8tA57cpq+OaU9uGs27Y8//799NdX/PbY9uB89unJ//z14sNf+emh+emk+vDc+uys9+OL8dJy89NH+eic8tN5+OaV+OWR9N2n9dtl9t529+KF9+GB9Nue9NdU8tR/9t5y89qW9dpj89iO89eG/vvu2pQ12Y4z/vzy2Ict/vvv48dr/vzz4sNg///+2Igty3PqwQAAAAF0Uk5TAEDm2GYAAACtSURBVBjTY2AgA2iYlJWVhfohBPg0yx38y92dS0pKVOVBAqIi6sb2vsWWpfrFeTI8QAEhYQEta28nCwM1OVleZqCAmKCEkUdwYWmhQnFeOStQgL9cySqkNNDHVJGbiY0FKCCuYuYSGRsV5KgjxcXIARRQNncNj09JTgqw0ZbkZAcK5LuFJaRmZqfHeNnpSucDBQoiEtOycnIz4qI9bfUKQA6pKKqAgqIKQyK8BgAZ5yfODmnHrQAAAABJRU5ErkJggg==",
+							"otherinfo": "\uFFFDPNG\r\n\\x001a\n\\x0000\\x0000\\x0000\rIHDR\\x0000\\x0000\\x0000\\x0010\\x0000\\x0000\\x0000\\x0010\\x0008\\x0003\\x0000\\x0000\\x0000(-\\x000fS\\x0000\\x0000\\x0000\\x0004gAMA\\x0000\\x0000\uFFFD\uFFFD\\x000b\uFFFDa\\x0005\\x0000\\x0000\\x0001kPLTE\\x0000\\x0000\\x0000\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\\\u06AE4\u06A45\u06AB6\uFFFD\uFFFD\uFFFD\u06985\u069F5\uFFFD\uFFFD\uFFFD\uFFFD\uFFFDD\uFFFD\uFFFDh\u06AF6\uFFFD\uFFFD\uFFFD\u06B36\u06A67\uFFFD\u0794\uFFFD\uFFFD\uFFFD\u06AA6\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\u06AF5\u06AB5\u06A16\uFFFD\u0514\uFFFD\uFFFD0\uFFFD\uFFFDO\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFDr\uFFFD\uFFFDv\uFFFD\uFFFDt\uFFFD\uFFFD\uFFFD\uFFFD\uFFFDv\uFFFD\uFFFD\uFFFD\u069A6\uFFFD\uFFFD\uFFFD\uFFFD\uFFFDy\uFFFD\uFFFDz\uFFFD\uFFFD\u06744\uFFFD\uFFFD\uFFFD\uFFFD\u0713\uFFFD\uFFFD;\uFFFD\uFFFD]\uFFFD\uFFFD&\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\u0480\u0606,\uFFFD\u0388\uFFFD\u0791\uFFFD\uFFFD^\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\u04C5\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\u0541\uFFFD\uFFFDI\uFFFD\uFFFDi\uFFFD\uFFFD.\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFDl\uFFFD\uFFFDl\uFFFD\uFFFDk\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFDs\uFFFD\uFFFDl\uFFFD\uFFFD9\uFFFD\uFFFDj\uFFFD\uFFFD\uFFFD\uFFFD\u06F6<\uFFFD\uFFFD\uFFFD\uFFFD\uFFFDW\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD|\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD_\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFDr\uFFFD\uFFFDG\uFFFD\uFFFD\uFFFD\uFFFDy\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\u0767\uFFFD\uFFFDe\uFFFD\uFFFDv\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\u06DE\uFFFD\uFFFDT\uFFFD\uFFFD\uFFFD\uFFFDr\uFFFD\u0696\uFFFD\uFFFDc\uFFFD\u060E\uFFFD\u05C6\uFFFD\uFFFD\uFFFD\u06945\u064E3\uFFFD\uFFFD\uFFFD\u0607-\uFFFD\uFFFD\uFFFD\uFFFD\uFFFDk\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD`\uFFFD\uFFFD\uFFFD\u0608-\uFFFDs\uFFFD\uFFFD\\x0000\\x0000\\x0000\\x0001tRNS\\x0000@\uFFFD\uFFFDf\\x0000\\x0000\\x0000\uFFFDIDAT\\x0018\uFFFDc` \\x0003h\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD!\\x0004\uFFFD4\uFFFD\\x001d\uFFFD\uFFFD\u075DKJJT\uFFFDA\\x0002\uFFFD\"\uFFFD\uFFFD\uFFFD\uFFFD\u0156\uFFFD\uFFFD\uFFFDy2<@\\x0001!a\\x0001-ko'\\x000b\\x000359Y^f\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFDGpai\uFFFDBq^9+P\uFFFD\uFFFD\\\uFFFD*\uFFFD4\uFFFD\uFFFDT\uFFFD\uFFFD\uFFFD\uFFFD\\x0005( \uFFFDb\uFFFD\\x0012\\x0019\\x001b\\x0015\uFFFD#\uFFFD\uFFFD\uFFFD\\x0001\\x0014P6w\r\uFFFDOIN\n\uFFFD\u0456\uFFFDd\\x0007\n\u4EC5%\uFFFDff\uFFFD\uFFFDx\uFFFD\uFFFDJ\uFFFD\\x0003\\x0005\n\"\\x0012\u04F2rr3\uFFFD=m\uFFFD\n@\\x000e\uFFFD(\uFFFD\uFFFD\uFFFD\uFFFD\nC\"\uFFFD\\x0006\\x0000\\x0019\uFFFD'\uFFFD\\x000ei\u01ED\\x0000\\x0000\\x0000\\x0000IEND\uFFFDB`\uFFFD"
+						},
+						{
+							"id": "110",
+							"uri": "http://localhost:3000/ftp/",
+							"nodeName": "http:\/\/localhost:3000\/ftp\/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAABGdBTUEAALGPC/xhBQAAAWtQTFRFAAAA/PPQ9Nhc2q402qQ12qs2/PTX2pg12p81+/LM89NE9dto2q82+/fp2rM22qY39d6U+/bo2qo2/frx/vz32q812qs12qE279SU8c4w9NZP+/LK//367s9y7s925cp0/vzw9t92//342po2/vz25s1579B6+OSO2bQ0/v799NyT8tE79dld8Msm+OrC/vzx79KA2IYs7s6I9d6R4cJe9+OF/PLI/fry79OF/v30//328tWB89RJ8c9p8c0u9eCf//7+9txs6sts5Mdr+++5+u2z/vrv+/fq6cFz8dBs8tA57cpq+OaU9uGs27Y8//799NdX/PbY9uB89unJ//z14sNf+emh+emk+vDc+uys9+OL8dJy89NH+eic8tN5+OaV+OWR9N2n9dtl9t529+KF9+GB9Nue9NdU8tR/9t5y89qW9dpj89iO89eG/vvu2pQ12Y4z/vzy2Ict/vvv48dr/vzz4sNg///+2Igty3PqwQAAAAF0Uk5TAEDm2GYAAACtSURBVBjTY2AgA2iYlJWVhfohBPg0yx38y92dS0pKVOVBAqIi6sb2vsWWpfrFeTI8QAEhYQEta28nCwM1OVleZqCAmKCEkUdwYWmhQnFeOStQgL9cySqkNNDHVJGbiY0FKCCuYuYSGRsV5KgjxcXIARRQNncNj09JTgqw0ZbkZAcK5LuFJaRmZqfHeNnpSucDBQoiEtOycnIz4qI9bfUKQA6pKKqAgqIKQyK8BgAZ5yfODmnHrQAAAABJRU5ErkJggg==",
+							"otherinfo": "\uFFFDPNG\r\n\\x001a\n\\x0000\\x0000\\x0000\rIHDR\\x0000\\x0000\\x0000\\x0010\\x0000\\x0000\\x0000\\x0010\\x0008\\x0003\\x0000\\x0000\\x0000(-\\x000fS\\x0000\\x0000\\x0000\\x0004gAMA\\x0000\\x0000\uFFFD\uFFFD\\x000b\uFFFDa\\x0005\\x0000\\x0000\\x0001kPLTE\\x0000\\x0000\\x0000\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\\\u06AE4\u06A45\u06AB6\uFFFD\uFFFD\uFFFD\u06985\u069F5\uFFFD\uFFFD\uFFFD\uFFFD\uFFFDD\uFFFD\uFFFDh\u06AF6\uFFFD\uFFFD\uFFFD\u06B36\u06A67\uFFFD\u0794\uFFFD\uFFFD\uFFFD\u06AA6\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\u06AF5\u06AB5\u06A16\uFFFD\u0514\uFFFD\uFFFD0\uFFFD\uFFFDO\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFDr\uFFFD\uFFFDv\uFFFD\uFFFDt\uFFFD\uFFFD\uFFFD\uFFFD\uFFFDv\uFFFD\uFFFD\uFFFD\u069A6\uFFFD\uFFFD\uFFFD\uFFFD\uFFFDy\uFFFD\uFFFDz\uFFFD\uFFFD\u06744\uFFFD\uFFFD\uFFFD\uFFFD\u0713\uFFFD\uFFFD;\uFFFD\uFFFD]\uFFFD\uFFFD&\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\u0480\u0606,\uFFFD\u0388\uFFFD\u0791\uFFFD\uFFFD^\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\u04C5\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\u0541\uFFFD\uFFFDI\uFFFD\uFFFDi\uFFFD\uFFFD.\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFDl\uFFFD\uFFFDl\uFFFD\uFFFDk\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFDs\uFFFD\uFFFDl\uFFFD\uFFFD9\uFFFD\uFFFDj\uFFFD\uFFFD\uFFFD\uFFFD\u06F6<\uFFFD\uFFFD\uFFFD\uFFFD\uFFFDW\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD|\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD_\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFDr\uFFFD\uFFFDG\uFFFD\uFFFD\uFFFD\uFFFDy\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\u0767\uFFFD\uFFFDe\uFFFD\uFFFDv\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\u06DE\uFFFD\uFFFDT\uFFFD\uFFFD\uFFFD\uFFFDr\uFFFD\u0696\uFFFD\uFFFDc\uFFFD\u060E\uFFFD\u05C6\uFFFD\uFFFD\uFFFD\u06945\u064E3\uFFFD\uFFFD\uFFFD\u0607-\uFFFD\uFFFD\uFFFD\uFFFD\uFFFDk\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD`\uFFFD\uFFFD\uFFFD\u0608-\uFFFDs\uFFFD\uFFFD\\x0000\\x0000\\x0000\\x0001tRNS\\x0000@\uFFFD\uFFFDf\\x0000\\x0000\\x0000\uFFFDIDAT\\x0018\uFFFDc` \\x0003h\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD!\\x0004\uFFFD4\uFFFD\\x001d\uFFFD\uFFFD\u075DKJJT\uFFFDA\\x0002\uFFFD\"\uFFFD\uFFFD\uFFFD\uFFFD\u0156\uFFFD\uFFFD\uFFFDy2<@\\x0001!a\\x0001-ko'\\x000b\\x000359Y^f\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFDGpai\uFFFDBq^9+P\uFFFD\uFFFD\\\uFFFD*\uFFFD4\uFFFD\uFFFDT\uFFFD\uFFFD\uFFFD\uFFFD\\x0005( \uFFFDb\uFFFD\\x0012\\x0019\\x001b\\x0015\uFFFD#\uFFFD\uFFFD\uFFFD\\x0001\\x0014P6w\r\uFFFDOIN\n\uFFFD\u0456\uFFFDd\\x0007\n\u4EC5%\uFFFDff\uFFFD\uFFFDx\uFFFD\uFFFDJ\uFFFD\\x0003\\x0005\n\"\\x0012\u04F2rr3\uFFFD=m\uFFFD\n@\\x000e\uFFFD(\uFFFD\uFFFD\uFFFD\uFFFD\nC\"\uFFFD\\x0006\\x0000\\x0019\uFFFD'\uFFFD\\x000ei\u01ED\\x0000\\x0000\\x0000\\x0000IEND\uFFFDB`\uFFFD"
+						},
+						{
+							"id": "109",
+							"uri": "http://localhost:3000/ftp/quarantine",
+							"nodeName": "http:\/\/localhost:3000\/ftp\/quarantine",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAABGdBTUEAALGPC/xhBQAAAWtQTFRFAAAA/PPQ9Nhc2q402qQ12qs2/PTX2pg12p81+/LM89NE9dto2q82+/fp2rM22qY39d6U+/bo2qo2/frx/vz32q812qs12qE279SU8c4w9NZP+/LK//367s9y7s925cp0/vzw9t92//342po2/vz25s1579B6+OSO2bQ0/v799NyT8tE79dld8Msm+OrC/vzx79KA2IYs7s6I9d6R4cJe9+OF/PLI/fry79OF/v30//328tWB89RJ8c9p8c0u9eCf//7+9txs6sts5Mdr+++5+u2z/vrv+/fq6cFz8dBs8tA57cpq+OaU9uGs27Y8//799NdX/PbY9uB89unJ//z14sNf+emh+emk+vDc+uys9+OL8dJy89NH+eic8tN5+OaV+OWR9N2n9dtl9t529+KF9+GB9Nue9NdU8tR/9t5y89qW9dpj89iO89eG/vvu2pQ12Y4z/vzy2Ict/vvv48dr/vzz4sNg///+2Igty3PqwQAAAAF0Uk5TAEDm2GYAAACtSURBVBjTY2AgA2iYlJWVhfohBPg0yx38y92dS0pKVOVBAqIi6sb2vsWWpfrFeTI8QAEhYQEta28nCwM1OVleZqCAmKCEkUdwYWmhQnFeOStQgL9cySqkNNDHVJGbiY0FKCCuYuYSGRsV5KgjxcXIARRQNncNj09JTgqw0ZbkZAcK5LuFJaRmZqfHeNnpSucDBQoiEtOycnIz4qI9bfUKQA6pKKqAgqIKQyK8BgAZ5yfODmnHrQAAAABJRU5ErkJggg==",
+							"otherinfo": "\uFFFDPNG\r\n\\x001a\n\\x0000\\x0000\\x0000\rIHDR\\x0000\\x0000\\x0000\\x0010\\x0000\\x0000\\x0000\\x0010\\x0008\\x0003\\x0000\\x0000\\x0000(-\\x000fS\\x0000\\x0000\\x0000\\x0004gAMA\\x0000\\x0000\uFFFD\uFFFD\\x000b\uFFFDa\\x0005\\x0000\\x0000\\x0001kPLTE\\x0000\\x0000\\x0000\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\\\u06AE4\u06A45\u06AB6\uFFFD\uFFFD\uFFFD\u06985\u069F5\uFFFD\uFFFD\uFFFD\uFFFD\uFFFDD\uFFFD\uFFFDh\u06AF6\uFFFD\uFFFD\uFFFD\u06B36\u06A67\uFFFD\u0794\uFFFD\uFFFD\uFFFD\u06AA6\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\u06AF5\u06AB5\u06A16\uFFFD\u0514\uFFFD\uFFFD0\uFFFD\uFFFDO\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFDr\uFFFD\uFFFDv\uFFFD\uFFFDt\uFFFD\uFFFD\uFFFD\uFFFD\uFFFDv\uFFFD\uFFFD\uFFFD\u069A6\uFFFD\uFFFD\uFFFD\uFFFD\uFFFDy\uFFFD\uFFFDz\uFFFD\uFFFD\u06744\uFFFD\uFFFD\uFFFD\uFFFD\u0713\uFFFD\uFFFD;\uFFFD\uFFFD]\uFFFD\uFFFD&\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\u0480\u0606,\uFFFD\u0388\uFFFD\u0791\uFFFD\uFFFD^\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\u04C5\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\u0541\uFFFD\uFFFDI\uFFFD\uFFFDi\uFFFD\uFFFD.\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFDl\uFFFD\uFFFDl\uFFFD\uFFFDk\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFDs\uFFFD\uFFFDl\uFFFD\uFFFD9\uFFFD\uFFFDj\uFFFD\uFFFD\uFFFD\uFFFD\u06F6<\uFFFD\uFFFD\uFFFD\uFFFD\uFFFDW\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD|\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD_\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFDr\uFFFD\uFFFDG\uFFFD\uFFFD\uFFFD\uFFFDy\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\u0767\uFFFD\uFFFDe\uFFFD\uFFFDv\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\u06DE\uFFFD\uFFFDT\uFFFD\uFFFD\uFFFD\uFFFDr\uFFFD\u0696\uFFFD\uFFFDc\uFFFD\u060E\uFFFD\u05C6\uFFFD\uFFFD\uFFFD\u06945\u064E3\uFFFD\uFFFD\uFFFD\u0607-\uFFFD\uFFFD\uFFFD\uFFFD\uFFFDk\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD`\uFFFD\uFFFD\uFFFD\u0608-\uFFFDs\uFFFD\uFFFD\\x0000\\x0000\\x0000\\x0001tRNS\\x0000@\uFFFD\uFFFDf\\x0000\\x0000\\x0000\uFFFDIDAT\\x0018\uFFFDc` \\x0003h\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD!\\x0004\uFFFD4\uFFFD\\x001d\uFFFD\uFFFD\u075DKJJT\uFFFDA\\x0002\uFFFD\"\uFFFD\uFFFD\uFFFD\uFFFD\u0156\uFFFD\uFFFD\uFFFDy2<@\\x0001!a\\x0001-ko'\\x000b\\x000359Y^f\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFDGpai\uFFFDBq^9+P\uFFFD\uFFFD\\\uFFFD*\uFFFD4\uFFFD\uFFFDT\uFFFD\uFFFD\uFFFD\uFFFD\\x0005( \uFFFDb\uFFFD\\x0012\\x0019\\x001b\\x0015\uFFFD#\uFFFD\uFFFD\uFFFD\\x0001\\x0014P6w\r\uFFFDOIN\n\uFFFD\u0456\uFFFDd\\x0007\n\u4EC5%\uFFFDff\uFFFD\uFFFDx\uFFFD\uFFFDJ\uFFFD\\x0003\\x0005\n\"\\x0012\u04F2rr3\uFFFD=m\uFFFD\n@\\x000e\uFFFD(\uFFFD\uFFFD\uFFFD\uFFFD\nC\"\uFFFD\\x0006\\x0000\\x0019\uFFFD'\uFFFD\\x000ei\u01ED\\x0000\\x0000\\x0000\\x0000IEND\uFFFDB`\uFFFD"
+						},
+						{
+							"id": "67",
+							"uri": "http://localhost:3000/main.js",
+							"nodeName": "http:\/\/localhost:3000\/main.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "1AbKfgvw9psQ41NbLi8kufDQTezwG8DRZm",
+							"otherinfo": "\uFFFD\\x0006\uFFFD~\\x000b\uFFFD\uFFFD\uFFFD\\x0010\uFFFDS[./$\uFFFD\uFFFD\uFFFDM\uFFFD\uFFFD\\x001b\uFFFD\uFFFDf"
+						},
+						{
+							"id": "141",
+							"uri": "http://localhost:3000/rest/continue-code",
+							"nodeName": "http:\/\/localhost:3000\/rest\/continue-code",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "g872mOLbrgjJwK7DQ9p834o2nmvd5btQGkqYRlExW6z1PeaBMNyXV5ZMWrXO",
+							"otherinfo": "\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\u06EE\\x0008\uFFFD\uFFFD\uFFFD\uFFFDC\uFFFD|\u07CA6\uFFFDk\uFFFD\uFFFDP\\x001aJ\uFFFDFQ1[\uFFFD\uFFFD=\uFFFD0\u0717W\uFFFDLZ\uFFFD\uFFFD"
+						},
+						{
+							"id": "104",
+							"uri": "http://localhost:3000/vendor.js",
+							"nodeName": "http:\/\/localhost:3000\/vendor.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ",
+							"otherinfo": "\uFFFD]\uFFFD\u37BB\uFFFD\u059Bq\u05DF\uFFFD\\x0018\uFFFD\uFFFDY\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\u06EF\uFFFD\\x001c\uFFFD\\x0000\\x0010\uFFFD\\x0010Q\uFFFD \uFFFD\uFFFD0\u04CFA\\x0014\uFFFDQU\uFFFDa"
+						}
+					],
+					"count": "6",
+					"systemic": false,
+					"solution": "<p>Manually confirm that the Base64 data does not leak sensitive information, and that the data cannot be aggregated/used to exploit other vulnerabilities.</p>",
+					"otherinfo": "<p>\uFFFDPNG</p><p>\\x001a</p><p>\\x0000\\x0000\\x0000\rIHDR\\x0000\\x0000\\x0000\\x0010\\x0000\\x0000\\x0000\\x0010\\x0008\\x0003\\x0000\\x0000\\x0000(-\\x000fS\\x0000\\x0000\\x0000\\x0004gAMA\\x0000\\x0000\uFFFD\uFFFD\\x000b\uFFFDa\\x0005\\x0000\\x0000\\x0001kPLTE\\x0000\\x0000\\x0000\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\\\u06AE4\u06A45\u06AB6\uFFFD\uFFFD\uFFFD\u06985\u069F5\uFFFD\uFFFD\uFFFD\uFFFD\uFFFDD\uFFFD\uFFFDh\u06AF6\uFFFD\uFFFD\uFFFD\u06B36\u06A67\uFFFD\u0794\uFFFD\uFFFD\uFFFD\u06AA6\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\u06AF5\u06AB5\u06A16\uFFFD\u0514\uFFFD\uFFFD0\uFFFD\uFFFDO\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFDr\uFFFD\uFFFDv\uFFFD\uFFFDt\uFFFD\uFFFD\uFFFD\uFFFD\uFFFDv\uFFFD\uFFFD\uFFFD\u069A6\uFFFD\uFFFD\uFFFD\uFFFD\uFFFDy\uFFFD\uFFFDz\uFFFD\uFFFD\u06744\uFFFD\uFFFD\uFFFD\uFFFD\u0713\uFFFD\uFFFD;\uFFFD\uFFFD]\uFFFD\uFFFD&\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\u0480\u0606,\uFFFD\u0388\uFFFD\u0791\uFFFD\uFFFD^\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\u04C5\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\u0541\uFFFD\uFFFDI\uFFFD\uFFFDi\uFFFD\uFFFD.\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFDl\uFFFD\uFFFDl\uFFFD\uFFFDk\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFDs\uFFFD\uFFFDl\uFFFD\uFFFD9\uFFFD\uFFFDj\uFFFD\uFFFD\uFFFD\uFFFD\u06F6<\uFFFD\uFFFD\uFFFD\uFFFD\uFFFDW\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD|\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD_\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFDr\uFFFD\uFFFDG\uFFFD\uFFFD\uFFFD\uFFFDy\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\u0767\uFFFD\uFFFDe\uFFFD\uFFFDv\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\u06DE\uFFFD\uFFFDT\uFFFD\uFFFD\uFFFD\uFFFDr\uFFFD\u0696\uFFFD\uFFFDc\uFFFD\u060E\uFFFD\u05C6\uFFFD\uFFFD\uFFFD\u06945\u064E3\uFFFD\uFFFD\uFFFD\u0607-\uFFFD\uFFFD\uFFFD\uFFFD\uFFFDk\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD`\uFFFD\uFFFD\uFFFD\u0608-\uFFFDs\uFFFD\uFFFD\\x0000\\x0000\\x0000\\x0001tRNS\\x0000@\uFFFD\uFFFDf\\x0000\\x0000\\x0000\uFFFDIDAT\\x0018\uFFFDc` \\x0003h\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD!\\x0004\uFFFD4\uFFFD\\x001d\uFFFD\uFFFD\u075DKJJT\uFFFDA\\x0002\uFFFD\"\uFFFD\uFFFD\uFFFD\uFFFD\u0156\uFFFD\uFFFD\uFFFDy2<@\\x0001!a\\x0001-ko'\\x000b\\x000359Y^f\uFFFD\uFFFD\uFFFD\uFFFD\uFFFD\uFFFDGpai\uFFFDBq^9+P\uFFFD\uFFFD\\\uFFFD*\uFFFD4\uFFFD\uFFFDT\uFFFD\uFFFD\uFFFD\uFFFD\\x0005( \uFFFDb\uFFFD\\x0012\\x0019\\x001b\\x0015\uFFFD#\uFFFD\uFFFD\uFFFD\\x0001\\x0014P6w\r\uFFFDOIN</p><p>\uFFFD\u0456\uFFFDd\\x0007</p><p>\u4EC5%\uFFFDff\uFFFD\uFFFDx\uFFFD\uFFFDJ\uFFFD\\x0003\\x0005</p><p>\"\\x0012\u04F2rr3\uFFFD=m\uFFFD</p><p>@\\x000e\uFFFD(\uFFFD\uFFFD\uFFFD\uFFFD</p><p>C\"\uFFFD\\x0006\\x0000\\x0019\uFFFD'\uFFFD\\x000ei\u01ED\\x0000\\x0000\\x0000\\x0000IEND\uFFFDB`\uFFFD</p>",
+					"reference": "<p>https://projects.webappsec.org/w/page/13246936/Information%20Leakage</p>",
+					"cweid": "319",
+					"wascid": "13",
+					"sourceid": "26"
+				},
+				{
+					"pluginid": "40040",
+					"alertRef": "40040-1",
+					"alert": "CORS Header",
+					"name": "CORS Header",
+					"riskcode": "0",
+					"confidence": "3",
+					"riskdesc": "Informational (High)",
+					"desc": "<p>Cross-Origin Resource Sharing (CORS) is an HTTP-header based mechanism that allows a server to indicate any other origins (domain, scheme, or port) than its own from which a browser should permit loading of resources. It relaxes the Same-Origin Policy (SOP).</p>",
+					"instances":[ 
+						{
+							"id": "538",
+							"uri": "http://localhost:3000/socket.io/?EIO=4&transport=polling&t=Q8Ce9Zo&sid=JesJ_sX20631pzXDAAAE",
+							"nodeName": "http:\/\/localhost:3000\/socket.io\/ (EIO,sid,t,transport)",
+							"method": "GET",
+							"param": "",
+							"attack": "origin: http://Ex7CPkre.com",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"id": "539",
+							"uri": "http://localhost:3000/socket.io/?EIO=4&transport=polling&t=Q8Ce9Rg",
+							"nodeName": "http:\/\/localhost:3000\/socket.io\/ (EIO,t,transport)",
+							"method": "GET",
+							"param": "",
+							"attack": "origin: http://Ex7CPkre.com",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"id": "544",
+							"uri": "http://localhost:3000/socket.io/?EIO=4&transport=polling&t=Q8Ce9X9&sid=JesJ_sX20631pzXDAAAE",
+							"nodeName": "http:\/\/localhost:3000\/socket.io\/ (EIO,sid,t,transport)(40)",
+							"method": "POST",
+							"param": "",
+							"attack": "origin: http://Ex7CPkre.com",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"id": "545",
+							"uri": "http://localhost:3000/socket.io/?EIO=4&transport=polling&t=Q8Cd_B2&sid=5x4Xr2u_VqdTBUqCAAAA",
+							"nodeName": "http:\/\/localhost:3000\/socket.io\/ (EIO,sid,t,transport)(42[\"notification received\",\"8d2072c6b0a4...)",
+							"method": "POST",
+							"param": "",
+							"attack": "origin: http://Ex7CPkre.com",
+							"evidence": "",
+							"otherinfo": ""
+						}
+					],
+					"count": "4",
+					"systemic": false,
+					"solution": "<p>If a web resource contains sensitive information, the origin should be properly specified in the Access-Control-Allow-Origin header. Only trusted websites needing this resource should be specified in this header, with the most secured protocol supported.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS</p><p>https://portswigger.net/web-security/cors</p>",
+					"cweid": "942",
+					"wascid": "14",
+					"sourceid": "25342"
+				},
+				{
+					"pluginid": "90027",
+					"alertRef": "90027",
+					"alert": "Cookie Slack Detector",
+					"name": "Cookie Slack Detector",
+					"riskcode": "0",
+					"confidence": "1",
+					"riskdesc": "Informational (Low)",
+					"desc": "<p>Repeated GET requests: drop a different cookie each time, followed by normal request with all cookies to stabilize session, compare responses against original baseline GET. This can reveal areas where cookie based authentication/attributes are not actually enforced.</p>",
+					"instances":[ 
+						{
+							"id": "750",
+							"uri": "http://localhost:3000/api/Feedbacks/",
+							"nodeName": "http:\/\/localhost:3000\/api\/Feedbacks\/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "Cookies that don't have expected effects can reveal flaws in application logic. In the worst case, this can reveal where authentication via cookie token(s) is not actually enforced.\nThese cookies affected the response: \nThese cookies did NOT affect the response: welcomebanner_status,language\n"
+						},
+						{
+							"id": "749",
+							"uri": "http://localhost:3000/rest/captcha/",
+							"nodeName": "http:\/\/localhost:3000\/rest\/captcha\/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "Dropping this cookie appears to have invalidated the session: [continueCode] A follow-on request with all original cookies still had a different response than the original request.\n"
+						},
+						{
+							"id": "747",
+							"uri": "http://localhost:3000/socket.io/?EIO=4&transport=polling&t=Q8Ce9Zo&sid=JesJ_sX20631pzXDAAAE",
+							"nodeName": "http:\/\/localhost:3000\/socket.io\/ (EIO,sid,t,transport)",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "Dropping this cookie appears to have invalidated the session: [continueCode] A follow-on request with all original cookies still had a different response than the original request.\n"
+						},
+						{
+							"id": "746",
+							"uri": "http://localhost:3000/socket.io/?EIO=4&transport=websocket&sid=JesJ_sX20631pzXDAAAE",
+							"nodeName": "http:\/\/localhost:3000\/socket.io\/ (EIO,sid,transport)",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "Dropping this cookie appears to have invalidated the session: [continueCode] A follow-on request with all original cookies still had a different response than the original request.\n"
+						},
+						{
+							"id": "748",
+							"uri": "http://localhost:3000/socket.io/?EIO=4&transport=polling&t=Q8Ce9Rg",
+							"nodeName": "http:\/\/localhost:3000\/socket.io\/ (EIO,t,transport)",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "Cookies that don't have expected effects can reveal flaws in application logic. In the worst case, this can reveal where authentication via cookie token(s) is not actually enforced.\nThese cookies affected the response: \nThese cookies did NOT affect the response: continueCode,welcomebanner_status,language\n"
+						}
+					],
+					"count": "5",
+					"systemic": true,
+					"solution": "",
+					"otherinfo": "<p>Cookies that don't have expected effects can reveal flaws in application logic. In the worst case, this can reveal where authentication via cookie token(s) is not actually enforced.</p><p>These cookies affected the response: </p><p>These cookies did NOT affect the response: welcomebanner_status,language</p><p></p>",
+					"reference": "<p>https://cwe.mitre.org/data/definitions/205.html</p>",
+					"cweid": "205",
+					"wascid": "45",
+					"sourceid": "26133"
+				},
+				{
+					"pluginid": "10109",
+					"alertRef": "10109",
+					"alert": "Modern Web Application",
+					"name": "Modern Web Application",
+					"riskcode": "0",
+					"confidence": "2",
+					"riskdesc": "Informational (Medium)",
+					"desc": "<p>The application appears to be a modern web application. If you need to explore it automatically then the Client Spider may well be more effective than the standard one.</p>",
+					"instances":[ 
+						{
+							"id": "33",
+							"uri": "http://localhost:3000",
+							"nodeName": "http:\/\/localhost:3000",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<script src=\"//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js\"></script>",
+							"otherinfo": "No links have been found while there are scripts, which is an indication that this is a modern web application."
+						},
+						{
+							"id": "4",
+							"uri": "http://localhost:3000/",
+							"nodeName": "http:\/\/localhost:3000\/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<script src=\"//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js\"></script>",
+							"otherinfo": "No links have been found while there are scripts, which is an indication that this is a modern web application."
+						},
+						{
+							"id": "97",
+							"uri": "http://localhost:3000/juice-shop/build/routes/fileServer.js:39:13",
+							"nodeName": "http:\/\/localhost:3000\/juice-shop\/build\/routes\/fileServer.js:39:13",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<script src=\"//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js\"></script>",
+							"otherinfo": "No links have been found while there are scripts, which is an indication that this is a modern web application."
+						},
+						{
+							"id": "93",
+							"uri": "http://localhost:3000/juice-shop/build/routes/fileServer.js:55:18",
+							"nodeName": "http:\/\/localhost:3000\/juice-shop\/build\/routes\/fileServer.js:55:18",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<script src=\"//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js\"></script>",
+							"otherinfo": "No links have been found while there are scripts, which is an indication that this is a modern web application."
+						},
+						{
+							"id": "34",
+							"uri": "http://localhost:3000/sitemap.xml",
+							"nodeName": "http:\/\/localhost:3000\/sitemap.xml",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<script src=\"//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js\"></script>",
+							"otherinfo": "No links have been found while there are scripts, which is an indication that this is a modern web application."
+						}
+					],
+					"count": "5",
+					"systemic": true,
+					"solution": "<p>This is an informational alert and so no changes are required.</p>",
+					"otherinfo": "<p>No links have been found while there are scripts, which is an indication that this is a modern web application.</p>",
+					"reference": "",
+					"cweid": "-1",
+					"wascid": "-1",
+					"sourceid": "9"
+				},
+				{
+					"pluginid": "10049",
+					"alertRef": "10049-1",
+					"alert": "Non-Storable Content",
+					"name": "Non-Storable Content",
+					"riskcode": "0",
+					"confidence": "2",
+					"riskdesc": "Informational (Medium)",
+					"desc": "<p>The response contents are not storable by caching components such as proxy servers. If the response does not contain sensitive, personal or user-specific information, it may benefit from being stored and cached, to improve performance.</p>",
+					"instances":[ 
+						{
+							"id": "70",
+							"uri": "http://localhost:3000/ftp/coupons_2013.md.bak",
+							"nodeName": "http:\/\/localhost:3000\/ftp\/coupons_2013.md.bak",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "403",
+							"otherinfo": ""
+						}
+					],
+					"count": "1",
+					"systemic": false,
+					"solution": "<p>The content may be marked as storable by ensuring that the following conditions are satisfied:</p><p>The request method must be understood by the cache and defined as being cacheable (\"GET\", \"HEAD\", and \"POST\" are currently defined as cacheable)</p><p>The response status code must be understood by the cache (one of the 1XX, 2XX, 3XX, 4XX, or 5XX response classes are generally understood)</p><p>The \"no-store\" cache directive must not appear in the request or response header fields</p><p>For caching by \"shared\" caches such as \"proxy\" caches, the \"private\" response directive must not appear in the response</p><p>For caching by \"shared\" caches such as \"proxy\" caches, the \"Authorization\" header field must not appear in the request, unless the response explicitly allows it (using one of the \"must-revalidate\", \"public\", or \"s-maxage\" Cache-Control response directives)</p><p>In addition to the conditions above, at least one of the following conditions must also be satisfied by the response:</p><p>It must contain an \"Expires\" header field</p><p>It must contain a \"max-age\" response directive</p><p>For \"shared\" caches such as \"proxy\" caches, it must contain a \"s-maxage\" response directive</p><p>It must contain a \"Cache Control Extension\" that allows it to be cached</p><p>It must have a status code that is defined as cacheable by default (200, 203, 204, 206, 300, 301, 404, 405, 410, 414, 501).</p>",
+					"otherinfo": "",
+					"reference": "<p>https://datatracker.ietf.org/doc/html/rfc7234</p><p>https://datatracker.ietf.org/doc/html/rfc7231</p><p>https://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html</p>",
+					"cweid": "524",
+					"wascid": "13",
+					"sourceid": "39"
+				},
+				{
+					"pluginid": "90005",
+					"alertRef": "90005-3",
+					"alert": "Sec-Fetch-Dest Header is Missing",
+					"name": "Sec-Fetch-Dest Header is Missing",
+					"riskcode": "0",
+					"confidence": "3",
+					"riskdesc": "Informational (High)",
+					"desc": "<p>Specifies how and where the data would be used. For instance, if the value is audio, then the requested resource must be audio data and not any other type of resource.</p>",
+					"instances":[ 
+						{
+							"id": "11",
+							"uri": "http://localhost:3000/",
+							"nodeName": "http:\/\/localhost:3000\/",
+							"method": "GET",
+							"param": "Sec-Fetch-Dest",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"id": "22",
+							"uri": "http://localhost:3000/robots.txt",
+							"nodeName": "http:\/\/localhost:3000\/robots.txt",
+							"method": "GET",
+							"param": "Sec-Fetch-Dest",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"id": "40",
+							"uri": "http://localhost:3000/runtime.js",
+							"nodeName": "http:\/\/localhost:3000\/runtime.js",
+							"method": "GET",
+							"param": "Sec-Fetch-Dest",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						}
+					],
+					"count": "3",
+					"systemic": false,
+					"solution": "<p>Ensure that Sec-Fetch-Dest header is included in request headers.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Sec-Fetch-Dest</p>",
+					"cweid": "352",
+					"wascid": "9",
+					"sourceid": "1"
+				},
+				{
+					"pluginid": "90005",
+					"alertRef": "90005-2",
+					"alert": "Sec-Fetch-Mode Header is Missing",
+					"name": "Sec-Fetch-Mode Header is Missing",
+					"riskcode": "0",
+					"confidence": "3",
+					"riskdesc": "Informational (High)",
+					"desc": "<p>Allows to differentiate between requests for navigating between HTML pages and requests for loading resources like images, audio etc.</p>",
+					"instances":[ 
+						{
+							"id": "10",
+							"uri": "http://localhost:3000/",
+							"nodeName": "http:\/\/localhost:3000\/",
+							"method": "GET",
+							"param": "Sec-Fetch-Mode",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"id": "21",
+							"uri": "http://localhost:3000/robots.txt",
+							"nodeName": "http:\/\/localhost:3000\/robots.txt",
+							"method": "GET",
+							"param": "Sec-Fetch-Mode",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"id": "38",
+							"uri": "http://localhost:3000/runtime.js",
+							"nodeName": "http:\/\/localhost:3000\/runtime.js",
+							"method": "GET",
+							"param": "Sec-Fetch-Mode",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						}
+					],
+					"count": "3",
+					"systemic": false,
+					"solution": "<p>Ensure that Sec-Fetch-Mode header is included in request headers.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Sec-Fetch-Mode</p>",
+					"cweid": "352",
+					"wascid": "9",
+					"sourceid": "1"
+				},
+				{
+					"pluginid": "90005",
+					"alertRef": "90005-1",
+					"alert": "Sec-Fetch-Site Header is Missing",
+					"name": "Sec-Fetch-Site Header is Missing",
+					"riskcode": "0",
+					"confidence": "3",
+					"riskdesc": "Informational (High)",
+					"desc": "<p>Specifies the relationship between request initiator's origin and target's origin.</p>",
+					"instances":[ 
+						{
+							"id": "9",
+							"uri": "http://localhost:3000/",
+							"nodeName": "http:\/\/localhost:3000\/",
+							"method": "GET",
+							"param": "Sec-Fetch-Site",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"id": "19",
+							"uri": "http://localhost:3000/robots.txt",
+							"nodeName": "http:\/\/localhost:3000\/robots.txt",
+							"method": "GET",
+							"param": "Sec-Fetch-Site",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"id": "37",
+							"uri": "http://localhost:3000/runtime.js",
+							"nodeName": "http:\/\/localhost:3000\/runtime.js",
+							"method": "GET",
+							"param": "Sec-Fetch-Site",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						}
+					],
+					"count": "3",
+					"systemic": false,
+					"solution": "<p>Ensure that Sec-Fetch-Site header is included in request headers.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Sec-Fetch-Site</p>",
+					"cweid": "352",
+					"wascid": "9",
+					"sourceid": "1"
+				},
+				{
+					"pluginid": "90005",
+					"alertRef": "90005-4",
+					"alert": "Sec-Fetch-User Header is Missing",
+					"name": "Sec-Fetch-User Header is Missing",
+					"riskcode": "0",
+					"confidence": "3",
+					"riskdesc": "Informational (High)",
+					"desc": "<p>Specifies if a navigation request was initiated by a user.</p>",
+					"instances":[ 
+						{
+							"id": "12",
+							"uri": "http://localhost:3000/",
+							"nodeName": "http:\/\/localhost:3000\/",
+							"method": "GET",
+							"param": "Sec-Fetch-User",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"id": "23",
+							"uri": "http://localhost:3000/robots.txt",
+							"nodeName": "http:\/\/localhost:3000\/robots.txt",
+							"method": "GET",
+							"param": "Sec-Fetch-User",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"id": "46",
+							"uri": "http://localhost:3000/runtime.js",
+							"nodeName": "http:\/\/localhost:3000\/runtime.js",
+							"method": "GET",
+							"param": "Sec-Fetch-User",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": ""
+						}
+					],
+					"count": "3",
+					"systemic": false,
+					"solution": "<p>Ensure that Sec-Fetch-User header is included in user initiated requests.</p>",
+					"otherinfo": "",
+					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Sec-Fetch-User</p>",
+					"cweid": "352",
+					"wascid": "9",
+					"sourceid": "1"
+				},
+				{
+					"pluginid": "10049",
+					"alertRef": "10049-3",
+					"alert": "Storable and Cacheable Content",
+					"name": "Storable and Cacheable Content",
+					"riskcode": "0",
+					"confidence": "2",
+					"riskdesc": "Informational (Medium)",
+					"desc": "<p>The response contents are storable by caching components such as proxy servers, and may be retrieved directly from the cache, rather than from the origin server by the caching servers, in response to similar requests from other users. If the response data is sensitive, personal or user-specific, this may result in sensitive information being leaked. In some cases, this may even result in a user gaining complete control of the session of another user, depending on the configuration of the caching components in use in their environment. This is primarily an issue where \"shared\" caching servers such as \"proxy\" caches are configured on the local network. This configuration is typically found in corporate or educational environments, for instance.</p>",
+					"instances":[ 
+						{
+							"id": "16",
+							"uri": "http://localhost:3000/robots.txt",
+							"nodeName": "http:\/\/localhost:3000\/robots.txt",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "",
+							"otherinfo": "In the absence of an explicitly specified caching lifetime directive in the response, a liberal lifetime heuristic of 1 year was assumed. This is permitted by rfc7234."
+						}
+					],
+					"count": "1",
+					"systemic": false,
+					"solution": "<p>Validate that the response does not contain sensitive, personal or user-specific information. If it does, consider the use of the following HTTP response headers, to limit, or prevent the content being stored and retrieved from the cache by another user:</p><p>Cache-Control: no-cache, no-store, must-revalidate, private</p><p>Pragma: no-cache</p><p>Expires: 0</p><p>This configuration directs both HTTP 1.0 and HTTP 1.1 compliant caching servers to not store the response, and to not retrieve the response (without validation) from the cache, in response to a similar request.</p>",
+					"otherinfo": "<p>In the absence of an explicitly specified caching lifetime directive in the response, a liberal lifetime heuristic of 1 year was assumed. This is permitted by rfc7234.</p>",
+					"reference": "<p>https://datatracker.ietf.org/doc/html/rfc7234</p><p>https://datatracker.ietf.org/doc/html/rfc7231</p><p>https://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html</p>",
+					"cweid": "524",
+					"wascid": "13",
+					"sourceid": "7"
+				},
+				{
+					"pluginid": "10049",
+					"alertRef": "10049-2",
+					"alert": "Storable but Non-Cacheable Content",
+					"name": "Storable but Non-Cacheable Content",
+					"riskcode": "0",
+					"confidence": "2",
+					"riskdesc": "Informational (Medium)",
+					"desc": "<p>The response contents are storable by caching components such as proxy servers, but will not be retrieved directly from the cache, without validating the request upstream, in response to similar requests from other users.</p>",
+					"instances":[ 
+						{
+							"id": "43",
+							"uri": "http://localhost:3000",
+							"nodeName": "http:\/\/localhost:3000",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "max-age=0",
+							"otherinfo": ""
+						},
+						{
+							"id": "5",
+							"uri": "http://localhost:3000/",
+							"nodeName": "http:\/\/localhost:3000\/",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "max-age=0",
+							"otherinfo": ""
+						},
+						{
+							"id": "57",
+							"uri": "http://localhost:3000/assets/public/favicon_js.ico",
+							"nodeName": "http:\/\/localhost:3000\/assets\/public\/favicon_js.ico",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "max-age=0",
+							"otherinfo": ""
+						},
+						{
+							"id": "35",
+							"uri": "http://localhost:3000/runtime.js",
+							"nodeName": "http:\/\/localhost:3000\/runtime.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "max-age=0",
+							"otherinfo": ""
+						},
+						{
+							"id": "39",
+							"uri": "http://localhost:3000/sitemap.xml",
+							"nodeName": "http:\/\/localhost:3000\/sitemap.xml",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "max-age=0",
+							"otherinfo": ""
+						}
+					],
+					"count": "5",
+					"systemic": true,
+					"solution": "",
+					"otherinfo": "",
+					"reference": "<p>https://datatracker.ietf.org/doc/html/rfc7234</p><p>https://datatracker.ietf.org/doc/html/rfc7231</p><p>https://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html</p>",
+					"cweid": "524",
+					"wascid": "13",
+					"sourceid": "9"
+				},
+				{
+					"pluginid": "10104",
+					"alertRef": "10104",
+					"alert": "User Agent Fuzzer",
+					"name": "User Agent Fuzzer",
+					"riskcode": "0",
+					"confidence": "2",
+					"riskdesc": "Informational (Medium)",
+					"desc": "<p>Check for differences in response based on fuzzed User Agent (eg. mobile sites, access as a Search Engine Crawler). Compares the response statuscode and the hashcode of the response body with the original response.</p>",
+					"instances":[ 
+						{
+							"id": "313",
+							"uri": "http://localhost:3000/socket.io/?EIO=4&transport=polling&t=Q8Ce9Zo&sid=JesJ_sX20631pzXDAAAE",
+							"nodeName": "http:\/\/localhost:3000\/socket.io\/ (EIO,sid,t,transport)",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"id": "309",
+							"uri": "http://localhost:3000/socket.io/?EIO=4&transport=polling&t=Q8Ce9Zo&sid=JesJ_sX20631pzXDAAAE",
+							"nodeName": "http:\/\/localhost:3000\/socket.io\/ (EIO,sid,t,transport)",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"id": "311",
+							"uri": "http://localhost:3000/socket.io/?EIO=4&transport=websocket&sid=JesJ_sX20631pzXDAAAE",
+							"nodeName": "http:\/\/localhost:3000\/socket.io\/ (EIO,sid,transport)",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"id": "312",
+							"uri": "http://localhost:3000/socket.io/?EIO=4&transport=polling&t=Q8Ce9Rg",
+							"nodeName": "http:\/\/localhost:3000\/socket.io\/ (EIO,t,transport)",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0)",
+							"evidence": "",
+							"otherinfo": ""
+						},
+						{
+							"id": "310",
+							"uri": "http://localhost:3000/socket.io/?EIO=4&transport=polling&t=Q8Ce9Rg",
+							"nodeName": "http:\/\/localhost:3000\/socket.io\/ (EIO,t,transport)",
+							"method": "GET",
+							"param": "Header User-Agent",
+							"attack": "Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)",
+							"evidence": "",
+							"otherinfo": ""
+						}
+					],
+					"count": "5",
+					"systemic": true,
+					"solution": "",
+					"otherinfo": "",
+					"reference": "<p>https://owasp.org/www-project-web-security-testing-guide/</p>",
+					"cweid": "0",
+					"wascid": "0",
+					"sourceid": "11150"
+				}
+			]
+		}
+	],
+	"sequences":[
+	]
+
+}

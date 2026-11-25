@@ -18,7 +18,7 @@ def dependency_check(report, threshold, ignore):
         if scores:
             top, cve = max(scores)
             if top >= float(threshold):
-                rows.append((str(top), dep.findtext(f"{tag}fileName"), cve))
+                rows.append((f"{top:.1f}", dep.findtext(f"{tag}fileName"), cve))
     return rows
 
 
