@@ -17,48 +17,32 @@ Los gates en aviso usan `continue-on-error: true`: el job queda en verde con una
 
 Cada gate escribe su tabla en el *Summary* del run.
 
-## Comportamiento esperado
+## Comportamiento en `main`
 
-| Rama | build | sca/sast/iac/container | dast | security-gate | deploy | notify |
-| --- | --- | --- | --- | --- | --- | --- |
-| `main` | verde | verde con avisos | verde o rojo según G5 | **rojo (G6)** | saltado | ejecutado |
-| `demo/gate` | verde | verde con avisos | verde o rojo según G5 | verde | **despliega en kind** | saltado |
+| build | sca/sast/iac/container | dast | security-gate | deploy | notify |
+| --- | --- | --- | --- | --- | --- |
+| verde | verde con avisos (G1–G4) | rojo si ZAP encuentra alertas `High` (G5) | **rojo (G6)** | saltado | aviso enviado |
 
-Si ZAP no encuentra alertas `High`, G5 pasa y se documenta así en el informe; no se baja el umbral para forzarlo.
+Es el comportamiento documentado en el run #48 (commit `633864c`): G5 bloqueó por 3 alertas High (SQL Injection, External Redirect, Off-site Redirect) y G6 por 4 dependencias con CVSS ≥ 9.0 y 41 vulnerabilidades CRITICAL con parche en la imagen. Las capturas están en `evidencias/runs/`.
 
-## Rama demo/gate
+Si ZAP no encuentra alertas `High`, G5 pasa y se documenta así; no se baja el umbral para forzarlo.
 
-1. Lanzar el pipeline en `main` y abrir el *Summary* de `security-gate`.
-2. Copiar los CVE de las tablas de G6.
-3. Crear la rama:
-   ```bash
-   git checkout main && git pull
-   git checkout -b demo/gate
-   ```
-4. Añadir cada CVE de Trivy a `security/.trivyignore`:
-   ```
-   CVE-AAAA-NNNNN  riesgo aceptado demo/gate · Rol C · revisar antes de 2026-12-31
-   ```
-5. Añadir cada CVE de Dependency-Check a `security/dependency-check-suppressions.xml`:
-   ```xml
-   <suppress until="2026-12-31Z">
-     <notes>Riesgo aceptado para la demostración de la rama demo/gate. Responsable: Rol C.</notes>
-     <cve>CVE-AAAA-NNNNN</cve>
-   </suppress>
-   ```
-6. Push de la rama. Si G6 sigue fallando, repetir con los CVE que queden.
-7. Registrar los mismos CVE como *Risk Acceptance* en DefectDojo con motivo, responsable y expiración 2026-12-31.
+## Desbloquear una release
 
-La rama `demo/gate` no se mergea en `main`.
+Un gate bloqueante solo se desbloquea de dos formas:
 
-Si G5 falla en `demo/gate` porque ZAP encuentra alertas `High` reales, el despliegue tampoco ocurre. En ese caso se añaden a `security/zap/rules.tsv` solo en `demo/gate`, con el motivo, y se explica en el informe.
+1. **Corrigiendo** el código, la dependencia o la imagen. El siguiente `reimport-scan` cierra el hallazgo.
+2. **Aceptando el riesgo formalmente**: *Risk Acceptance* en DefectDojo con motivo, responsable y caducidad, y la misma supresión en el repositorio, entrando por pull request revisada por otro rol:
+   - Trivy: `security/.trivyignore` → `CVE-AAAA-NNNNN  motivo · responsable · revisar antes de AAAA-MM-DD`
+   - Dependency-Check: `security/dependency-check-suppressions.xml` → `<suppress until="AAAA-MM-DDZ">` con `<notes>` y `<cve>`
+   - ZAP: `security/zap/rules.tsv` → `pluginid<TAB>IGNORE<TAB>(nombre) motivo`
 
 ## Triage en DefectDojo
 
 - [ ] SLA asignada al producto y notificaciones *Scan added* activas
 - [ ] Critical y High de las cinco herramientas revisados: los reales en *Verified* y con responsable
 - [ ] Al menos un *False Positive* justificado y reflejado en la supresión de su herramienta
-- [ ] Al menos una *Risk Acceptance* con motivo y expiración (los CVE de `demo/gate`)
+- [ ] Al menos una *Risk Acceptance* con motivo y expiración
 - [ ] Dos runs seguidos sin cambios: el número de tests y de hallazgos no crece
 - [ ] Un mismo CVE detectado por Dependency-Check y Trivy, con uno de ellos marcado *Duplicate*
 
